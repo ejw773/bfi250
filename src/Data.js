@@ -1999,7 +1999,3 @@ const bfiData = [
         director: "Krysztof Kielowski"
     }
 ]
-
-console.log(imdbIDs)
-console.log(bfiData)
-export default imdbIDs;
