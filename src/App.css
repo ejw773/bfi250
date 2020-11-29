@@ -6,6 +6,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 8em 0 3em 0;
 }
 
 .card {

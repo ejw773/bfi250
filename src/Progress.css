@@ -1,0 +1,9 @@
+.bg-warning {
+    color: black;
+}
+
+.progress {
+    font-size: 2em;
+    height: 2em;
+    border: 4px solid white;
+}
