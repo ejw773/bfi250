@@ -4,8 +4,13 @@
 
 .button-container {
     background-color: rgb(200, 200, 200);
+    bottom: 0;
 }
 
 .status-container {
     padding-bottom: 1em;
+}
+
+.poster {
+    
 }

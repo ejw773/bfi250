@@ -9,9 +9,9 @@ class ProgressBar extends React.Component {
         this.clickUnseen = this.clickUnseen.bind(this);
         this.clickSkipped = this.clickSkipped.bind(this);
         this.state = {
-            totalSeen: 14,
-            totalUnseen: 230,
-            totalSkipped: 6
+            totalFilms: 250,
+            totalSeen: 1,
+            totalSkipped: 0
         }
     }
     click250() {
@@ -27,15 +27,37 @@ class ProgressBar extends React.Component {
         console.log("You clicked the 'Skipped' part of the progress bar.")
     }
     render() {
+        let totalUnseen = (this.state.totalFilms - (this.state.totalSeen + this.state.totalSkipped))
+
+        let seenPercent = Math.ceil(this.state.totalSeen / this.state.totalFilms * 100);
+        console.log(seenPercent)
+        let unseenPercent = Math.ceil(totalUnseen / this.state.totalFilms * 100);
+        console.log(unseenPercent)
+        let skippedPercent = (100 - (seenPercent + unseenPercent));
+        console.log(skippedPercent)
+
+        let seenPercentText = seenPercent + '%';
+        let unseenPercentText = unseenPercent + '%';
+        let skippedPercentText = skippedPercent + '%';
+
+        let seenPercentStyle = {
+            width: seenPercentText
+        }
+        let unseenPercentStyle = {
+            width: unseenPercentText
+        }
+        let skippedPercentStyle = {
+            width: skippedPercentText
+        }
         return (
             <div>
             <div className="progress">
-        <div className="progress-bar bg-primary" onClick={this.click250} role="progressbar" style={{width: '100%'}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
+        <div className="progress-bar bg-primary" onClick={this.click250} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
             </div>
             <div className="progress">
-        <div className="progress-bar bg-success" onClick={this.clickSeen} role="progressbar" style={{width: '10%'}} aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Seen: {this.state.totalSeen}</div>
-        <div className="progress-bar bg-warning" onClick={this.clickUnseen} role="progressbar" style={{width: '80%'}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Unseen: {this.state.totalUnseen}</div>
-        <div className="progress-bar bg-danger" onClick={this.clickSkipped} role="progressbar" style={{width: '10%'}} aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Skipped: {this.state.totalSkipped}</div>
+        <div className="progress-bar bg-success" onClick={this.clickSeen} role="progressbar" style={seenPercentStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{this.state.totalSeen}</div>
+        <div className="progress-bar bg-warning" onClick={this.clickUnseen} role="progressbar" style={unseenPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalUnseen}</div>
+        <div className="progress-bar bg-danger" onClick={this.clickSkipped} role="progressbar" style={skippedPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{this.state.totalSkipped}</div>
             </div>
         </div>
 
