@@ -10,8 +10,8 @@ class ProgressBar extends React.Component {
         this.clickSkipped = this.clickSkipped.bind(this);
         this.state = {
             totalFilms: 250,
-            totalSeen: 1,
-            totalSkipped: 0
+            totalSeen: 73,
+            totalSkipped: 16
         }
     }
     click250() {
