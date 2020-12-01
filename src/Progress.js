@@ -51,17 +51,15 @@ class ProgressBar extends React.Component {
         }
         return (
             <div>
-            <div className="progress">
-        <div className="progress-bar bg-primary" onClick={this.click250} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
+                <div className="progress progress-all">
+                    <div className="progress-bar bg-primary" onClick={this.click250} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
+                </div>
+                <div className="progress progress-sections">
+                    <div className="progress-bar bg-success" onClick={this.clickSeen} role="progressbar" style={seenPercentStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{this.state.totalSeen}</div>
+                    <div className="progress-bar bg-warning" onClick={this.clickUnseen} role="progressbar" style={unseenPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalUnseen}</div>
+                    <div className="progress-bar bg-danger" onClick={this.clickSkipped} role="progressbar" style={skippedPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{this.state.totalSkipped}</div>
+                </div>
             </div>
-            <div className="progress">
-        <div className="progress-bar bg-success" onClick={this.clickSeen} role="progressbar" style={seenPercentStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{this.state.totalSeen}</div>
-        <div className="progress-bar bg-warning" onClick={this.clickUnseen} role="progressbar" style={unseenPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalUnseen}</div>
-        <div className="progress-bar bg-danger" onClick={this.clickSkipped} role="progressbar" style={skippedPercentStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{this.state.totalSkipped}</div>
-            </div>
-        </div>
-
-
         )
     }
 }
