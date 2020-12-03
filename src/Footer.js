@@ -5,19 +5,19 @@ class Footer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchInput: 'search box test'
+            searchInput: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({
             searchInput: event.target.value
         })
     }
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault();
         console.log(this.state.searchInput)
     }
