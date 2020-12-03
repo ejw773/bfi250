@@ -17,7 +17,7 @@ class App extends React.Component {
       year: "1958",
       bfiRank: "1",
       imdbID: "tt0052357",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYTE4ODEwZDUtNDFjOC00NjAxLWEzYTQtYTI1NGVmZmFlNjdiL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -26,7 +26,7 @@ class App extends React.Component {
       year: "1941",
       bfiRank: "2",
       imdbID: "tt0033467",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -35,7 +35,7 @@ class App extends React.Component {
       year: "1953",
       bfiRank: "3",
       imdbID: "tt0046438",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYWQ4ZTRiODktNjAzZC00Nzg1LTk1YWQtNDFmNDI0NmZiNGIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -44,7 +44,7 @@ class App extends React.Component {
       year: "1939",
       bfiRank: "4",
       imdbID: "tt0031885",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYTE4NjYxMGEtZmQxZi00YWVmLWJjZTctYTJmNDFmZGEwNDVhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -53,7 +53,7 @@ class App extends React.Component {
       year: "1927",
       bfiRank: "5",
       imdbID: "tt0018455",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNDVkYmYwM2ItNzRiMy00NWQ4LTlhMjMtNDI1ZDYyOGVmMzJjXkEyXkFqcGdeQXVyNTgzMzU5MDI@._V1_SX300.jpg"
     },
     {
@@ -62,7 +62,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "6",
       imdbID: "tt0062622",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -71,7 +71,7 @@ class App extends React.Component {
       year: "1956",
       bfiRank: "7",
       imdbID: "tt0049730",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYWQ3YWJiMDEtMDBhNS00YjY1LTkzNmEtY2U4Njg4MjQ3YWE3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -80,7 +80,7 @@ class App extends React.Component {
       year: "1929",
       bfiRank: "8",
       imdbID: "tt0019760",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYTc3NGVlN2QtYWJlZi00YjhjLThiZjctZDA1MmE1NGI4ZmE4XkEyXkFqcGdeQXVyODQyNDU4OTk@._V1_SX300.jpg"
     },
     {
@@ -89,7 +89,7 @@ class App extends React.Component {
       year: "1928",
       bfiRank: "9",
       imdbID: "tt0019254",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNjBjNDJiYTUtOWY0OS00OGVmLTg2YzctMTE0NzVhODM1ZWJmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -98,7 +98,7 @@ class App extends React.Component {
       year: "1963",
       bfiRank: "10",
       imdbID: "tt0056801",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMTQ4MTA0NjEzMF5BMl5BanBnXkFtZTgwMDg4NDYxMzE@._V1_SX300.jpg"
     },
     {
@@ -107,7 +107,7 @@ class App extends React.Component {
       year: "1925",
       bfiRank: "11",
       imdbID: "tt0015648",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMTEyMTQzMjQ0MTJeQTJeQWpwZ15BbWU4MDcyMjg4OTEx._V1_SX300.jpg"
     },
     {
@@ -116,7 +116,7 @@ class App extends React.Component {
       year: "1934",
       bfiRank: "12",
       imdbID: "tt0024844",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMGRkOTA2NjYtMDEyOC00MWUxLTkzMjctZmU0MjVjZTQ1MjZlXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg"
     },
     {
@@ -125,7 +125,7 @@ class App extends React.Component {
       year: "1960",
       bfiRank: "13",
       imdbID: "tt0053472",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNzk5MDk2MjktY2I3NS00ODZkLTk3OTktY2Q3ZDE2MmQ2M2ZmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -134,7 +134,7 @@ class App extends React.Component {
       year: "1979",
       bfiRank: "14",
       imdbID: "tt0078788",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMDdhODg0MjYtYzBiOS00ZmI5LWEwZGYtZDEyNDU4MmQyNzFkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -143,7 +143,7 @@ class App extends React.Component {
       year: "1949",
       bfiRank: "15",
       imdbID: "tt0041154",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNzQyMzMzMDUtNWVhYi00MzVmLTg3NDYtNjE4ZWQxNmIzY2YxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -152,7 +152,7 @@ class App extends React.Component {
       year: "1966",
       bfiRank: "16",
       imdbID: "tt0060138",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMmM4ZmE0NzktNzQ5MS00ZWU2LTlmMjMtNmJmNzM4MWVmYTA0XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
     },
     {
@@ -161,7 +161,7 @@ class App extends React.Component {
       year: "1954",
       bfiRank: "17",
       imdbID: "tt0047478",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BOWE4ZDdhNmMtNzE5ZC00NzExLTlhNGMtY2ZhYjYzODEzODA1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
     },
     {
@@ -170,7 +170,7 @@ class App extends React.Component {
       year: "1966",
       bfiRank: "17",
       imdbID: "tt0060827",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTM0YzExY2EtMjUyZi00ZmIwLWFkYTktNjY5NmVkYTdkMjI5XkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
     },
     {
@@ -179,7 +179,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "19",
       imdbID: "tt0072443",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTg1MDg3OTk3M15BMl5BanBnXkFtZTgwMDEzMzE5MTE@._V1_SX300.jpg"
     },
     {
@@ -188,7 +188,7 @@ class App extends React.Component {
       year: "1951",
       bfiRank: "20",
       imdbID: "tt0045152",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZDRjNGViMjQtOThlMi00MTA3LThkYzQtNzJkYjBkMGE0YzE1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
     },
     {
@@ -197,7 +197,7 @@ class App extends React.Component {
       year: "1960",
       bfiRank: "21",
       imdbID: "tt0053619",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNmJlYTVjZTYtZDg1Yy00NzFiLWJmYzYtYTJhMjliY2I2ZTlhXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
     },
     {
@@ -206,7 +206,7 @@ class App extends React.Component {
       year: "1972",
       bfiRank: "21",
       imdbID: "tt0068646",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -215,7 +215,7 @@ class App extends React.Component {
       year: "1963",
       bfiRank: "21",
       imdbID: "tt0057345",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMGNhNjYxYmUtMGI5Zi00N2MxLTkzYTctYjEyNWQ1YTk4MTc0XkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg"
     },
     {
@@ -224,7 +224,7 @@ class App extends React.Component {
       year: "1950",
       bfiRank: "24",
       imdbID: "tt0042876",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMjEzMzA4NDE2OF5BMl5BanBnXkFtZTcwNTc5MDI2NQ@@._V1_SX300.jpg"
     },
     {
@@ -233,7 +233,7 @@ class App extends React.Component {
       year: "1955",
       bfiRank: "24",
       imdbID: "tt0048452",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYjFjYzQ4ZTgtZGQ3MS00NDE2LTlmOTktYTIwOWIwMWVkYjcxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTc2MDU0NDE@._V1_SX300.jpg"
     },
     {
@@ -242,7 +242,7 @@ class App extends React.Component {
       year: "2000",
       bfiRank: "24",
       imdbID: "tt0118694",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYjZjODRlMjQtMjJlYy00ZDBjLTkyYTQtZGQxZTk5NzJhYmNmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
@@ -251,7 +251,7 @@ class App extends React.Component {
       year: "1966",
       bfiRank: "27",
       imdbID: "tt0060107",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNjM2MjMwNzUzN15BMl5BanBnXkFtZTgwMjEzMzE5MTE@._V1_SX300.jpg"
     },
     {
@@ -260,7 +260,7 @@ class App extends React.Component {
       year: "2003",
       bfiRank: "28",
       imdbID: "tt0166924",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BYjBhZmViNTItMGExMy00MGNmLTkwZDItMDVlMTQ4ODVkYTMwXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
     },
     {
@@ -269,7 +269,7 @@ class App extends React.Component {
       year: "1979",
       bfiRank: "29",
       imdbID: "tt0079944",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMDgwODNmMGItMDcwYi00OWZjLTgyZjAtMGYwMmI4N2Q0NmJmXkEyXkFqcGdeQXVyNzY1MTU0Njk@._V1_SX300.jpg"
     },
     {
@@ -278,7 +278,7 @@ class App extends React.Component {
       year: "1985",
       bfiRank: "29",
       imdbID: "tt0090015",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTYyMTI3NzYxMl5BMl5BanBnXkFtZTcwMzM5ODQxNA@@._V1_SX300.jpg"
     },
     {
@@ -287,7 +287,7 @@ class App extends React.Component {
       year: "1976",
       bfiRank: "31",
       imdbID: "tt0075314",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -296,7 +296,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "31",
       imdbID: "tt0071562",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -305,7 +305,7 @@ class App extends React.Component {
       year: "1948",
       bfiRank: "33",
       imdbID: "tt0040522",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNmI1ODdjODctMDlmMC00ZWViLWI5MzYtYzRhNDdjYmM3MzFjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
     },
     {
@@ -314,7 +314,7 @@ class App extends React.Component {
       year: "1960",
       bfiRank: "34",
       imdbID: "tt0054215",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -323,7 +323,7 @@ class App extends React.Component {
       year: "1926",
       bfiRank: "34",
       imdbID: "tt0017925",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYmRiMDFlYjYtOTMwYy00OGY2LWE0Y2QtYzQxOGNhZmUwNTIxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -332,7 +332,7 @@ class App extends React.Component {
       year: "1994",
       bfiRank: "36",
       imdbID: "tt0111341",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMjU1M2U2NzItYTEyZC00Mzc0LWI2ZjUtODlkZDc0OGIyMGU4XkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
     },
     {
@@ -341,7 +341,7 @@ class App extends React.Component {
       year: "1927",
       bfiRank: "36",
       imdbID: "tt0017136",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMTg5YWIyMWUtZDY5My00Zjc1LTljOTctYmI0MWRmY2M2NmRkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
     },
     {
@@ -350,7 +350,7 @@ class App extends React.Component {
       year: "1975",
       bfiRank: "36",
       imdbID: "tt0073198",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMzdmYjM0YmUtNDc0Ny00ZjM5LWFjYzMtZWJmNDVkY2U4ZjA2XkEyXkFqcGdeQXVyODU1OTc0MzI@._V1_SX300.jpg"
     },
     {
@@ -359,7 +359,7 @@ class App extends React.Component {
       year: "1960",
       bfiRank: "39",
       imdbID: "tt0053779",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BODQ0NzY5NGEtYTc5NC00Yjg4LTg4Y2QtZjE2MTkyYTNmNmU2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -368,7 +368,7 @@ class App extends React.Component {
       year: "1959",
       bfiRank: "39",
       imdbID: "tt0053198",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYTQ4MjA4NmYtYjRhNi00MTEwLTg0NjgtNjk3ODJlZGU4NjRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -377,7 +377,7 @@ class App extends React.Component {
       year: "1955",
       bfiRank: "41",
       imdbID: "tt0048473",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNDE5YmMxYjEtZjNjNC00NjM2LWE2ZjctOTkyNGMxODRiMGNiXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg"
     },
     {
@@ -386,7 +386,7 @@ class App extends React.Component {
       year: "1954",
       bfiRank: "41",
       imdbID: "tt0046511",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNTRiM2E4MGUtOGVkOS00OTIwLTg4MzEtMDEzOThiNTQ2YjY4XkEyXkFqcGdeQXVyNjI5NTk0MzE@._V1_SX300.jpg"
     },
     {
@@ -395,7 +395,7 @@ class App extends React.Component {
       year: "1965",
       bfiRank: "43",
       imdbID: "tt0059592",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMTQ0OTc4MDcxMl5BMl5BanBnXkFtZTgwNjIzMjA0NzE@._V1_SX300.jpg"
     },
     {
@@ -404,7 +404,7 @@ class App extends React.Component {
       year: "1989",
       bfiRank: "43",
       imdbID: "tt0100234",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMDczY2VmMWQtOTUxMi00YWM5LWE5OTUtNzcxZTQwMWI2MjIzXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -413,7 +413,7 @@ class App extends React.Component {
       year: "1959",
       bfiRank: "43",
       imdbID: "tt0053291",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNzAyOGIxYjAtMGY2NC00ZTgyLWIwMWEtYzY0OWQ4NDFjOTc5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -422,7 +422,7 @@ class App extends React.Component {
       year: "1967",
       bfiRank: "43",
       imdbID: "tt0062136",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZGJiMjY4MjAtYzA3OS00MDE3LWJlMGQtOTgzMzRhYmQzZjliXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
     },
     {
@@ -431,7 +431,7 @@ class App extends React.Component {
       year: "1964",
       bfiRank: "43",
       imdbID: "tt0058138",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMDYyMTIwYTMtOGRjNC00Njk4LWE1Y2EtYjhhMDJlNDY2MThkXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg"
     },
     {
@@ -440,7 +440,7 @@ class App extends React.Component {
       year: "1989",
       bfiRank: "48",
       imdbID: "tt6677224",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZDE2NWEzMmYtYTc1MS00NjRjLWIzOGYtNTUyYTE0ZWZhYTRkXkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_SX300.jpg"
     },
     {
@@ -449,7 +449,7 @@ class App extends React.Component {
       year: "1966",
       bfiRank: "48",
       imdbID: "tt0058946",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZWEzMGY4OTQtYTdmMy00M2QwLTliYTQtYWUzYzc3OTA5YzIwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -458,7 +458,7 @@ class App extends React.Component {
       year: "1931",
       bfiRank: "50",
       imdbID: "tt0021749",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BY2I4MmM1N2EtM2YzOS00OWUzLTkzYzctNDc5NDg2N2IyODJmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -467,7 +467,7 @@ class App extends React.Component {
       year: "1953",
       bfiRank: "50",
       imdbID: "tt0046478",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNWRhYTZjMzUtYWJkOC00YjNmLWFmMzctNjI1MjFjOWQ3MmU1XkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg"
     },
     {
@@ -476,7 +476,7 @@ class App extends React.Component {
       year: "1962",
       bfiRank: "50",
       imdbID: "tt0056119",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNmEyNzJmMjEtYWM4ZS00MWE2LTg5NzktNGY2MzkzZmQxMTE4XkEyXkFqcGdeQXVyMjQxNDE0ODg@._V1_SX300.jpg"
     },
     {
@@ -485,7 +485,7 @@ class App extends React.Component {
       year: "1959",
       bfiRank: "53",
       imdbID: "tt0053125",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZDA3NDExMTUtMDlhOC00MmQ5LWExZGUtYmI1NGVlZWI4OWNiXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -494,7 +494,7 @@ class App extends React.Component {
       year: "1954",
       bfiRank: "53",
       imdbID: "tt0047396",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BNGUxYWM3M2MtMGM3Mi00ZmRiLWE0NGQtZjE5ODI2OTJhNTU0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
@@ -503,7 +503,7 @@ class App extends React.Component {
       year: "1980",
       bfiRank: "53",
       imdbID: "tt0081398",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYjRmODkzNDItMTNhNi00YjJlLTg0ZjAtODlhZTM0YzgzYThlXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"
     },
     {
@@ -512,7 +512,7 @@ class App extends React.Component {
       year: "1931",
       bfiRank: "56",
       imdbID: "tt0022100",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BODA4ODk3OTEzMF5BMl5BanBnXkFtZTgwMTQ2ODMwMzE@._V1_SX300.jpg"
     },
     {
@@ -521,7 +521,7 @@ class App extends React.Component {
       year: "1963",
       bfiRank: "57",
       imdbID: "tt0057091",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYTgxZjc4NjQtZWJlNS00MTNlLWE3NDQtMmEwZTEyZDMxMjVlXkEyXkFqcGdeQXVyNzMzNzY1OTQ@._V1_SX300.jpg"
     },
     {
@@ -530,7 +530,7 @@ class App extends React.Component {
       year: "1958",
       bfiRank: "57",
       imdbID: "tt0052311",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BOTA1MjA3M2EtMmJjZS00OWViLTkwMTEtM2E5ZDk0NTAyNGJiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -539,7 +539,7 @@ class App extends React.Component {
       year: "1924",
       bfiRank: "59",
       imdbID: "tt0015324",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZWFhOGU5NDctY2Q3YS00Y2VlLWI1NzEtZmIwY2ZiZjY4OTA2XkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg"
     },
     {
@@ -548,7 +548,7 @@ class App extends React.Component {
       year: "1975",
       bfiRank: "59",
       imdbID: "tt0072684",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNmY0MWY2NDctZDdmMi00MjA1LTk0ZTQtZDMyZTQ1NTNlYzVjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
     },
     {
@@ -557,7 +557,7 @@ class App extends React.Component {
       year: "1973",
       bfiRank: "59",
       imdbID: "tt0070359",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZjc4YzI0NjQtZjljZC00MzJhLWI4ZjQtMjRlOTFhMTkxM2I2XkEyXkFqcGdeQXVyNTc1NDM0NDU@._V1_SX300.jpg"
     },
     {
@@ -566,7 +566,7 @@ class App extends React.Component {
       year: "1954",
       bfiRank: "59",
       imdbID: "tt0047445",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZGU0YmFmMGEtYjVmZi00N2UxLTkxOWMtMzRjZDFhZDQyYzBhXkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg"
     },
     {
@@ -575,7 +575,7 @@ class App extends React.Component {
       year: "1957",
       bfiRank: "63",
       imdbID: "tt0050986",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYzdkODZlOGItY2RjZC00Mzc5LWI5NzMtZDUyMmNhNjljOWE2XkEyXkFqcGdeQXVyOTk4MjA5NjQ@._V1_SX300.jpg"
     },
     {
@@ -584,7 +584,7 @@ class App extends React.Component {
       year: "1936",
       bfiRank: "63",
       imdbID: "tt0027977",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYjJiZjMzYzktNjU0NS00OTkxLWEwYzItYzdhYWJjN2QzMTRlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -593,7 +593,7 @@ class App extends React.Component {
       year: "1950",
       bfiRank: "63",
       imdbID: "tt0043014",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_SX300.jpg"
     },
     {
@@ -602,7 +602,7 @@ class App extends React.Component {
       year: "1955",
       bfiRank: "63",
       imdbID: "tt0048424",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYTNjN2M2MzYtZGEwMi00Mzc5LWEwYTMtODM1ZmRiZjFiNTU0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -611,7 +611,7 @@ class App extends React.Component {
       year: "1959",
       bfiRank: "63",
       imdbID: "tt0053168",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZWNlMTM4YTYtNWY4NS00MDQzLTkzOWQtYzU0MGUxOTM3NzI3XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -620,7 +620,7 @@ class App extends React.Component {
       year: "1958",
       bfiRank: "63",
       imdbID: "tt0053221",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZDVhMTk1NjUtYjc0OS00OTE1LTk1NTYtYWMzMDI5OTlmYzU2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -629,7 +629,7 @@ class App extends React.Component {
       year: "1982",
       bfiRank: "69",
       imdbID: "tt0083658",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -638,7 +638,7 @@ class App extends React.Component {
       year: "1986",
       bfiRank: "69",
       imdbID: "tt0090756",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BM2YxOGQ0N2UtOTRjYy00NjJiLWFhZWEtMjU5ZjgwMjkwZjZlXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg"
     },
     {
@@ -647,7 +647,7 @@ class App extends React.Component {
       year: "1982",
       bfiRank: "69",
       imdbID: "tt0084628",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMjc4MzliNDQtYjc2Mi00Y2UxLTk2ZTctOGIzMmY3YjFmN2UyXkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
     },
     {
@@ -656,7 +656,7 @@ class App extends React.Component {
       year: "1956",
       bfiRank: "69",
       imdbID: "tt0049902",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYzMyYTFjYzAtOTczYS00NTU0LTg1Y2EtN2UwN2RkMDNjZDA1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
     },
     {
@@ -665,7 +665,7 @@ class App extends React.Component {
       year: "1949",
       bfiRank: "73",
       imdbID: "tt0041959",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYjE2OTdhMWUtOGJlMy00ZDViLWIzZjgtYjZkZGZmMDZjYmEyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -674,7 +674,7 @@ class App extends React.Component {
       year: "1962",
       bfiRank: "73",
       imdbID: "tt0056736",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BOTlmZjMxMzctMmE0MS00NmI1LTg5NTktNjc5ODY1ZDg3NmE4XkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg"
     },
     {
@@ -683,7 +683,7 @@ class App extends React.Component {
       year: "1945",
       bfiRank: "73",
       imdbID: "tt0037674",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZjVjYTAzYjctZTZkNi00NmNhLWJkY2UtNjEyOWQ5NTI0MmEzXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg"
     },
     {
@@ -692,7 +692,7 @@ class App extends React.Component {
       year: "1937",
       bfiRank: "73",
       imdbID: "tt0028950",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTg3MTI5NTk0N15BMl5BanBnXkFtZTgwMjU1MDM5MTE@._V1_SX300.jpg"
     },
     {
@@ -701,7 +701,7 @@ class App extends React.Component {
       year: "1975",
       bfiRank: "73",
       imdbID: "tt0073440",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMDY0MzE3YWQtZTAzMS00ZmRlLWE3NzYtMjk0NDlkMmE4N2U2XkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg"
     },
     {
@@ -710,7 +710,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "78",
       imdbID: "tt0071315",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BOGMwYmY5ZmEtMzY1Yi00OWJiLTk1Y2MtMzI2MjBhYmZkNTQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -719,7 +719,7 @@ class App extends React.Component {
       year: "1998",
       bfiRank: "78",
       imdbID: "tt0209933",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYjRkMGQwMWMtYzkxZC00MjZhLTkwNWYtZGI4NGY4OWI4ZmMyXkEyXkFqcGdeQXVyODU1OTc0MzI@._V1_SX300.jpg"
     },
     {
@@ -728,7 +728,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "78",
       imdbID: "tt0064116",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZGI5MjBmYzYtMzJhZi00NGI1LTk3MzItYjBjMzcxM2U3MDdiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -737,7 +737,7 @@ class App extends React.Component {
       year: "1942",
       bfiRank: "81",
       imdbID: "tt0035015",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BOTQ4Y2I5MzYtNDJkZS00YTFmLWJkODctMmU3YzQ3ZDhkMWE5XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -746,7 +746,7 @@ class App extends React.Component {
       year: "1962",
       bfiRank: "81",
       imdbID: "tt0056172",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
     },
     {
@@ -755,7 +755,7 @@ class App extends React.Component {
       year: "1973",
       bfiRank: "81",
       imdbID: "tt0070040",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYTNmNTZmYmQtZTA0Mi00OTRiLWI4MGEtMzIwMzQ0NjkzYzZjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
     },
     {
@@ -764,7 +764,7 @@ class App extends React.Component {
       year: "1984",
       bfiRank: "84",
       imdbID: "tt0083922",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZmQzMDE5ZWQtOTU3ZS00ZjdhLWI0OTctZDNkODk4YThmOTRhL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -773,7 +773,7 @@ class App extends React.Component {
       year: "1942",
       bfiRank: "84",
       imdbID: "tt0034583",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
     },
     {
@@ -782,7 +782,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "84",
       imdbID: "tt0063555",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZmIyMjhhYTktYWI5Yy00YTczLTgzYzktODdkMWMxODk5MGQ3XkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
     },
     {
@@ -791,7 +791,7 @@ class App extends React.Component {
       year: "1924",
       bfiRank: "84",
       imdbID: "tt0015881",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNzFhZWQ1MjgtYTNmNy00ZjdhLWEwZDctMzJkYzE5YTQwNjIxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -800,7 +800,7 @@ class App extends React.Component {
       year: "1991",
       bfiRank: "84",
       imdbID: "tt0101985",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BOGUwNTg3ODUtMTU5Zi00MDdiLWE0ZmQtMzRhMmZkMWJkNjViXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_SX300.jpg"
     },
     {
@@ -809,7 +809,7 @@ class App extends React.Component {
       year: "1969",
       bfiRank: "84",
       imdbID: "tt0065214",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BNGUyYTZmOWItMDJhMi00N2IxLWIyNDMtNjUxM2ZiYmU5YWU1XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -818,7 +818,7 @@ class App extends React.Component {
       year: "1936",
       bfiRank: "90",
       imdbID: "tt0028445",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTFmMzgwMWEtMDVlNy00MDdhLWJjODEtZjU3MTY3MzhhMjZmXkEyXkFqcGdeQXVyNjI5NTk0MzE@._V1_SX300.jpg"
     },
     {
@@ -827,7 +827,7 @@ class App extends React.Component {
       year: "1972",
       bfiRank: "90",
       imdbID: "tt0068182",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMjRkY2VhYzMtZWQyNS00OTY2LWE5NTAtYjlhNmQyYzE5MmUxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
@@ -836,7 +836,7 @@ class App extends React.Component {
       year: "1946",
       bfiRank: "90",
       imdbID: "tt0038733",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZmQzZjIyN2EtOWI5Ni00ZDgyLTk4NGQtZmQ3ZWRhODIyZTVlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -845,7 +845,7 @@ class App extends React.Component {
       year: "1957",
       bfiRank: "93",
       imdbID: "tt0050976",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BM2I1ZWU4YjMtYzU0My00YmMzLWFmNTAtZDJhZGYwMmI3YWQ5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     },
     {
@@ -854,7 +854,7 @@ class App extends React.Component {
       year: "1929",
       bfiRank: "93",
       imdbID: "tt0020530",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMWJmNGM2ZjMtNjY2OC00Nzk4LTk0MWQtZjkxMWU1M2IyYmI4XkEyXkFqcGdeQXVyMDY4MzkyNw@@._V1_SX300.jpg"
     },
     {
@@ -863,7 +863,7 @@ class App extends React.Component {
       year: "1916",
       bfiRank: "93",
       imdbID: "tt0006864",
-      viewStatus: "seen",
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZTc0YjA1ZjctOTFlZi00NWRiLWE2MTAtZDE1MWY1YTgzOTJjXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -872,7 +872,7 @@ class App extends React.Component {
       year: "1999",
       bfiRank: "93",
       imdbID: "tt0244316",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZDNkMGUyYzUtNjM0ZC00NDM2LWE5ZjEtMjliNzIxMmMzZThhXkEyXkFqcGdeQXVyMzAxNjg3MjQ@._V1_SX300.jpg"
     },
     {
@@ -881,7 +881,7 @@ class App extends React.Component {
       year: "1943",
       bfiRank: "93",
       imdbID: "tt0036112",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMzg2MzE5YTktNzc3NC00NTI0LTk3OGMtNzQ5OWE4NmJiZGRhXkEyXkFqcGdeQXVyMTk4MDgwNA@@._V1_SX300.jpg"
     },
     {
@@ -890,7 +890,7 @@ class App extends React.Component {
       year: "1973",
       bfiRank: "93",
       imdbID: "tt0070820",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BN2ExYmM2NjktODBkYy00NTdmLWI4OTEtMGNiYmE3NzY3ZjM0XkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
     },
     {
@@ -899,7 +899,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "93",
       imdbID: "tt0071141",
-      viewStatus: "skip",
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMTQ5YzM4MGMtYzIwZS00MjliLTg5NDUtZTUxYjJhNTI1NDU3XkEyXkFqcGdeQXVyNjUwMTQ4NjE@._V1_SX300.jpg"
     },
     {
@@ -908,7 +908,7 @@ class App extends React.Component {
       year: "1959",
       bfiRank: "93",
       imdbID: "tt0052918",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNjhiYzRiMzMtODMwZS00OWIwLTk3NTgtYjI1MDMxMDU5OWEzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -917,7 +917,7 @@ class App extends React.Component {
       year: "1953",
       bfiRank: "93",
       imdbID: "tt0046022",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BOTUzNGU0MzQtOTQ2ZC00MDViLTk0MzctNTFhOGU4ZTU4YjBkXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg"
     },
     {
@@ -926,7 +926,7 @@ class App extends React.Component {
       year: "1967",
       bfiRank: "102",
       imdbID: "tt0127354",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNzBhYjZjMTItNGQzZS00NTNiLWJlYzItODM4NDBkMmNiZThiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -935,7 +935,7 @@ class App extends React.Component {
       year: "1970",
       bfiRank: "102",
       imdbID: "tt0065571",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BODFlYzU4YTItN2EwYi00ODI3LTkwNTQtMDdkNjM3YjMyMTgyXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -944,7 +944,7 @@ class App extends React.Component {
       year: "1975",
       bfiRank: "102",
       imdbID: "tt0073800",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNmY3NmQzMWItMmI3Zi00MmE5LWE0ZTctYTBjY2FjYzBhYzRlXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg"
     },
     {
@@ -953,7 +953,7 @@ class App extends React.Component {
       year: "1943",
       bfiRank: "102",
       imdbID: "tt0036154",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYzI0ODY4MTgtNjcxZC00Njk5LWI4MjQtZWRhMzU0ZjgwNDlmXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg"
     },
     {
@@ -962,7 +962,7 @@ class App extends React.Component {
       year: "1967",
       bfiRank: "102",
       imdbID: "tt0060304",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYmFkYjJmNTYtYWRiMS00YWRkLTgyNzgtMTlmMTljZDE4YzNiXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg"
     },
     {
@@ -971,7 +971,7 @@ class App extends React.Component {
       year: "2010",
       bfiRank: "102",
       imdbID: "tt0478304",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTMwNjQ0NjMzN15BMl5BanBnXkFtZTcwNjMxMTkyNA@@._V1_SX300.jpg"
     },
     {
@@ -980,7 +980,7 @@ class App extends React.Component {
       year: "1945",
       bfiRank: "102",
       imdbID: "tt0037824",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZjI1MWFmMTktOTE3Mi00NjE0LWFlMDctZGNiZThkODI3YTJjXkEyXkFqcGdeQXVyMTE5MjM5Njk3._V1_SX300.jpg"
     },
     {
@@ -989,7 +989,7 @@ class App extends React.Component {
       year: "1961",
       bfiRank: "102",
       imdbID: "tt0054632",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNTFmMzUzN2ItNmU3OS00ZmQxLTg1ODMtNjJjM2E4OWFkYWI5XkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg"
     },
     {
@@ -998,7 +998,7 @@ class App extends React.Component {
       year: "1941",
       bfiRank: "110",
       imdbID: "tt0033804",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BOTQzNWM4Y2QtMWVhYS00MTNkLTgxMGMtNjM5Y2FmNjQ2MWFiXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg"
     },
     {
@@ -1007,7 +1007,7 @@ class App extends React.Component {
       year: "1950",
       bfiRank: "110",
       imdbID: "tt0042804",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BODM4OTk1MjI5NV5BMl5BanBnXkFtZTgwNTg0NTQzMjE@._V1_SX300.jpg"
     },
     {
@@ -1016,7 +1016,7 @@ class App extends React.Component {
       year: "1938",
       bfiRank: "110",
       imdbID: "tt0029947",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMmVkOTRiYmItZjE4NS00MWNjLWE0ZmMtYzg5YzFjMjMyY2RkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -1025,7 +1025,7 @@ class App extends React.Component {
       year: "1970",
       bfiRank: "110",
       imdbID: "tt0066214",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BODBlMGU1ZjItYTY1NS00MjY4LWJlYWUtNTkxOGE3ZWE5NDYxXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -1034,7 +1034,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "110",
       imdbID: "tt0073580",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BM2MyODc3OWEtYzRiYS00Yzc5LTliZjMtNTQ1NWFlMDRmZmVlL2ltYWdlXkEyXkFqcGdeQXVyNzM0MDQ1Mw@@._V1_SX300.jpg"
     },
     {
@@ -1043,7 +1043,7 @@ class App extends React.Component {
       year: "1961",
       bfiRank: "110",
       imdbID: "tt0055601",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMDJkYzdmZmUtM2RmNC00ODliLThlNmMtNzFjNWIwOWMyNzkxXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
     },
     {
@@ -1052,7 +1052,7 @@ class App extends React.Component {
       year: "1930",
       bfiRank: "110",
       imdbID: "tt0021577",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMmY2NWYyN2MtNTkyNi00MmJkLTkwODAtNWU1ZDQ5OWFkNmY5XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
     },
     {
@@ -1061,7 +1061,7 @@ class App extends React.Component {
       year: "1944",
       bfiRank: "117",
       imdbID: "tt0036695",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BNDlhNDliOGQtN2EzYS00Njg4LWIzODgtNWIxNWJjMDU4NzcwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -1070,7 +1070,7 @@ class App extends React.Component {
       year: "1966",
       bfiRank: "117",
       imdbID: "tt0061996",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BM2UwZDEzOWYtOTA5ZC00OTMwLTgyMDctZmIzYmRkODczZDI0XkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
     },
     {
@@ -1079,7 +1079,7 @@ class App extends React.Component {
       year: "1963",
       bfiRank: "117",
       imdbID: "tt0057012",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZWI3ZTMxNjctMjdlNS00NmUwLWFiM2YtZDUyY2I3N2MxYTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -1088,7 +1088,7 @@ class App extends React.Component {
       year: "1922",
       bfiRank: "117",
       imdbID: "tt0013442",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMTAxYjEyMTctZTg3Ni00MGZmLWIxMmMtOGM2NTFiY2U3MmExXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -1097,7 +1097,7 @@ class App extends React.Component {
       year: "1948",
       bfiRank: "117",
       imdbID: "tt0040725",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMzY2MzIwMDQzN15BMl5BanBnXkFtZTcwNDUxMTM4NA@@._V1_SX300.jpg"
     },
     {
@@ -1106,7 +1106,7 @@ class App extends React.Component {
       year: "1932",
       bfiRank: "117",
       imdbID: "tt0023622",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BY2E5ODgyYmQtY2Q0ZS00N2MyLWJhYzktYTliMWEyOWM2OGNiXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg"
     },
     {
@@ -1115,7 +1115,7 @@ class App extends React.Component {
       year: "1989",
       bfiRank: "117",
       imdbID: "tt0096908",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BYzBkNzI3YWYtMWE4MC00Y2JlLWIwOGUtNjVjZDFkMTFhYzhmXkEyXkFqcGdeQXVyNDY5NjU5MDE@._V1_SX300.jpg"
     },
     {
@@ -1124,7 +1124,7 @@ class App extends React.Component {
       year: "1972",
       bfiRank: "117",
       imdbID: "tt0071129",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BZDI2OTg2NDQtMzc0MC00MjRiLWI1NzAtMjY2ZDMwMmUyNzBiXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
     },
     {
@@ -1133,7 +1133,7 @@ class App extends React.Component {
       year: "1962",
       bfiRank: "117",
       imdbID: "tt0056217",
-      viewStatus: "see",
+      viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMGEyNzhkYzktMGMyZS00YzRiLWJlYjktZjJkOTU5ZDY0ZGI4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
     }
 
@@ -1147,7 +1147,7 @@ class App extends React.Component {
       imdbID: "",
       hasSeen: false,
       willSkip: false,
-      viewStatus: "",
+      viewStatus: null,
       poster: ""
     }
 
