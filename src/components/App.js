@@ -1136,6 +1136,15 @@ class App extends React.Component {
       poster: "https://m.media-amazon.com/images/M/MV5BMGEyNzhkYzktMGMyZS00YzRiLWJlYjktZjJkOTU5ZDY0ZGI4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
     },
     {
+      title: "Days of Heaven",
+      director: "Terence Malick",
+      year: "1978",
+      bfiRank: "117",
+      imdbID: "tt0077405",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjMyZmU4OGYtNjBiYS00YTIxLWJjMDUtZjczZmQwMTM4YjQxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"
+    },
+    {
       title: "Spring in a Small Town",
       director: "Fei Mu",
       year: "1948",
@@ -1848,102 +1857,408 @@ class App extends React.Component {
     },
     {
       title: "Kings of the Road",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      director: "Wim Wenders",
+      year: "1976",
+      bfiRank: "202",
+      imdbID: "tt0073152",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BM2Q4NmRlOTEtZTYyMy00MzliLWIwYzktMzA4YTU0NmViYWQzXkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "There Will Be Blood",
+      director: "Paul Thomas Anderson",
+      year: "2002",
+      bfiRank: "202",
+      imdbID: "tt0469494",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BMjAxODQ4MDU5NV5BMl5BanBnXkFtZTcwMDU4MjU1MQ@@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
-      viewStatus: null,
-      poster: ""
+      title: "WALL-E",
+      director: "Andrew Stanton",
+      year: "2008",
+      bfiRank: "202",
+      imdbID: "tt0910970",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Berlin Alexanderplatz",
+      director: "Rainer Werner Fassbinder",
+      year: "1980",
+      bfiRank: "202",
+      imdbID: "tt0080196",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BYWM2MDU2N2UtZTU4MS00MTJhLWFjNTAtZGQzODkyZGY1OTBhXkEyXkFqcGdeQXVyMzIwNDY4NDI@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Videodrome",
+      director: "David Cronenberg",
+      year: "1983",
+      bfiRank: "202",
+      imdbID: "tt0086541",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BNzdlNDk0YTMtNWJjOS00NzhlLThiOTAtZDUyOWNkNDQ2NmU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Daisies",
+      director: "Vera Chytilova",
+      year: "1966",
+      bfiRank: "202",
+      imdbID: "tt0060959",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BMmUxMjkxZGUtMmUyOC00ODY0LTgwMTktMTBhNTdkODMxYWE3XkEyXkFqcGdeQXVyNjg3MTIwODI@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Uncle Boonmee Who Can Recall His Past Lives",
+      director: "Apichatpong Weerasethakul",
+      year: "2010",
+      bfiRank: "202",
+      imdbID: "tt1588895",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BMTc2MjAxMzI3NV5BMl5BanBnXkFtZTcwMDE3MDU0NA@@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
-      viewStatus: null,
-      poster: ""
+      title: "Manhattan",
+      director: "Woody Allen",
+      year: "1979",
+      bfiRank: "202",
+      imdbID: "tt0079522",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzdmY2I3MmEtOGFiZi00MTg1LWIxY2QtNWUwM2NmNWNlY2U5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Cleo From 5 to 7",
+      director: "Agnes Varda",
+      year: "1962",
+      bfiRank: "202",
+      imdbID: "tt0055852",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BNzJjYzU2NjMtNzUwMS00NzFlLTg5OGItZjg5ZWM2ZWI2MTg2XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "West of the Tracks",
+      director: "Wang Bing",
+      year: "2002",
+      bfiRank: "202",
+      imdbID: "tt0389448",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BMTc4NjMxNjk0Nl5BMl5BanBnXkFtZTcwNTIwMTgyMQ@@._V1_SX300.jpg"
     },
     {
-      title: "",
-      director: "",
-      year: "",
-      bfiRank: "",
-      imdbID: "",
+      title: "Russian Ark",
+      director: "Aleksandr Sokurov",
+      year: "2002",
+      bfiRank: "202",
+      imdbID: "tt0318034",
       viewStatus: null,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/M/MV5BMjEyNDEwOTU0NV5BMl5BanBnXkFtZTYwNjk0NTk5._V1_SX300.jpg"
+    },
+    {
+      title: "A Tale of Tales",
+      director: "Yuri Norstein",
+      year: "1979",
+      bfiRank: "202",
+      imdbID: "tt0079986",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTM0MjkyNWMtMDlhZC00YTkzLTljM2EtMDY5YjdhOGRjYmQ1XkEyXkFqcGdeQXVyMjExNjgyMTc@._V1_SX300.jpg"
+    },
+    {
+      title: "Spirited Away",
+      director: "Miyazaki Hayao",
+      year: "2001",
+      bfiRank: "202",
+      imdbID: "tt0245429",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      title: "La Strada",
+      director: "Federico Fellini",
+      year: "1954",
+      bfiRank: "202",
+      imdbID: "tt0047528",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BYjUyOGMyMTQtYTM5Yy00MjFiLTk2OGItMWYwMDc2YmM1YzhiXkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_SX300.jpg"
+    },
+    {
+      title: "Paisà",
+      director: "Roberto Rossellini",
+      year: "1946",
+      bfiRank: "202",
+      imdbID: "tt0038823",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTI2NmNjNGItZDc4OC00YTI4LTkxYzItNmMxNzg3MWI4ZjYwXkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_SX300.jpg"
+    },
+    {
+      title: "The Shop Around the Corner",
+      director: "Ernst Lubitsch",
+      year: "1940",
+      bfiRank: "202",
+      imdbID: "tt0033045",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzc1MTcyNTQ5N15BMl5BanBnXkFtZTgwMzgwMDI0MjE@._V1_SX300.jpg"
+    },
+    {
+      title: "The Big Sleep",
+      director: "Howard Hawks",
+      year: "1946",
+      bfiRank: "202",
+      imdbID: "tt0038355",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjdiM2IyZmQtODJiYy00NDNkLTllYmItMmFjMDNiYTQyOGVkXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg"
+    },
+    {
+      title: "Killer of Sheep",
+      director: "Killer of Sheep",
+      year: "1977",
+      bfiRank: "202",
+      imdbID: "tt0076263",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTYwNjI3Mzk3Ml5BMl5BanBnXkFtZTYwMDQ0NjY3._V1_SX300.jpg"
+    },
+    {
+      title: "Wanda",
+      director: "Barbara Loden",
+      year: "1970",
+      bfiRank: "202",
+      imdbID: "tt0067961",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNjA5NDk3NDEtNzEzNy00ZDUwLTlkNzktN2FlODM2YTU2M2ZkXkEyXkFqcGdeQXVyMTk2MzI2Ng@@._V1_SX300.jpg"
+    },
+    {
+      title: "Germany, Year Zero",
+      director: "Roberto Rossellini",
+      year: "1948",
+      bfiRank: "202",
+      imdbID: "tt0039417",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDRlOWRiMTktYmQ0Zi00ZDRhLWIwNjUtYmM1MDA0MjZiZjlmXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
+    },
+    {
+      title: "The Life of Oharu",
+      director: "Mizoguchi Kenji",
+      year: "1952",
+      bfiRank: "202",
+      imdbID: "tt0045112",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BOGMyZDkzNmItYzEzZC00YmJmLWE2ZTItNGRiMGQ5YzA4ZWI1XkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Army of Shadows",
+      director: "Jean-Pierre Melville",
+      year: "1969",
+      bfiRank: "202",
+      imdbID: "tt0064040",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTk5MTUyNTA2Nl5BMl5BanBnXkFtZTgwNTQzMDg1NjE@._V1_SX300.jpg"
+    },
+    {
+      title: "Salo, or the 120 Days of Sodom",
+      director: "Pier Paolo Pasolini",
+      year: "1975",
+      bfiRank: "202",
+      imdbID: "tt0073650",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNmFmYmNmMzQtMjQ4Yy00MTRkLWJhNmUtZmE3ZTMyMDhiNzkxXkEyXkFqcGdeQXVyNjUxMDQ0MTg@._V1_SX300.jpg"
+    },
+    {
+      title: "Duck Soup",
+      director: "Leo McCarey",
+      year: "1933",
+      bfiRank: "202",
+      imdbID: "tt0023969",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYmYxZGU2NWYtNzQxZS00NmEyLWIzN2YtMDk5MWM0ODc5ZTE4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+    },
+    {
+      title: "The Devil Probably",
+      director: "Robert Bresson",
+      year: "1977",
+      bfiRank: "202",
+      imdbID: "tt0075938",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BY2JjMmNkMGQtZmQxMy00ZjNlLWI4ZWUtNmM1ODY3MjA2ZWRjXkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "The Turin Horse",
+      director: "Bela Tarr",
+      year: "2011",
+      bfiRank: "202",
+      imdbID: "tt1316540",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTMyNzg1MzM2Ml5BMl5BanBnXkFtZTcwMzQ5NjcxNw@@._V1_SX300.jpg"
+    },
+    {
+      title: "Love Streams",
+      director: "John Cassavetes",
+      year: "1984",
+      bfiRank: "202",
+      imdbID: "tt0087644",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjI0NzQ4NDk3NF5BMl5BanBnXkFtZTcwMDYzNTg0Nw@@._V1_SX300.jpg"
+    },
+    {
+      title: "The Exterminating Angel",
+      director: "Luis Buñuel",
+      year: "1962",
+      bfiRank: "202",
+      imdbID: "tt0056732",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTg3M2ExY2EtZmI5Yy00YWM1LTg4NzItZWEzZTgxNzE2MjhhXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg"
+    },
+    {
+      title: "Floating Clouds",
+      director: "Naruse Mikio",
+      year: "1955",
+      bfiRank: "202",
+      imdbID: "tt0048757",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYzU2NzFkYTItNTA3YS00M2RmLTg4ZDAtNTFiYTUyMmRjNTIzXkEyXkFqcGdeQXVyMzY2MDk0MTk@._V1_SX300.jpg"
+    },
+    {
+      title: "The Piano",
+      director: "Jane Campion",
+      year: "1992",
+      bfiRank: "235",
+      imdbID: "tt0107822",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMWVkNzg3NDktOTFmMi00YjU2LTk0MzMtYTVjZjRiYTliZDkzXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg"
+    },
+    {
+      title: "Gone With the Wind",
+      director: "Victor Fleming",
+      year: "1939",
+      bfiRank: "235",
+      imdbID: "tt0031381",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYjUyZWZkM2UtMzYxYy00ZmQ3LWFmZTQtOGE2YjBkNjA3YWZlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Melancholia",
+      director: "Lars von Trier",
+      year: "2011",
+      bfiRank: "235",
+      imdbID: "tt1527186",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTk4NjM0MjI3MV5BMl5BanBnXkFtZTcwNjcxMDYzNg@@._V1_SX300.jpg"
+    },
+    {
+      title: "The House Is Black",
+      director: "Forough Farrokhzad",
+      year: "1962",
+      bfiRank: "235",
+      imdbID: "tt0336693",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzM0MDI5ODU1NV5BMl5BanBnXkFtZTcwOTQwNzcyMQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "The Cabinet of Dr. Caligari",
+      director: "Robert Wiene",
+      year: "1920",
+      bfiRank: "235",
+      imdbID: "tt0010323",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNWJiNGJiMTEtMGM3OC00ZWNlLTgwZTgtMzdhNTRiZjk5MTQ1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      title: "Red River",
+      director: "Howard Hawks/Arthur Rosson",
+      year: "1948",
+      bfiRank: "235",
+      imdbID: "tt0040724",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzNiOGJhMDUtZjNjMC00YmE5LTk3NjQtNGM4ZjAzOGJjZmRlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "A Clockwork Orange",
+      director: "Stanley Kubrick",
+      year: "1971",
+      bfiRank: "235",
+      imdbID: "tt0066921",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX300.jpg"
+    },
+    {
+      title: "Two-Lane Blacktop",
+      director: "Monte Hellman",
+      year: "1971",
+      bfiRank: "235",
+      imdbID: "tt0067893",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZDQ4NjllMWItYWY0OS00YjlkLTkzZDgtZThhZmVlZjEyOTA3XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "An Autumn Afternoon",
+      director: "Ozu Yasujiro",
+      year: "1962",
+      bfiRank: "235",
+      imdbID: "tt0056444",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BOWIxY2JkYTgtNjkxYS00NGFmLTgxMGEtOTYxMjBkNWQ2YzgwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "The Thin Blue Line",
+      director: "Errol Morris",
+      year: "1989",
+      bfiRank: "235",
+      imdbID: "tt0096257",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTE3MTViMDUtNjkxYy00NWY2LTg5MzEtYjFiNzRkMTgwYTJmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "The World of Apu",
+      director: "Satyajit Ray",
+      year: "1958",
+      bfiRank: "235",
+      imdbID: "tt0052572",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BOGJlNjA4MjctMmYyOS00YTVlLWJjMGUtOTU2NzJiYmQ3ZjJlXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg"
+    },
+    {
+      title: "The Testament of Dr. Mabuse",
+      director: "Fritz Lang",
+      year: "1933",
+      bfiRank: "235",
+      imdbID: "tt0023563",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTQzMzEyOTEyNF5BMl5BanBnXkFtZTgwNjA0OTA5MTE@._V1_SX300.jpg"
+    },
+    {
+      title: "My Darling Clementine",
+      director: "John Ford",
+      year: "1946",
+      bfiRank: "235",
+      imdbID: "tt0038762",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTQ5MTc1NzYtZmIyYi00YzdjLTk4OWEtMDQyNmU1MTQ2MzkzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "The Double Life of Veronique",
+      director: "Krysztof Kielowski",
+      year: "1991",
+      bfiRank: "235",
+      imdbID: "tt0101765",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYmE0ZGRiMDgtOTU0ZS00YWUwLTk5YWQtMzhiZGVhNzViMGZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      title: "Kes",
+      director: "Ken Loach",
+      year: "1966",
+      bfiRank: "235",
+      imdbID: "tt0064541",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTkyMDI4NDM5N15BMl5BanBnXkFtZTgwNzY5MzM2OTE@._V1_SX300.jpg"
+    },
+    {
+      title: "Three Colors: Red",
+      director: "Krysztof Kielowski",
+      year: "1994",
+      bfiRank: "235",
+      imdbID: "tt0111495",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTg1MmNiMjItMmY4Yy00ZDQ3LThjMzYtZGQ0ZTQzNTdkMGQ1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     }
 
     /*
@@ -1966,7 +2281,7 @@ class App extends React.Component {
   ],
 
   // Below the options should be: 'allFilms', 'filmsSeen', 'filmsSkipped', 'filmsToSee'
-  showSet: 'filmsSeen'
+  showSet: 'allFilms'
 
 }
 
