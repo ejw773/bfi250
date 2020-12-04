@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Badge = (props) => {
+    const { viewStatus } = props;
     return (
-    props.viewStatus===false
+    viewStatus===false
     ? <span className="badge badge-pill badge-danger">Skipped</span>
-    : props.viewStatus===true
+    : viewStatus===true
     ? <span className="badge badge-pill badge-success">Seen</span>
     : <span className="badge badge-pill badge-warning">To See</span>
     )

@@ -11,7 +11,6 @@ class CardButtons extends React.Component {
 
     handleSeenButton(event) {
         console.log("You clicked the 'Seen' button.")
-        console.log(event)
     }
     handleUnseenButton() {
         console.log("You clicked the 'Unseen' button.")
@@ -25,7 +24,6 @@ class CardButtons extends React.Component {
 
 
     render() {
-        
     return (
         this.props.viewStatus===true
         ?
