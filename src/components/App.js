@@ -1584,6 +1584,366 @@ class App extends React.Component {
       imdbID: "tt0099685",
       viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "The Umbrellas of Cherbourg",
+      director: "Jacques Demy",
+      year: "1964",
+      bfiRank: "171",
+      imdbID: "tt0058450",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZmMyNzg3MGYtZTllNS00MjVjLWI0NmQtMTZlNzBmZjBjZTZmXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
+    },
+    {
+      title: "A Trip to the Moon",
+      director: "George Méliès",
+      year: "1902",
+      bfiRank: "171",
+      imdbID: "tt0000417",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzcyYzhlMzctYjg1NS00ODJlLTkxOTUtYmQ4YjgxMWY5MGFlXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg"
+    },
+    {
+      title: "Sweet Smell of Success",
+      director: "Alexander MacKendrick",
+      year: "1957",
+      bfiRank: "171",
+      imdbID: "tt0051036",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjE5NTU3YWYtOWIxNi00YWZhLTg2NzktYzVjZWY5MDQ4NzVlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "Kind Hearts and Coronets",
+      director: "Robert Hamer",
+      year: "1949",
+      bfiRank: "171",
+      imdbID: "tt0041546",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjc1Yzc0ZmItMzU1OS00OWVlLThmYTctMWNlYmFlMjkxMzc0XkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg"
+    },
+    {
+      title: "Tabu",
+      director: "F.W. Murnau",
+      year: "1931",
+      bfiRank: "171",
+      imdbID: "tt0022458",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNDhmNzg0M2UtZGNkNC00YTQ3LWE0ZjAtMmFjNTI2MmFkZmNiXkEyXkFqcGdeQXVyMTczMjA2Nzk@._V1_SX300.jpg"
+    },
+    {
+      title: "Earth",
+      director: "Aleksander Dovzhenko",
+      year: "1930",
+      bfiRank: "171",
+      imdbID: "tt0021571",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDg4MzU3OTgtZmFkOC00MGRkLTlmZDctYWEwN2JmYWM1YTc4XkEyXkFqcGdeQXVyNjg3MTIwODI@._V1_SX300.jpg"
+    },
+    {
+      title: "Breaking the Waves",
+      director: "Lars von Trier",
+      year: "1996",
+      bfiRank: "183",
+      imdbID: "tt0115751",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNDYwZTU2MzktNWYxMS00NTYzLTgzOWEtMTRiYjc5NGY2Nzg1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "The Grapes of Wrath",
+      director: "John Ford",
+      year: "1940",
+      bfiRank: "183",
+      imdbID: "tt0032551",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzJiOGI2MjctYjUyMS00ZjkzLWE2ZmUtOTg4NTZkOTNhZDc1L2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "Paris, Texas",
+      director: "Wim Wenders",
+      year: "1984",
+      bfiRank: "183",
+      imdbID: "tt0087884",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BM2RjMmU3ZWItYzBlMy00ZmJkLWE5YzgtNTVkODdhOWM3NGZhXkEyXkFqcGdeQXVyNDA5Mjg5MjA@._V1_SX300.jpg"
+    },
+    {
+      title: "E.T.",
+      director: "Steven Spielberg",
+      year: "1982",
+      bfiRank: "183",
+      imdbID: "tt0083866",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "Rome, Open City",
+      director: "Roberto Rossellini",
+      year: "1945",
+      bfiRank: "183",
+      imdbID: "tt0038890",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNGI0MmY1NTMtMTFmZS00Y2NkLTgyZDktMTFkNDZlOTc4YWU3XkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
+    },
+    {
+      title: "Faces",
+      director: "John Cassavetes",
+      year: "1968",
+      bfiRank: "183",
+      imdbID: "tt0062952",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzlkNDNjMzQtZThlMi00Yzk5LThmZjktOTU5ZjM2Y2RmMjgxXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg"
+    },
+    {
+      title: "The Music Room",
+      director: "Satyajit Ray",
+      year: "1958",
+      bfiRank: "183",
+      imdbID: "tt0051792",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNmVhOWViMGQtMDBmNS00YmM3LTlmOGItMjRmN2VjNWExNWIzXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
+    },
+    {
+      title: "The Story of the Last Chrysanthemums",
+      director: "Mizoguchi Kenji",
+      year: "1939",
+      bfiRank: "183",
+      imdbID: "tt0032156",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZmEyNTMzMGEtMzJjOS00Yjg1LTgwMjgtM2Q2M2NiY2ZhYzBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "A Touch of Zen",
+      director: "King Hu",
+      year: "1969",
+      bfiRank: "183",
+      imdbID: "tt0064451",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYmViNmFhYjEtYWRmZi00OTE1LTljYzQtZjY2MjA4NzZhODBmXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Listen to Britain",
+      director: "Humphrey Jennings/Stewart McAllister",
+      year: "1942",
+      bfiRank: "183",
+      imdbID: "tt0034978",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjA3NTY1ODk2MF5BMl5BanBnXkFtZTgwMjUzODgwMzE@._V1_SX300.jpg"
+    },
+    {
+      title: "Day of Wrath",
+      director: "Carl Theodor Dreyer",
+      year: "1943",
+      bfiRank: "183",
+      imdbID: "tt0036506",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMjViNzJlZTQtMDc3NS00YTk1LWI1YjAtYTIxMTI4ODRmOGVhXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
+    },
+    {
+      title: "The Thin Red Line",
+      director: "Terence Malick",
+      year: "1998",
+      bfiRank: "183",
+      imdbID: "tt0120863",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYjEzMTM2NjAtNWFmZC00MTVlLTgyMmQtMGQyNTFjZDk5N2NmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"
+    },
+    {
+      title: "Eraserhead",
+      director: "David Lynch",
+      year: "1976",
+      bfiRank: "183",
+      imdbID: "tt0074486",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDExYzg5YjQtMzE0Yy00OWJjLThiZTctMWI5MzhjM2RmNjA4L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "The Texas Chainsaw Massacre",
+      director: "Tobe Hooper",
+      year: "1974",
+      bfiRank: "183",
+      imdbID: "tt0072271",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BZDI3OWE0ZWMtNGJjOS00N2E4LWFiOTAtZjQ4OTNiNzIwN2NkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "The Discreet Charm of the Bourgeoisie",
+      director: "Luis Buñuel",
+      year: "1972",
+      bfiRank: "183",
+      imdbID: "tt0068361",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYzQ5NjJiYWQtYjAzMC00NGU0LWFlMDYtNGFiYjFlMWI1NWM0XkEyXkFqcGdeQXVyODQ0OTczOQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "The Conversation",
+      director: "Francis Ford Coppola",
+      year: "1974",
+      bfiRank: "183",
+      imdbID: "tt0071360",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzZlMThlYzktMDlmZC00YTI1LThlNzktZWU0MTY4ODc2ZWY4XkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg"
+    },
+    {
+      title: "Out of the Past",
+      director: "Jacques Tourneur",
+      year: "1947",
+      bfiRank: "183",
+      imdbID: "tt0039689",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDE0MjYxYmMtM2VhMC00MjhiLTg5NjItMDkzZGM5MGVlYjMxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "I Was Born, But…",
+      director: "Ozu Yasujiro",
+      year: "1932",
+      bfiRank: "183",
+      imdbID: "tt0023634",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjg5YzhhMzItOTQ4Mi00YzM3LWE5NWUtZWMwYWI5OTVkNTViXkEyXkFqcGdeQXVyMjcxNjI4NTk@._V1_SX300.jpg"
+    },
+    {
+      title: "I Know Where I’m Going!",
+      director: "Michael Powell/Emeric Pressburger",
+      year: "1945",
+      bfiRank: "183",
+      imdbID: "tt0037800",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTM0OTRiYjktMTNjZi00NzVhLWIzYmQtZDQyYzk4NTE5NzRmXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg"
+    },
+    {
+      title: "The Death of Mr Lazarescu",
+      director: "Cristi Puiu",
+      year: "2005",
+      bfiRank: "202",
+      imdbID: "tt0456149",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTcxNDk3MTQ3OF5BMl5BanBnXkFtZTcwODgwODczMQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "Red Desert",
+      director: "Michelangelo Antonioni",
+      year: "1964",
+      bfiRank: "202",
+      imdbID: "tt0058003",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZmU4YjkxNmEtNWIwMy00Y2Q2LWFlODEtMzgxNTk0MTlkZWU1XkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_SX300.jpg"
+    },
+    {
+      title: "Chelsea Girls",
+      director: "Andy Warhol/Paul Morrissey",
+      year: "1966",
+      bfiRank: "202",
+      imdbID: "tt0061465",
+      viewStatus: false,
+      poster: ""
+    },
+    {
+      title: "Badlands",
+      director: "Terence Malick",
+      year: "1973",
+      bfiRank: "202",
+      imdbID: "tt0069762",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDcxNjhiOTEtMzQ0YS00OTBhLTkxM2QtN2UyZDMzNzIzNWFlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "Kings of the Road",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
+    },
+    {
+      title: "",
+      director: "",
+      year: "",
+      bfiRank: "",
+      imdbID: "",
+      viewStatus: null,
+      poster: ""
     }
 
     /*
@@ -1606,7 +1966,7 @@ class App extends React.Component {
   ],
 
   // Below the options should be: 'allFilms', 'filmsSeen', 'filmsSkipped', 'filmsToSee'
-  showSet: 'allFilms'
+  showSet: 'filmsSeen'
 
 }
 
