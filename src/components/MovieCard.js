@@ -12,7 +12,7 @@ class MovieCard extends React.Component {
         return (
             <div className="card card-group" style={{width: "18rem"}}>
                 <div className="poster">
-                    <a href={imdbLink} target="_blank" rel="noreferrer"><img src={this.props.poster} class="card-img-top" alt={this.props.title} /></a>
+                    <a href={imdbLink} target="_blank" rel="noreferrer"><img src={this.props.poster} className="card-img-top" alt={this.props.title} /></a>
                 </div>
                 <div className="card-body">
                     <div className="status-container">

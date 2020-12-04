@@ -1,9 +1,8 @@
 import React from 'react'
-import './Data.js'
 import './App.css'
-import MovieCard from './MovieCard.js'
-import Header from './Header'
+import ProgressBar from './ProgressBar'
 import Footer from './Footer'
+import RenderCards from './RenderCards'
 
 
 class App extends React.Component {
@@ -935,7 +934,7 @@ class App extends React.Component {
       year: "1970",
       bfiRank: "102",
       imdbID: "tt0065571",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BODFlYzU4YTItN2EwYi00ODI3LTkwNTQtMDdkNjM3YjMyMTgyXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -962,7 +961,7 @@ class App extends React.Component {
       year: "1967",
       bfiRank: "102",
       imdbID: "tt0060304",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BYmFkYjJmNTYtYWRiMS00YWRkLTgyNzgtMTlmMTljZDE4YzNiXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg"
     },
     {
@@ -980,7 +979,7 @@ class App extends React.Component {
       year: "1945",
       bfiRank: "102",
       imdbID: "tt0037824",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZjI1MWFmMTktOTE3Mi00NjE0LWFlMDctZGNiZThkODI3YTJjXkEyXkFqcGdeQXVyMTE5MjM5Njk3._V1_SX300.jpg"
     },
     {
@@ -998,7 +997,7 @@ class App extends React.Component {
       year: "1941",
       bfiRank: "110",
       imdbID: "tt0033804",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BOTQzNWM4Y2QtMWVhYS00MTNkLTgxMGMtNjM5Y2FmNjQ2MWFiXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg"
     },
     {
@@ -1016,7 +1015,7 @@ class App extends React.Component {
       year: "1938",
       bfiRank: "110",
       imdbID: "tt0029947",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMmVkOTRiYmItZjE4NS00MWNjLWE0ZmMtYzg5YzFjMjMyY2RkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -1025,7 +1024,7 @@ class App extends React.Component {
       year: "1970",
       bfiRank: "110",
       imdbID: "tt0066214",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BODBlMGU1ZjItYTY1NS00MjY4LWJlYWUtNTkxOGE3ZWE5NDYxXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
     },
     {
@@ -1079,7 +1078,7 @@ class App extends React.Component {
       year: "1963",
       bfiRank: "117",
       imdbID: "tt0057012",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZWI3ZTMxNjctMjdlNS00NmUwLWFiM2YtZDUyY2I3N2MxYTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -1088,7 +1087,7 @@ class App extends React.Component {
       year: "1922",
       bfiRank: "117",
       imdbID: "tt0013442",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMTAxYjEyMTctZTg3Ni00MGZmLWIxMmMtOGM2NTFiY2U3MmExXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -1097,7 +1096,7 @@ class App extends React.Component {
       year: "1948",
       bfiRank: "117",
       imdbID: "tt0040725",
-      viewStatus: null,
+      viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BMzY2MzIwMDQzN15BMl5BanBnXkFtZTcwNDUxMTM4NA@@._V1_SX300.jpg"
     },
     {
@@ -1124,7 +1123,7 @@ class App extends React.Component {
       year: "1972",
       bfiRank: "117",
       imdbID: "tt0071129",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZDI2OTg2NDQtMzc0MC00MjRiLWI1NzAtMjY2ZDMwMmUyNzBiXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
     },
     {
@@ -1135,6 +1134,231 @@ class App extends React.Component {
       imdbID: "tt0056217",
       viewStatus: null,
       poster: "https://m.media-amazon.com/images/M/MV5BMGEyNzhkYzktMGMyZS00YzRiLWJlYjktZjJkOTU5ZDY0ZGI4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
+    },
+    {
+      title: "Spring in a Small Town",
+      director: "Fei Mu",
+      year: "1948",
+      bfiRank: "127",
+      imdbID: "tt0189219",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMWY3YjZhNjEtZDM0OS00YTc5LTllODctMmY4NWQ3OTAzOGIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Do the Right Thing",
+      director: "Spike Lee",
+      year: "1989",
+      bfiRank: "127",
+      imdbID: "tt0097216",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BODA2MjU1NTI1MV5BMl5BanBnXkFtZTgwOTU4ODIwMjE@._V1_SX300.jpg"
+    },
+    {
+      title: "Out 1",
+      director: "Jacques Rivette",
+      year: "1990",
+      bfiRank: "127",
+      imdbID: "tt0246135",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDg4ZmUxY2EtZjA0My00ZjgyLWE3NmItODUwYTY2MGNkM2JhXkEyXkFqcGdeQXVyMjQzMzQzODY@._V1_SX300.jpg"
+    },
+    {
+      title: "Tropical Malady",
+      director: "Apichatpong Weerasethakul",
+      year: "2004",
+      bfiRank: "127",
+      imdbID: "tt0381668",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTdhZGE5YTktOWE0Ni00OWMyLWFjMjktOTEwOGM0YmQ2MDc4XkEyXkFqcGdeQXVyNDI0NzUxODU@._V1_SX300.jpg"
+    },
+    {
+      title: "The River",
+      director: "Jean Renoir",
+      year: "1951",
+      bfiRank: "127",
+      imdbID: "tt0043972",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzZiYzYwMTktMDkwMi00M2YyLTk1ODQtZjI3YzE2NjdkYTZlXkEyXkFqcGdeQXVyNTEwNDcxNDc@._V1_SX300.jpg"
+    },
+    {
+      title: "Jules et Jim",
+      director: "Francois Truffaut",
+      year: "1962",
+      bfiRank: "127",
+      imdbID: "tt0055032",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTM1MTRiNDctMTFiMC00NGM1LTkyMWQtNTY1M2JjZDczOWQ3XkEyXkFqcGdeQXVyMDI3OTIzOA@@._V1_SX300.jpg"
+    },
+    {
+      title: "Pulp Fiction",
+      director: "Quentin Tarantino",
+      year: "1994",
+      bfiRank: "127",
+      imdbID: "tt0110912",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Meet Me in St. Louis",
+      director: "Vincente Minnelli",
+      year: "1944",
+      bfiRank: "127",
+      imdbID: "tt0037059",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZWVmZmRlNWQtYzYyMy00ZDljLWE5MjgtNDE5MGVmYTQ5NDk0XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "L’Argent",
+      director: "Robert Bresson",
+      year: "1983",
+      bfiRank: "127",
+      imdbID: "tt0085180",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BY2RlYTc2ZGUtMGFlNS00ZGUxLWEzODYtYjJhY2RmOWRkYzY4L2ltYWdlXkEyXkFqcGdeQXVyNDQzMDg4Nzk@._V1_SX300.jpg"
+    },
+    {
+      title: "Ikiru",
+      director: "Akira Kurosawa",
+      year: "1952",
+      bfiRank: "127",
+      imdbID: "tt0044741",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZmM0NGY3Y2MtMTA1YS00YmQzLTk2YTctYWFhMDkzMDRjZWQzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+    },
+    {
+      title: "Three Colors: Blue",
+      director: "Krysztof Kielowski",
+      year: "1993",
+      bfiRank: "127",
+      imdbID: "tt0108394",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BZGJhNDdmMWMtNzZiYy00MmFiLThjNmUtYTE1ZjRkNjdjYmQ5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      title: "Don’t Look Now",
+      director: "Nicolas Roeg",
+      year: "1973",
+      bfiRank: "127",
+      imdbID: "tt0069995",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNDZmYzJmMDQtM2NkNi00NjU0LTlmZGItNDFjZjVkZjhmNDcyXkEyXkFqcGdeQXVyMTA1NTM1NDI2._V1_SX300.jpg"
+    },
+    {
+      title: "Celine and Julie Go Boating",
+      director: "Jacques Rivette",
+      year: "1974",
+      bfiRank: "127",
+      imdbID: "tt0071381",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYzg0NzljOWMtMGY5Mi00NmU2LWIzNzktZDE3YzNlZWMwZWFkXkEyXkFqcGdeQXVyNTc1NDM0NDU@._V1_SX300.jpg"
+    },
+    {
+      title: "Annie Hall",
+      director: "Woody Allen",
+      year: "1977",
+      bfiRank: "127",
+      imdbID: "tt0075686",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZDg1OGQ4YzgtM2Y2NS00NjA3LWFjYTctMDRlMDI3NWE1OTUyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
+    },
+    {
+      title: "The Apartment",
+      director: "Billy Wilder",
+      year: "1960",
+      bfiRank: "127",
+      imdbID: "tt0053604",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzkwODFjNzItMmMwNi00MTU5LWE2MzktM2M4ZDczZGM1MmViXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg"
+    },
+    {
+      title: "The Last Laugh",
+      director: "F.W. Murnau",
+      year: "1924",
+      bfiRank: "127",
+      imdbID: "tt0015064",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BOTBjM2M1Y2ItYTVmMi00NmY0LWIyYjEtNzVhM2UzMzNhMzVkXkEyXkFqcGdeQXVyMzg1ODEwNQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "Hiroshima Mon Amour",
+      director: "Alain Resnais",
+      year: "1959",
+      bfiRank: "127",
+      imdbID: "tt0052893",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMzY2NTA1MzUwN15BMl5BanBnXkFtZTgwOTc4NTU4MjE@._V1_SX300.jpg"
+    },
+    {
+      title: "Blow Up",
+      director: "Michelangelo Antonioni",
+      year: "1966",
+      bfiRank: "144",
+      imdbID: "tt0060176",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNWNkOGYzOGYtZGE4OC00NDVjLWExZTYtZWE2YTA3MjI4YThlXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg"
+    },
+    {
+      title: "The Great Dictator",
+      director: "Charlie Chaplin",
+      year: "1940",
+      bfiRank: "144",
+      imdbID: "tt0032553",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMmExYWJjNTktNGUyZS00ODhmLTkxYzAtNWIzOGEyMGNiMmUwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+      title: "Memories of Underdevelopment",
+      director: "Tomas Gutierrez Alea",
+      year: "1968",
+      bfiRank: "144",
+      imdbID: "tt0063291",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjZlYWU1YjQtNzE1OS00NDQ2LWJkYmEtMThkMGU4ZWFlYWFiXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
+    },
+    {
+      title: "Diary of a Country Priest",
+      director: "Robert Bresson",
+      year: "1951",
+      bfiRank: "144",
+      imdbID: "tt0042619",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZWI1MDM5NjYtNDg3NC00MDIxLTlkYzItODYwYmU4MTQxM2FhXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
+    },
+    {
+      title: "Chungking Express",
+      director: "Wong Kar Wai",
+      year: "1994",
+      bfiRank: "144",
+      imdbID: "tt0109424",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMGQ5MzljNzYtMDM1My00NmI0LThlYzQtMTg0ZmQ0MTk1YjkxXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "To Be or Not To Be",
+      director: "Ernst Lubitsch",
+      year: "1942",
+      bfiRank: "144",
+      imdbID: "tt0035446",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTIwNDcyMjktMTczMy00NDM5LTlhNDEtMmE3NGVjOTM2YjQ3XkEyXkFqcGdeQXVyNjc0MzMzNjA@._V1_SX300.jpg"
+    },
+    {
+      title: "A Woman Under the Influence",
+      director: "John Cassavetes",
+      year: "1974",
+      bfiRank: "144",
+      imdbID: "tt0072417",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZDQwZmIzZjAtMmI1YS00NzEwLWFmYmEtMGFkYTk5NTllNDA0XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
+    },
+    {
+      title: "Napoleon",
+      director: "Abel Gance",
+      year: "1927",
+      bfiRank: "144",
+      imdbID: "tt0018192",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjI4MDEzNTktMGU4ZC00YjFiLTg4OWEtNzNkMWVlY2YwOTdjXkEyXkFqcGdeQXVyNjEwMTA0NTc@._V1_SX300.jpg"
     }
 
     /*
@@ -1145,45 +1369,54 @@ class App extends React.Component {
       year: "",
       bfiRank: "",
       imdbID: "",
-      hasSeen: false,
-      willSkip: false,
       viewStatus: null,
       poster: ""
     }
 
 */
 
+  ],
 
-  ]}
+  // Below the options should be: 'allFilms', 'filmsSeen', 'filmsSkipped', 'filmsToSee'
+  showSet: 'allFilms'
+
+}
 
 
   }
   render() {
+    const allFilms = this.state.BFI;
+    const filmsSeen = this.state.BFI.filter(film => film.viewStatus===true);
+    const filmsSkipped = this.state.BFI.filter(film => film.viewStatus===false);
+    const filmsToSee = this.state.BFI.filter(film => film.viewStatus===null);
     return (
       <div>
-        <Header />
-        <div className="films-container">
-          {this.state.BFI.map((film) => (
-            <MovieCard
-              key={film.imdbID}
-              title={film.title}
-              director={film.director}
-              year={film.year}
-              bfiRank={film.bfiRank}
-              poster={film.poster}
-              imdbID={film.imdbID}
-              viewStatus={film.viewStatus}
-              // hasSeen={film.hasSeen}
-              // willSkip={film.willSkip}
-            />
-          ))}
+        <div className="fixed-top">
+          <ProgressBar 
+            seenTotal={filmsSeen.length}
+            skippedTotal={filmsSkipped.length}
+            totalFilms={allFilms.length}
+          />
         </div>
+        {
+          this.state.showSet==='filmsSeen'
+          ?
+          <RenderCards BFI={filmsSeen} />
+          :
+          this.state.showSet==='filmsSkipped'
+          ?
+          <RenderCards BFI={filmsSkipped} />
+          :
+          this.state.showSet==='filmsToSee'
+          ?
+          <RenderCards BFI={filmsToSee} />
+          :
+          <RenderCards BFI={allFilms} />
+        }
         <Footer />
       </div>
     )
   }
 }
-
-
 
 export default App;
