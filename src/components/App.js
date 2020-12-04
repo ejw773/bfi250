@@ -1312,7 +1312,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "144",
       imdbID: "tt0063291",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZjZlYWU1YjQtNzE1OS00NDQ2LWJkYmEtMThkMGU4ZWFlYWFiXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
     },
     {
@@ -1348,7 +1348,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "144",
       imdbID: "tt0072417",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZDQwZmIzZjAtMmI1YS00NzEwLWFmYmEtMGFkYTk5NTllNDA0XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
     },
     {
@@ -1359,6 +1359,231 @@ class App extends React.Component {
       imdbID: "tt0018192",
       viewStatus: true,
       poster: "https://m.media-amazon.com/images/M/MV5BZjI4MDEzNTktMGU4ZC00YjFiLTg4OWEtNzNkMWVlY2YwOTdjXkEyXkFqcGdeQXVyNjEwMTA0NTc@._V1_SX300.jpg"
+    },
+    {
+      title: "Vivre Sa Vie",
+      director: "Jean-Luc Godard",
+      year: "1962",
+      bfiRank: "144",
+      imdbID: "tt0056663",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BNjMyZmI5NmItY2JlMi00NzU3LWI5ZGItZjhkOTE0YjEyN2Q4XkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
+    },
+    {
+      title: "The Wizard of Oz",
+      director: "Victor Fleming",
+      year: "1939",
+      bfiRank: "144",
+      imdbID: "tt0032138",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BNjUyMTc4MDExMV5BMl5BanBnXkFtZTgwNDg0NDIwMjE@._V1_SX300.jpg"
+    },
+    {
+      title: "Marketa Lazarova",
+      director: "Frantisek Vlacil",
+      year: "1967",
+      bfiRank: "154",
+      imdbID: "tt0063278",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BM2Q0N2VhNGEtYjYyOC00ZmQ5LTk3YTAtOTczNmUxZDUwMGY4XkEyXkFqcGdeQXVyODUwNTM2ODI@._V1_SX300.jpg"
+    },
+    {
+      title: "Hidden",
+      director: "Michael Haneke",
+      year: "2004",
+      bfiRank: "154",
+      imdbID: "tt0387898",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTAxZTU0Y2MtOWY2Mi00YWVmLWJkMTctMjg2YjVjOGI1OGZmXkEyXkFqcGdeQXVyMzIzNDU1NTY@._V1_SX300.jpg"
+    },
+    {
+      title: "The Shining",
+      director: "Stanley Kubrick",
+      year: "1980",
+      bfiRank: "154",
+      imdbID: "tt0081505",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      title: "Solaris",
+      director: "Andrei Tarkovsky",
+      year: "1972",
+      bfiRank: "154",
+      imdbID: "tt0069293",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZmY4Yjc0OWQtZDRhMy00ODc2LWI2NGYtMWFlODYyN2VlNDQyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+      title: "Chimes at Midnight",
+      director: "Orson Welles",
+      year: "1966",
+      bfiRank: "154",
+      imdbID: "tt0059012",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYzEwYTM5MTYtM2FjOS00ZjI5LThmZjctNjUyNGZkZmRkZWI5XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "The Gold Rush",
+      director: "Charlie Chaplin",
+      year: "1925",
+      bfiRank: "154",
+      imdbID: "tt0015864",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZjEyOTE4MzMtNmMzMy00Mzc3LWJlOTQtOGJiNDE0ZmJiOTU4L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+      title: "Letter from an Unknown Woman",
+      director: "Max Ophüls",
+      year: "1948",
+      bfiRank: "154",
+      imdbID: "tt0040536",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BY2VhMDdlM2UtYjViZi00OWFjLWI5YjUtYjY4NjRjOTJhOGNlXkEyXkFqcGdeQXVyNjc0MzMzNjA@._V1_SX300.jpg"
+    },
+    {
+      title: "Brief Encounter",
+      director: "David Lean",
+      year: "1945",
+      bfiRank: "154",
+      imdbID: "tt0037558",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BYWQ0MGNjOTYtMWJlNi00YWMxLWFmMzktYjAyNTVkY2U1NWNhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "In a Lonely Place",
+      director: "Nicholas Ray",
+      year: "1950",
+      bfiRank: "154",
+      imdbID: "tt0042593",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNjRmZjcwZTQtYWY0ZS00ODAwLTg4YTktZDhlZDMwMTM1MGFkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "Black Narcissus",
+      director: "Michael Powell/Emeric Pressburger",
+      year: "1947",
+      bfiRank: "154",
+      imdbID: "tt0039192",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTg3MDQxMzg2OF5BMl5BanBnXkFtZTgwNDY5NTY3MzE@._V1_SX300.jpg"
+    },
+    {
+      title: "My Neighbor Totoro",
+      director: "Miyazaki Hayao",
+      year: "1988",
+      bfiRank: "154",
+      imdbID: "tt0096283",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BYzJjMTYyMjQtZDI0My00ZjE2LTkyNGYtOTllNGQxNDMyZjE0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      title: "Only Angels Have Wings",
+      director: "Howard Hawks",
+      year: "1939",
+      bfiRank: "154",
+      imdbID: "tt0031762",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTZjMzI3YjMtMTBlMC00NmMyLWJmY2QtZDYzMmVhYmRlY2Q1XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "Vampyr",
+      director: "Carl Theodor Dreyer",
+      year: "1932",
+      bfiRank: "154",
+      imdbID: "tt0023649",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BMmNmOTg4MDYtZDZjYy00NjNkLTkxMjQtNWM5YjVmODYyZGE4XkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_SX300.jpg"
+    },
+    {
+      title: "Come and See",
+      director: "Elem Klimov",
+      year: "1985",
+      bfiRank: "154",
+      imdbID: "tt0091251",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BODM4Njg0NTAtYjI5Ny00ZjAxLTkwNmItZTMxMWU5M2U3M2RjXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Distant Voices, Still Lives",
+      director: "Terence Davies",
+      year: "1988",
+      bfiRank: "154",
+      imdbID: "tt0095037",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BNDNiZGE1YzQtZDczNy00Yjk1LTk5ZWUtZWU4MmNiY2RiZGQxXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg"
+    },
+    {
+      title: "Once Upon a Time in America",
+      director: "Sergio Leone",
+      year: "1983",
+      bfiRank: "154",
+      imdbID: "tt0087843",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BMGFkNWI4MTMtNGQ0OC00MWVmLTk3MTktOGYxN2Y2YWVkZWE2XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+      title: "Cries and Whispers",
+      director: "Ingmar Bergman",
+      year: "1972",
+      bfiRank: "154",
+      imdbID: "tt0069467",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMTg3NzYzOTEtNmE2Ni00M2EyLWJhMjctNjMyMTk4ZTViOGUzXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
+    },
+    {
+      title: "King Kong",
+      director: "Merian C. Cooper/Ernest B. Schoedsack",
+      year: "1933",
+      bfiRank: "171",
+      imdbID: "tt0024216",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZTY3YjYxZGQtMTM2YS00ZmYwLWFlM2QtOWFlMTU1NTAyZDQ2XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg"
+    },
+    {
+      title: "The Werckmeister Harmonies",
+      director: "Bela Tarr",
+      year: "2000",
+      bfiRank: "171",
+      imdbID: "tt0249241",
+      viewStatus: null,
+      poster: "https://m.media-amazon.com/images/M/MV5BMDE3ODViYjYtMTIyMy00ZTBjLWIxZGUtZjljODlmODRkMTkxXkEyXkFqcGdeQXVyMTA1NTM1NDI2._V1_SX300.jpg"
+    },
+    {
+      title: "Star Wars",
+      director: "George Lucas",
+      year: "1977",
+      bfiRank: "171",
+      imdbID: "tt0076759",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      title: "Notorious",
+      director: "Alfred Hitchcock",
+      year: "1946",
+      bfiRank: "171",
+      imdbID: "tt0038787",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BYTc1NGViOTMtNjZhNS00OGY2LWI4MmItOWQwNTY4MDMzNWI3L2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+      title: "His Girl Friday",
+      director: "Howard Hawks",
+      year: "1940",
+      bfiRank: "171",
+      imdbID: "tt0032599",
+      viewStatus: true,
+      poster: "https://m.media-amazon.com/images/M/MV5BZDVmZTZkYjMtNmViZC00ODEzLTgwNDAtNmQ3OGQwOWY5YjFmXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg"
+    },
+    {
+      title: "Goodfellas",
+      director: "Martin Scorsese",
+      year: "1990",
+      bfiRank: "171",
+      imdbID: "tt0099685",
+      viewStatus: false,
+      poster: "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     }
 
     /*
