@@ -1312,7 +1312,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "144",
       imdbID: "tt0063291",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZjZlYWU1YjQtNzE1OS00NDQ2LWJkYmEtMThkMGU4ZWFlYWFiXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg"
     },
     {
@@ -1348,7 +1348,7 @@ class App extends React.Component {
       year: "1974",
       bfiRank: "144",
       imdbID: "tt0072417",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZDQwZmIzZjAtMmI1YS00NzEwLWFmYmEtMGFkYTk5NTllNDA0XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
     },
     {
