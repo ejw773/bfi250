@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      BFI: [
+      BFI2012: [
     {
       title: "Vertigo",
       director: "Alfred Hitchcock",
@@ -1374,6 +1374,9 @@ class App extends React.Component {
     }
 
 */
+  // Below gives the option of adding a new dataset when the new list is released in 2022
+  ],
+  BFI2022: [
 
   ],
 
@@ -1385,10 +1388,10 @@ class App extends React.Component {
 
   }
   render() {
-    const allFilms = this.state.BFI;
-    const filmsSeen = this.state.BFI.filter(film => film.viewStatus===true);
-    const filmsSkipped = this.state.BFI.filter(film => film.viewStatus===false);
-    const filmsToSee = this.state.BFI.filter(film => film.viewStatus===null);
+    const allFilms = this.state.BFI2012;
+    const filmsSeen = this.state.BFI2012.filter(film => film.viewStatus===true);
+    const filmsSkipped = this.state.BFI2012.filter(film => film.viewStatus===false);
+    const filmsToSee = this.state.BFI2012.filter(film => film.viewStatus===null);
     return (
       <div>
         <div className="fixed-top">
