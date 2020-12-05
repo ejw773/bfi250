@@ -31,7 +31,7 @@ class CardButtons extends React.Component {
             <button onClick={this.handleUnseenButton} className="btn btn-warning">Unseen</button>
         </div>
         :
-        this.props.viewStatus==false
+        this.props.viewStatus===false
         ?
         <div className="status-buttons">
             <button onClick={this.handleUnskipButton} className="btn btn-secondary">Unskip</button> 
