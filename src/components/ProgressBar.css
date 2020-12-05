@@ -4,15 +4,15 @@
 
 .progress {
     font-size: 2em;
-    height: 2em;
-    border: 4px solid white;
 }
 
 .progress-all {
+    height: 1.5em;
     cursor: pointer;
 }
 
 .progress-sections {
+    height: 2em;
     cursor: pointer;
-    border: 4px solid gray;
+    border: 4px solid black;
 }

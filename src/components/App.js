@@ -53,7 +53,7 @@ class App extends React.Component {
       bfiRank: "5",
       imdbID: "tt0018455",
       viewStatus: true,
-      poster: "https://m.media-amazon.com/images/M/MV5BNDVkYmYwM2ItNzRiMy00NWQ4LTlhMjMtNDI1ZDYyOGVmMzJjXkEyXkFqcGdeQXVyNTgzMzU5MDI@._V1_SX300.jpg"
+      poster: "https://images-na.ssl-images-amazon.com/images/I/81vlvZJCo9L._SX600_.jpg"
     },
     {
       title: "2001: A Space Odyssey",
@@ -89,7 +89,7 @@ class App extends React.Component {
       bfiRank: "9",
       imdbID: "tt0019254",
       viewStatus: true,
-      poster: "https://m.media-amazon.com/images/M/MV5BNjBjNDJiYTUtOWY0OS00OGVmLTg2YzctMTE0NzVhODM1ZWJmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+      poster: "https://images-na.ssl-images-amazon.com/images/I/51hNEZ8jDtL.jpg"
     },
     {
       title: "8 1/2",
@@ -152,7 +152,7 @@ class App extends React.Component {
       bfiRank: "16",
       imdbID: "tt0060138",
       viewStatus: null,
-      poster: "https://m.media-amazon.com/images/M/MV5BMmM4ZmE0NzktNzQ5MS00ZWU2LTlmMjMtNmJmNzM4MWVmYTA0XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
+      poster: "https://images-na.ssl-images-amazon.com/images/I/81fX70pH1OL._SX522_.jpg"
     },
     {
       title: "Seven Samurai",
@@ -215,7 +215,7 @@ class App extends React.Component {
       bfiRank: "21",
       imdbID: "tt0057345",
       viewStatus: true,
-      poster: "https://m.media-amazon.com/images/M/MV5BMGNhNjYxYmUtMGI5Zi00N2MxLTkzYTctYjEyNWQ1YTk4MTc0XkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg"
+      poster: "https://s3.amazonaws.com/criterion-production/films/cae208f094ecebe309725be4da77fc6a/2BtyOBtJSRO3DebbEvm5h4sRnya54Z_original.jpg"
     },
     {
       title: "Rashomon",
@@ -1042,7 +1042,7 @@ class App extends React.Component {
       year: "1961",
       bfiRank: "110",
       imdbID: "tt0055601",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMDJkYzdmZmUtM2RmNC00ODliLThlNmMtNzFjNWIwOWMyNzkxXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg"
     },
     {
@@ -1411,7 +1411,7 @@ class App extends React.Component {
       year: "1980",
       bfiRank: "154",
       imdbID: "tt0081505",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
@@ -1510,7 +1510,7 @@ class App extends React.Component {
       year: "1985",
       bfiRank: "154",
       imdbID: "tt0091251",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BODM4Njg0NTAtYjI5Ny00ZjAxLTkwNmItZTMxMWU5M2U3M2RjXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -1628,7 +1628,7 @@ class App extends React.Component {
       bfiRank: "171",
       imdbID: "tt0041546",
       viewStatus: true,
-      poster: "https://m.media-amazon.com/images/M/MV5BZjc1Yzc0ZmItMzU1OS00OWVlLThmYTctMWNlYmFlMjkxMzc0XkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg"
+      poster: "https://images-na.ssl-images-amazon.com/images/I/81TrfW%2BVCYL._SY679_.jpg"
     },
     {
       title: "Tabu",
@@ -1672,7 +1672,7 @@ class App extends React.Component {
       year: "1984",
       bfiRank: "183",
       imdbID: "tt0087884",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BM2RjMmU3ZWItYzBlMy00ZmJkLWE5YzgtNTVkODdhOWM3NGZhXkEyXkFqcGdeQXVyNDA5Mjg5MjA@._V1_SX300.jpg"
     },
     {
@@ -1699,7 +1699,7 @@ class App extends React.Component {
       year: "1968",
       bfiRank: "183",
       imdbID: "tt0062952",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMzlkNDNjMzQtZThlMi00Yzk5LThmZjktOTU5ZjM2Y2RmMjgxXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg"
     },
     {
@@ -1844,7 +1844,7 @@ class App extends React.Component {
       bfiRank: "202",
       imdbID: "tt0061465",
       viewStatus: false,
-      poster: ""
+      poster: "https://m.media-amazon.com/images/I/714yzWXtgZL._AC_UL640_FMwebp_QL65_.jpg"
     },
     {
       title: "Badlands",
@@ -1861,7 +1861,7 @@ class App extends React.Component {
       year: "1976",
       bfiRank: "202",
       imdbID: "tt0073152",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BM2Q4NmRlOTEtZTYyMy00MzliLWIwYzktMzA4YTU0NmViYWQzXkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg"
     },
     {
@@ -1897,7 +1897,7 @@ class App extends React.Component {
       year: "1983",
       bfiRank: "202",
       imdbID: "tt0086541",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BNzdlNDk0YTMtNWJjOS00NzhlLThiOTAtZDUyOWNkNDQ2NmU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
@@ -2122,7 +2122,7 @@ class App extends React.Component {
       year: "1992",
       bfiRank: "235",
       imdbID: "tt0107822",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMWVkNzg3NDktOTFmMi00YjU2LTk0MzMtYTVjZjRiYTliZDkzXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg"
     },
     {
@@ -2140,7 +2140,7 @@ class App extends React.Component {
       year: "2011",
       bfiRank: "235",
       imdbID: "tt1527186",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BMTk4NjM0MjI3MV5BMl5BanBnXkFtZTcwNjcxMDYzNg@@._V1_SX300.jpg"
     },
     {
@@ -2213,7 +2213,7 @@ class App extends React.Component {
       bfiRank: "235",
       imdbID: "tt0052572",
       viewStatus: null,
-      poster: "https://m.media-amazon.com/images/M/MV5BOGJlNjA4MjctMmYyOS00YTVlLWJjMGUtOTU2NzJiYmQ3ZjJlXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg"
+      poster: "https://m.media-amazon.com/images/I/91Qa5jkrfnL._AC_UY436_FMwebp_QL65_.jpg"
     },
     {
       title: "The Testament of Dr. Mabuse",
@@ -2239,7 +2239,7 @@ class App extends React.Component {
       year: "1991",
       bfiRank: "235",
       imdbID: "tt0101765",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BYmE0ZGRiMDgtOTU0ZS00YWUwLTk5YWQtMzhiZGVhNzViMGZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
     },
     {
@@ -2257,7 +2257,7 @@ class App extends React.Component {
       year: "1994",
       bfiRank: "235",
       imdbID: "tt0111495",
-      viewStatus: null,
+      viewStatus: false,
       poster: "https://m.media-amazon.com/images/M/MV5BYTg1MmNiMjItMmY4Yy00ZDQ3LThjMzYtZGQ0ZTQzNTdkMGQ1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     }
 
@@ -2302,18 +2302,12 @@ class App extends React.Component {
           />
         </div>
         {
-          this.state.showSet==='filmsSeen'
-          ?
-          <RenderCards BFI={filmsSeen} />
-          :
-          this.state.showSet==='filmsSkipped'
-          ?
-          <RenderCards BFI={filmsSkipped} />
-          :
-          this.state.showSet==='filmsToSee'
-          ?
-          <RenderCards BFI={filmsToSee} />
-          :
+          this.state.showSet==='filmsSeen' ?
+          <RenderCards BFI={filmsSeen} /> :
+          this.state.showSet==='filmsSkipped' ?
+          <RenderCards BFI={filmsSkipped} /> :
+          this.state.showSet==='filmsToSee' ?
+          <RenderCards BFI={filmsToSee} /> :
           <RenderCards BFI={allFilms} />
         }
         <Footer />
