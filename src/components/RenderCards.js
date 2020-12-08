@@ -18,6 +18,7 @@ class RenderCards extends React.Component {
               poster={film.poster}
               imdbID={film.imdbID}
               viewStatus={film.viewStatus}
+              setToSeen={this.props.setToSeen}
             />
           ))}
         </div>

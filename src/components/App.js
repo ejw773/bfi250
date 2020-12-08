@@ -8,9 +8,39 @@ import bfiData from './Data.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.changeView = this.changeView.bind(this);
+    this.setToSeen = this.setToSeen.bind(this);
     this.state = bfiData;
-
   }
+
+  changeView(event) {
+    let buttonID = event.target.id;
+    let theAction = (
+      buttonID==='view-seen' ? 'filmsSeen' :
+      buttonID==='view-tosee' ? 'filmsToSee' :
+      buttonID==='view-skipped' ? 'filmsSkipped' :
+      'allFilms'
+    );
+    this.setState(state => {
+      return {
+        showSet: theAction
+      }
+    })
+  }
+
+  setToSeen(event) {
+    let selectedImdbID = event.target.id;
+    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===selectedImdbID);
+    let changeMe = changeMeArray[0];
+    console.log(changeMe.title)
+    console.log(changeMe.viewStatus);
+    this.setState((state) => {
+      return {
+        viewStatus: true
+      }
+    })
+  }
+
   render() {
     const allFilms = this.state.BFI2012;
     const filmsSeen = allFilms.filter(film => film.viewStatus===true);
@@ -23,16 +53,17 @@ class App extends React.Component {
             seenTotal={filmsSeen.length}
             skippedTotal={filmsSkipped.length}
             totalFilms={allFilms.length}
+            changeView={this.changeView}
           />
         </div>
         {
           this.state.showSet==='filmsSeen' ?
           <RenderCards BFI={filmsSeen} /> :
           this.state.showSet==='filmsSkipped' ?
-          <RenderCards BFI={filmsSkipped} /> :
+          <RenderCards setToSeen={this.setToSeen} BFI={filmsSkipped} /> :
           this.state.showSet==='filmsToSee' ?
-          <RenderCards BFI={filmsToSee} /> :
-          <RenderCards BFI={allFilms} />
+          <RenderCards setToSeen={this.setToSeen} BFI={filmsToSee} /> :
+          <RenderCards setToSeen={this.setToSeen} BFI={allFilms} />
         }
         <Footer />
       </div>

@@ -24,6 +24,7 @@ const bfiData = {
     year: "1953",
     bfiRank: "3",
     imdbID: "tt0046438",
+    viewStatus: null,
     poster: "https://m.media-amazon.com/images/M/MV5BYWQ4ZTRiODktNjAzZC00Nzg1LTk1YWQtNDFmNDI0NmZiNGIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
   },
   {
@@ -32,6 +33,7 @@ const bfiData = {
     year: "1939",
     bfiRank: "4",
     imdbID: "tt0031885",
+    viewStatus: null,
     poster: "https://m.media-amazon.com/images/M/MV5BYTE4NjYxMGEtZmQxZi00YWVmLWJjZTctYTJmNDFmZGEwNDVhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
   },
   {

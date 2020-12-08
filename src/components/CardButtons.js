@@ -28,18 +28,18 @@ class CardButtons extends React.Component {
         this.props.viewStatus===true
         ?
         <div className="status-buttons">
-            <button onClick={this.handleUnseenButton} className="btn btn-warning">Unseen</button>
+            <button onClick={this.props.setToUnseen} className="btn btn-warning" id={this.props.id}>Unseen</button>
         </div>
         :
         this.props.viewStatus===false
         ?
         <div className="status-buttons">
-            <button onClick={this.handleUnskipButton} className="btn btn-secondary">Unskip</button> 
+            <button onClick={this.props.setToUnskip} className="btn btn-secondary" id={this.props.id}>Unskip</button> 
         </div>
         :
         <div className="status-buttons">
-            <button onClick={this.handleSeenButton} className="btn btn-success">Seen</button>
-            <button onClick={this.handleSkipButton} className="btn btn-danger">Skip</button>
+            <button onClick={this.props.setToSeen} className="btn btn-success" id={this.props.id}>Seen</button>
+            <button onClick={this.props.setToSkip} className="btn btn-danger" id={this.props.id}>Skip</button>
         </div>
     )
     }

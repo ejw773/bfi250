@@ -19,29 +19,28 @@ class ProgressBar extends React.Component {
 
         let unseenPercent = (100 - (seenPercent + skippedPercent));
 
-
-
         let seenPercentText = seenPercent + '%';
         let unseenPercentText = unseenPercent + '%';
         let skippedPercentText = skippedPercent + '%';
 
-        let seenPercentStyle = {
+        let seenPercentWidth = {
             width: seenPercentText
         }
-        let unseenPercentStyle = {
+        let unseenPercentWidth = {
             width: unseenPercentText
         }
-        let skippedPercentStyle = {
+        let skippedPercentWidth = {
             width: skippedPercentText
         }
         return (
             <RenderProgressBar 
-                seenPercentStyle={seenPercentStyle} 
-                unseenPercentStyle={unseenPercentStyle}
-                skippedPercentStyle={skippedPercentStyle}
+                seenPercentStyle={seenPercentWidth} 
+                unseenPercentStyle={unseenPercentWidth}
+                skippedPercentStyle={skippedPercentWidth}
                 totalUnseen={totalUnseen}
                 totalSeen={this.props.seenTotal}
                 totalSkipped={this.props.skippedTotal}
+                changeView={this.props.changeView}
             />
         )
     }

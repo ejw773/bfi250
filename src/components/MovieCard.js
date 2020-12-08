@@ -21,7 +21,7 @@ class MovieCard extends React.Component {
                     <h5 className="card-title">{this.props.bfiRank}. {this.props.title} ({this.props.year})</h5>
                     <p className="card-text">Director: {this.props.director}</p>
                     <div className="button-container">
-                        <CardButtons viewStatus={this.props.viewStatus}/>
+                        <CardButtons viewStatus={this.props.viewStatus} setToSeen={this.props.setToSeen} id={this.props.imdbID}/>
                     </div>
                 </div>
             </div>
