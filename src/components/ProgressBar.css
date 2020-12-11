@@ -7,12 +7,27 @@
 }
 
 .progress-all {
-    height: 1.5em;
+    height: 2em;
     cursor: pointer;
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    border-rigth: 4px solid black;
 }
 
 .progress-sections {
     height: 2em;
     cursor: pointer;
+}
+
+.progress-seen {
+    border: 4px solid black;
+}
+
+.progress-tosee {
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.progress-skipped {
     border: 4px solid black;
 }

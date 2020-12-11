@@ -23,6 +23,7 @@ class App extends React.Component {
     );
     this.setState(state => {
       return {
+        ...state,
         showSet: theAction
       }
     })
@@ -34,11 +35,19 @@ class App extends React.Component {
     let changeMe = changeMeArray[0];
     console.log(changeMe.title)
     console.log(changeMe.viewStatus);
-    this.setState((state) => {
-      return {
-        viewStatus: true
+    this.setState(prevState => ({
+      BFI2012: {
+        ...prevState.BFI2012,
+          
       }
-    })
+    }))
+
+    // this.setState((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     viewStatus: true
+    //   }
+    // })
   }
 
   render() {
