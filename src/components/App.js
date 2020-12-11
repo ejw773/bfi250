@@ -9,7 +9,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.changeView = this.changeView.bind(this);
-    this.setToSeen = this.setToSeen.bind(this);
+    this.toggleSeen = this.toggleSeen.bind(this);
+    this.toggleSkip = this.toggleSkip.bind(this);
     this.state = bfiData;
   }
 
@@ -29,25 +30,20 @@ class App extends React.Component {
     })
   }
 
-  setToSeen(event) {
-    let selectedImdbID = event.target.id;
-    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===selectedImdbID);
+  toggleSeen(event) {
+    let currentID = event.target.id;
+    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
     let changeMe = changeMeArray[0];
-    console.log(changeMe.title)
-    console.log(changeMe.viewStatus);
-    this.setState(prevState => ({
-      BFI2012: {
-        ...prevState.BFI2012,
-          
-      }
-    }))
+    changeMe.viewStatus===true ? changeMe.viewStatus = null : changeMe.viewStatus = true;
+    this.setState({changeMe})
+  }
 
-    // this.setState((prevState) => {
-    //   return {
-    //     ...prevState,
-    //     viewStatus: true
-    //   }
-    // })
+  toggleSkip(event) {
+    let currentID = event.target.id;
+    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
+    let changeMe = changeMeArray[0];
+    changeMe.viewStatus===false ? changeMe.viewStatus = null : changeMe.viewStatus = false;
+    this.setState({changeMe})
   }
 
   render() {
@@ -67,12 +63,12 @@ class App extends React.Component {
         </div>
         {
           this.state.showSet==='filmsSeen' ?
-          <RenderCards BFI={filmsSeen} /> :
+          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSeen} /> :
           this.state.showSet==='filmsSkipped' ?
-          <RenderCards setToSeen={this.setToSeen} BFI={filmsSkipped} /> :
+          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSkipped} /> :
           this.state.showSet==='filmsToSee' ?
-          <RenderCards setToSeen={this.setToSeen} BFI={filmsToSee} /> :
-          <RenderCards setToSeen={this.setToSeen} BFI={allFilms} />
+          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsToSee} /> :
+          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={allFilms} />
         }
         <Footer />
       </div>

@@ -9,9 +9,9 @@
 .progress-all {
     height: 2em;
     cursor: pointer;
-    border-left: 4px solid black;
-    border-top: 4px solid black;
-    border-rigth: 4px solid black;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
 }
 
 .progress-sections {
