@@ -114,7 +114,7 @@ const bfiData = {
     year: "1960",
     bfiRank: "13",
     imdbID: "tt0053472",
-    viewStatus: null,
+    viewStatus: false,
     poster: "https://m.media-amazon.com/images/M/MV5BNzk5MDk2MjktY2I3NS00ODZkLTk3OTktY2Q3ZDE2MmQ2M2ZmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
   },
   {
@@ -1131,7 +1131,7 @@ const bfiData = {
     year: "1978",
     bfiRank: "117",
     imdbID: "tt0077405",
-    viewStatus: null,
+    viewStatus: true,
     poster: "https://m.media-amazon.com/images/M/MV5BZjMyZmU4OGYtNjBiYS00YTIxLWJjMDUtZjczZmQwMTM4YjQxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"
   },
   {
@@ -1923,7 +1923,7 @@ const bfiData = {
     year: "1962",
     bfiRank: "202",
     imdbID: "tt0055852",
-    viewStatus: null,
+    viewStatus: true,
     poster: "https://m.media-amazon.com/images/M/MV5BNzJjYzU2NjMtNzUwMS00NzFlLTg5OGItZjg5ZWM2ZWI2MTg2XkEyXkFqcGdeQXVyMTA2ODMzMDU@._V1_SX300.jpg"
   },
   {
