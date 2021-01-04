@@ -12,15 +12,15 @@ class MovieCard extends React.Component {
         return (
             <div className="card card-group" style={{width: "18rem"}}>
                 <div className="poster">
-                    <a href={imdbLink} target="_blank" rel="noreferrer"><img src={this.props.poster} className="card-img-top" alt={this.props.title} /></a>
+                    <Badge viewStatus={this.props.viewStatus}/>
+                    <a href={imdbLink} target="_blank" rel="noreferrer"><img src={this.props.poster} style={{height: '400px'}} className="card-img-top" alt={this.props.title} /></a>
                 </div>
-                <div className="card-body">
+                <div className="card-body align-self-end">
                     <div className="status-container">
-                        <Badge viewStatus={this.props.viewStatus}/>
                     </div>
                     <h5 className="card-title">{this.props.bfiRank}. {this.props.title} ({this.props.year})</h5>
                     <p className="card-text">Director: {this.props.director}</p>
-                    <div className="button-container">
+                    <div className="button-container view-status-buttons align-self-end">
                         <CardButtons viewStatus={this.props.viewStatus} toggleSeen={this.props.toggleSeen} toggleSkip={this.props.toggleSkip} id={this.props.imdbID}/>
                     </div>
                 </div>
