@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import MovieCard from './MovieCard'
 
 class RenderCards extends React.Component {
@@ -17,7 +18,7 @@ class RenderCards extends React.Component {
               bfiRank={film.bfiRank}
               poster={film.poster}
               imdbID={film.imdbID}
-              viewStatus={film.viewStatus}
+              viewStatus={this.props.seenStatus[film.imdbID]}
               toggleSeen={this.props.toggleSeen}
               toggleSkip={this.props.toggleSkip}
             />
@@ -27,4 +28,10 @@ class RenderCards extends React.Component {
     }
 }
 
-export default RenderCards;
+const mapStateToProps = state => {
+  return {
+    seenStatus: state.seenStatus
+  }
+}
+
+export default connect(mapStateToProps, null)(RenderCards);

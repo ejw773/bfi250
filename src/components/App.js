@@ -3,7 +3,8 @@ import './App.css'
 import ProgressBar from './ProgressBar'
 import Footer from './Footer'
 import RenderCards from './RenderCards'
-import bfiData from './Data.js';
+import { connect } from 'react-redux';
+import { toggleSeenStatus, searchTitle, changeShowSet } from '../redux/actions'
 
 class App extends React.Component {
   constructor(props) {
@@ -11,28 +12,16 @@ class App extends React.Component {
     this.changeView = this.changeView.bind(this);
     this.toggleSeen = this.toggleSeen.bind(this);
     this.toggleSkip = this.toggleSkip.bind(this);
-    this.state = bfiData;
   }
 
   changeView(event) {
-    let buttonID = event.target.id;
-    let theAction = (
-      buttonID==='view-seen' ? 'filmsSeen' :
-      buttonID==='view-tosee' ? 'filmsToSee' :
-      buttonID==='view-skipped' ? 'filmsSkipped' :
-      'allFilms'
-    );
-    this.setState(state => {
-      return {
-        ...state,
-        showSet: theAction
-      }
-    })
+    let viewSet = event.target.id;
+    this.props.changeShowSet(viewSet);
   }
 
   toggleSeen(event) {
     let currentID = event.target.id;
-    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
+    let changeMeArray = this.props.movieData.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
     let changeMe = changeMeArray[0];
     changeMe.viewStatus===true ? changeMe.viewStatus = null : changeMe.viewStatus = true;
     this.setState({changeMe})
@@ -40,17 +29,18 @@ class App extends React.Component {
 
   toggleSkip(event) {
     let currentID = event.target.id;
-    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
+    let changeMeArray = this.props.movieData.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
     let changeMe = changeMeArray[0];
     changeMe.viewStatus===false ? changeMe.viewStatus = null : changeMe.viewStatus = false;
     this.setState({changeMe})
   }
 
   render() {
-    const allFilms = this.state.BFI2012;
-    const filmsSeen = allFilms.filter(film => film.viewStatus===true);
-    const filmsSkipped = allFilms.filter(film => film.viewStatus===false);
-    const filmsToSee = allFilms.filter(film => film.viewStatus===null);
+    const allFilms = this.props.movieData.BFI2012;
+    const filmsSeen = allFilms.filter(film => this.props.seenStatus[film.imdbID]===true);
+    const filmsSkipped = allFilms.filter(film => this.props.seenStatus[film.imdbID]===false);
+    const filmsToSee = allFilms.filter(film => this.props.seenStatus[film.imdbID]===undefined);
+
     return (
       <div>
         <div className="fixed-top">
@@ -62,11 +52,11 @@ class App extends React.Component {
           />
         </div>
         {
-          this.state.showSet==='filmsSeen' ?
+          this.props.showSet.showSet==='view-seen' ?
           <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSeen} /> :
-          this.state.showSet==='filmsSkipped' ?
+          this.props.showSet.showSet==='view-skipped' ?
           <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSkipped} /> :
-          this.state.showSet==='filmsToSee' ?
+          this.props.showSet.showSet==='view-tosee' ?
           <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsToSee} /> :
           <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={allFilms} />
         }
@@ -76,4 +66,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  changeShowSet: (newSet) => dispatch(changeShowSet(newSet))
+})
+
+const mapStateToProps = state => {
+  return state
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
