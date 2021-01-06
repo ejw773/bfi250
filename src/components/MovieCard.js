@@ -15,7 +15,7 @@ class MovieCard extends React.Component {
                     <Badge viewStatus={this.props.viewStatus}/>
                     <a href={imdbLink} target="_blank" rel="noreferrer"><img src={this.props.poster} style={{height: '400px'}} className="card-img-top" alt={this.props.title} /></a>
                 </div>
-                <div className="card-body align-self-end">
+                <div className="card-body">
                     <div className="status-container">
                     </div>
                     <h5 className="card-title">{this.props.bfiRank}. {this.props.title} ({this.props.year})</h5>
