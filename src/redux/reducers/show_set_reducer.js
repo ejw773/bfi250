@@ -1,7 +1,17 @@
-const initialState = {
+import { CHANGE_SHOW_SET } from '../actionTypes'
 
+const initialState = {
+    showSet: 'allFilms'
 };
 
 export default function showSet(state = initialState, action) {
-    return state;
+    switch(action.type) {
+        case CHANGE_SHOW_SET: {
+            return {
+                ...state,
+                showSet: action.payload.newSet
+            }
+        }
+        default: return state;
+    }
 }
