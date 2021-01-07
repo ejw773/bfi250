@@ -1,7 +1,8 @@
 import {
     TOGGLE_SEEN_STATUS,
     SEARCH_TITLE,
-    CHANGE_SHOW_SET
+    CHANGE_SHOW_SET,
+    UPDATE_STATS
 } from './actionTypes';
 
 export const toggleSeenStatus = (bfiID, toggleAction) => {
@@ -31,3 +32,13 @@ export const changeShowSet = (newSet) => {
         }
     }
 };
+
+export const updateStats = (newStats) => {
+    return {
+        type: UPDATE_STATS,
+        payload: {
+            [newStats.key]: newStats.key,
+            [newStats.value]: newStats.value            
+        }
+    }
+}

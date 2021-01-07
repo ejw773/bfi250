@@ -1,3 +1,5 @@
+// I think this one's done
+
 import React from 'react';
 
 const Badge = (props) => {

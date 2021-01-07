@@ -4,7 +4,6 @@ import ProgressBar from './ProgressBar'
 import Footer from './Footer'
 import RenderCards from './RenderCards'
 import { connect } from 'react-redux';
-import { searchTitle } from '../redux/actions'
 
 class App extends React.Component {
   constructor(props) {
@@ -12,28 +11,27 @@ class App extends React.Component {
   }
 
   render() {
+    // Create variables containing the sets of films to be rendered
     const allFilms = this.props.movieData.BFI2012;
-    const filmsSeen = allFilms.filter(film => this.props.seenStatus[film.imdbID]===true);
-    const filmsSkipped = allFilms.filter(film => this.props.seenStatus[film.imdbID]===false);
-    const filmsToSee = allFilms.filter(film => this.props.seenStatus[film.imdbID]===undefined);
+    let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(this.props.searchTitle.toLowerCase()))
+    let filmsSeen = titlesToSearch.filter(film => this.props.seenStatus[film.imdbID]===true);
+    let filmsSkipped = titlesToSearch.filter(film => this.props.seenStatus[film.imdbID]===false);
+    let filmsToSee = titlesToSearch.filter(film => this.props.seenStatus[film.imdbID]===undefined);
+    let showTheseFilms = this.props.showSet.showSet;
 
     return (
       <div>
         <div className="fixed-top">
-          <ProgressBar 
-            seenTotal={filmsSeen.length}
-            skippedTotal={filmsSkipped.length}
-            totalFilms={allFilms.length}
-          />
+          <ProgressBar />
         </div>
         {
-          this.props.showSet.showSet==='view-seen' ?
+          showTheseFilms==='view-seen' ?
           <RenderCards BFI={filmsSeen} /> :
-          this.props.showSet.showSet==='view-skipped' ?
+          showTheseFilms==='view-skipped' ?
           <RenderCards BFI={filmsSkipped} /> :
-          this.props.showSet.showSet==='view-tosee' ?
+          showTheseFilms==='view-tosee' ?
           <RenderCards BFI={filmsToSee} /> :
-          <RenderCards BFI={allFilms} />
+          <RenderCards BFI={titlesToSearch} />
         }
         <Footer />
       </div>
@@ -42,7 +40,12 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return state
+  return {
+    movieData: state.movieData,
+    seenStatus: state.seenStatus,
+    showSet: state.showSet,
+    searchTitle: state.searchTitle.title
+  }
 }
 
 export default connect(mapStateToProps, null)(App);

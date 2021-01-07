@@ -1,3 +1,5 @@
+// I think this one's done
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchTitle } from '../redux/actions';
@@ -19,7 +21,6 @@ const Footer = (props) => {
     )
 }
 
-
 const mapStateToProps = state => {
     return {
         title: state.searchTitle.title
@@ -30,5 +31,4 @@ const mapDispatchToProps = dispatch => ({
     searchTitle: (searchInput) => dispatch(searchTitle(searchInput))
   })
   
-
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);
