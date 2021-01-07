@@ -1,4 +1,5 @@
-export const TOGGLE_SEEN = "TOGGLE_SEEN";
-export const TOGGLE_SKIP = "TOGLGE_SKIP";
+export const TOGGLE_SEEN_STATUS = "TOGGLE_SEEN_STATUS";
+export const REMOVE_SEEN_STATUS = "REMOVE_SEEN_STATUS";
 export const SEARCH_TITLE = "SEARCH_TITLE";
-export const SHOW_SET = "SHOW_SET";
+export const CHANGE_SHOW_SET = "CHANGE_SHOW_SET";
+export const UPDATE_STATS = "UPDATE_STATS";

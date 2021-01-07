@@ -1,79 +1,55 @@
-import React from 'react'
-import './App.css'
-import ProgressBar from './ProgressBar'
-import Footer from './Footer'
-import RenderCards from './RenderCards'
-import bfiData from './Data.js';
+// This is done
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.changeView = this.changeView.bind(this);
-    this.toggleSeen = this.toggleSeen.bind(this);
-    this.toggleSkip = this.toggleSkip.bind(this);
-    this.state = bfiData;
-  }
+import React from 'react';
+import './App.css';
+import ProgressBar from './ProgressBar';
+import Footer from './Footer';
+import RenderCards from './RenderCards';
+import { connect } from 'react-redux';
 
-  changeView(event) {
-    let buttonID = event.target.id;
-    let theAction = (
-      buttonID==='view-seen' ? 'filmsSeen' :
-      buttonID==='view-tosee' ? 'filmsToSee' :
-      buttonID==='view-skipped' ? 'filmsSkipped' :
-      'allFilms'
-    );
-    this.setState(state => {
-      return {
-        ...state,
-        showSet: theAction
-      }
-    })
-  }
+const App = (props) => {
 
-  toggleSeen(event) {
-    let currentID = event.target.id;
-    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
-    let changeMe = changeMeArray[0];
-    changeMe.viewStatus===true ? changeMe.viewStatus = null : changeMe.viewStatus = true;
-    this.setState({changeMe})
-  }
+  // Variable containing all the films
+  const allFilms = props.movieData.BFI2012;
 
-  toggleSkip(event) {
-    let currentID = event.target.id;
-    let changeMeArray = this.state.BFI2012.filter(thisFilm => thisFilm.imdbID===currentID);
-    let changeMe = changeMeArray[0];
-    changeMe.viewStatus===false ? changeMe.viewStatus = null : changeMe.viewStatus = false;
-    this.setState({changeMe})
-  }
+  // Filter by any string entered in the search bar
+  let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(props.searchTitle.toLowerCase()))
 
-  render() {
-    const allFilms = this.state.BFI2012;
-    const filmsSeen = allFilms.filter(film => film.viewStatus===true);
-    const filmsSkipped = allFilms.filter(film => film.viewStatus===false);
-    const filmsToSee = allFilms.filter(film => film.viewStatus===null);
-    return (
-      <div>
-        <div className="fixed-top">
-          <ProgressBar 
-            seenTotal={filmsSeen.length}
-            skippedTotal={filmsSkipped.length}
-            totalFilms={allFilms.length}
-            changeView={this.changeView}
-          />
-        </div>
-        {
-          this.state.showSet==='filmsSeen' ?
-          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSeen} /> :
-          this.state.showSet==='filmsSkipped' ?
-          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsSkipped} /> :
-          this.state.showSet==='filmsToSee' ?
-          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={filmsToSee} /> :
-          <RenderCards toggleSeen={this.toggleSeen} toggleSkip={this.toggleSkip} BFI={allFilms} />
-        }
-        <Footer />
+  // Create sets of films based on seenStatus
+  let filmsSeen = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===true);
+  let filmsSkipped = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===false);
+  let filmsToSee = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===undefined);
+
+  // Variable holding the name of the set to be shown, based on seenStatus
+  let showTheseFilms = props.showSet.showSet;
+
+  return (
+    <div>
+      <div className="fixed-top">
+        <ProgressBar />
       </div>
-    )
+      {
+        showTheseFilms==='view-seen' ?
+        <RenderCards BFI={filmsSeen} /> :
+        showTheseFilms==='view-skipped' ?
+        <RenderCards BFI={filmsSkipped} /> :
+        showTheseFilms==='view-tosee' ?
+        <RenderCards BFI={filmsToSee} /> :
+        <RenderCards BFI={titlesToSearch} />
+      }
+      <Footer />
+    </div>
+  )
+}
+
+const mapStateToProps = state => {
+  return {
+    movieData: state.movieData,
+    seenStatus: state.seenStatus,
+    showSet: state.showSet,
+    searchTitle: state.searchTitle.title
   }
 }
 
-export default App;
+
+export default connect(mapStateToProps, null)(App);

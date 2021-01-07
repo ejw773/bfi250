@@ -1,47 +1,34 @@
+// I think this one's done
+
 import React from 'react';
+import { connect } from 'react-redux';
+import { searchTitle } from '../redux/actions';
 
-class Footer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchInput: ''
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+const Footer = (props) => {
+    const handleChange = (event) => {
+        let searchInput = event.target.value;
+        props.searchTitle(searchInput);
     }
+    return (
+        <div>
+        <nav className="navbar fixed-bottom navbar-dark bg-dark">
+            {/* <a className="navbar-brand" href="https://fanwithamovieyammer.wordpress.com/the-sight-sound-top-250-list/" target="_blank">Sight & Sound "Greatest Films of All Time" | 2012 Edition</a> */}
+            <form className="form-inline my-2 my-lg-0">
+                <input value={props.title} onChange={handleChange} className="form-control mr-sm-2" type="search" placeholder="Filter by Title" aria-label="Search" />
+            </form>
+        </nav>
+    </div>
+    )
+}
 
-    handleChange = (event) => {
-        this.setState({
-            searchInput: event.target.value
-        })
-        console.log(this.state.searchInput)
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(this.state.searchInput)
-        this.setState({
-            searchInput: ''
-        })
-    }
-
-    render() {
-        return (
-            <div>
-            <nav className="navbar fixed-bottom navbar-dark bg-dark">
-                {/* <a className="navbar-brand" href="https://fanwithamovieyammer.wordpress.com/the-sight-sound-top-250-list/" target="_blank">Sight & Sound "Greatest Films of All Time" | 2012 Edition</a> */}
-                <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit.bind(this)}>
-                    <input value={this.state.searchInput} onChange={this.handleChange.bind(this)} className="form-control mr-sm-2" type="search" placeholder="Filter by Title" aria-label="Search" />
-                    {/* <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button> */}
-                </form>
-            </nav>
-        </div>
-
-
-
-        )
+const mapStateToProps = state => {
+    return {
+        title: state.searchTitle.title
     }
 }
 
-
-export default Footer;
+const mapDispatchToProps = dispatch => ({
+    searchTitle: (searchInput) => dispatch(searchTitle(searchInput))
+  })
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);
