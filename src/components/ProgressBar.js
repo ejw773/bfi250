@@ -40,7 +40,6 @@ class ProgressBar extends React.Component {
                 totalUnseen={totalUnseen}
                 totalSeen={this.props.seenTotal}
                 totalSkipped={this.props.skippedTotal}
-                changeView={this.props.changeView}
             />
         )
     }

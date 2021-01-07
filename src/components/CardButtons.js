@@ -1,15 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { toggleSeenStatus } from '../redux/actions'
 
 const CardButtons = (props) => {
-    const toNull = () => {
-        console.log('goes to null')
+    const toNull = (event) => {
+        props.toggleSeenStatus(event.target.id, null)
     }
-    const toTrue = () => {
-        console.log('goes to true')
+    const toTrue = (event) => {
+        props.toggleSeenStatus(event.target.id, true);
     }
-    const toFalse = () => {
-        console.log('goes to false')
+    const toFalse = (event) => {
+        props.toggleSeenStatus(event.target.id, false);
     }
 
     return (
@@ -33,7 +34,7 @@ const CardButtons = (props) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    // changeShowSet: (newSet) => dispatch(changeShowSet(newSet))
-  })  
+    toggleSeenStatus: (bfiID, toggleAction) => dispatch(toggleSeenStatus(bfiID, toggleAction))
+})  
 
-export default CardButtons;
+export default connect(null, mapDispatchToProps)(CardButtons);

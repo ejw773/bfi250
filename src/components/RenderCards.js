@@ -19,8 +19,6 @@ class RenderCards extends React.Component {
               poster={film.poster}
               imdbID={film.imdbID}
               viewStatus={this.props.seenStatus[film.imdbID]}
-              toggleSeen={this.props.toggleSeen}
-              toggleSkip={this.props.toggleSkip}
             />
           ))}
         </div>
