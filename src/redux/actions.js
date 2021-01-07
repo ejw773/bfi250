@@ -32,13 +32,3 @@ export const changeShowSet = (newSet) => {
         }
     }
 };
-
-export const updateStats = (newStats) => {
-    return {
-        type: UPDATE_STATS,
-        payload: {
-            [newStats.key]: newStats.key,
-            [newStats.value]: newStats.value            
-        }
-    }
-}
