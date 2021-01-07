@@ -44,7 +44,8 @@ const ProgressBar = (props) => {
     let skippedPercentText = skippedPercent + '%';
 
     // Set up variables to control the appearnace of selected portion of progress bar
-    const selectedBorder = 'solid black 4px'
+    const selectedBorderWhite = 'solid white 4px'
+    const selectedborderBlack = 'solid black 4px'
     const unselectedBorder = ''
     let viewSeenBorder = unselectedBorder;
     let viewSkippedBorder = unselectedBorder;
@@ -53,12 +54,12 @@ const ProgressBar = (props) => {
 
     // Put border on selected portion of progress bar
     showSet==='view-seen' ?
-    viewSeenBorder=selectedBorder :
+    viewSeenBorder=selectedBorderWhite :
     showSet==='view-skipped' ?
-    viewSkippedBorder=selectedBorder :
+    viewSkippedBorder=selectedBorderWhite :
     showSet==='view-tosee' ?
-    viewToSeeBorder=selectedBorder :
-    viewAllBorder=selectedBorder
+    viewToSeeBorder=selectedborderBlack :
+    viewAllBorder=selectedBorderWhite
 
     // Creates object variables for styling of each portion of progress bar
     let viewAllStyle = {
