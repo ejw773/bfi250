@@ -6,21 +6,18 @@ import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
 import { connect } from 'react-redux';
-import { updateStats } from '../redux/actions';
 
 const App = (props) => {
 
-  // Create variables containing the sets of films to be rendered
+  // Variable containing all the films
   const allFilms = props.movieData.BFI2012;
 
-  // First, filter by any string entered in the search bar
+  // Filter by any string entered in the search bar
   let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(props.searchTitle.toLowerCase()))
 
-  // Second, create sets of films based on seenStatus
+  // Create sets of films based on seenStatus
   let filmsSeen = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===true);
-
   let filmsSkipped = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===false);
-
   let filmsToSee = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===undefined);
 
   // Variable holding the name of the set to be shown, based on seenStatus
@@ -54,9 +51,5 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  updateStats: (key, value) => dispatch(updateStats(key, value))
-})
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, null)(App);

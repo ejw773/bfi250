@@ -7,13 +7,19 @@ import { changeShowSet } from '../redux/actions';
 
 
 const ProgressBar = (props) => {
+    // Assigns props to variables
     const totalFilms = props.movieData.BFI2012.length;
-    let totalSeen = props.totalSeen;
-    let totalSkipped = props.totalSkipped;
+    const seenStatusData = props.seenStatus;
+    
+    // Calculate quantities of seen, unseen, and skipped
+    let totalSeen = (Object.values(seenStatusData).reduce((a, item) => a + (item === true ? 1 : 0), 0));
+    let totalSkipped = (Object.values(seenStatusData).reduce((a, item) => a + (item === false ? 1 : 0), 0));
     let totalUnseen = totalFilms - totalSeen - totalSkipped;
 
+    // Set a minimum percentage for the progress bars
     let minPercent = 2;
 
+    // Calculate percentages, also accounting for minimum percentage
     let seenPercent = Math.ceil(totalSeen / totalFilms * 100);
     if (seenPercent < minPercent) {seenPercent = minPercent};
 
@@ -22,10 +28,12 @@ const ProgressBar = (props) => {
 
     let unseenPercent = (100 - (seenPercent + skippedPercent));
 
+    // Add '%' onto the percentages
     let seenPercentText = seenPercent + '%';
     let unseenPercentText = unseenPercent + '%';
     let skippedPercentText = skippedPercent + '%';
 
+    // Turn percentages into objects, to be used as style in JSX
     let seenPercentWidth = {
         width: seenPercentText
     }
@@ -36,6 +44,7 @@ const ProgressBar = (props) => {
         width: skippedPercentText
     }
 
+    // Call the reducer to update which collection of films to show
     const changeView = (event) => {
         let viewSet = event.target.id;
         props.changeShowSet(viewSet);
@@ -57,8 +66,7 @@ const ProgressBar = (props) => {
 
 const mapStateToProps = state => {
     return {
-        totalSeen: state.viewerStats.totalSeen,
-        totalSkipped: state.viewerStats.totalSkipped,
+        seenStatus: state.seenStatus,
         movieData: state.movieData
     }
 }

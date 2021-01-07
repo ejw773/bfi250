@@ -1,9 +1,6 @@
 import { TOGGLE_SEEN_STATUS } from '../actionTypes';
 
 const initialState = {
-    tt0052357: true,
-    tt0033467: true,
-    tt0031885: false
 };
 
 export default function seenStatus(state = initialState, action) {

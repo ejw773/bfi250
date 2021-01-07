@@ -2,12 +2,12 @@ import { createStore } from 'redux';
 import rootReducer from './reducers';
 
 function saveToLocalStorage(state) {
-    // try {
-    //     const serialisedState = JSON.stringify(state);
-    //     localStorage.setItem("persistantState", serialisedState);
-    // } catch (event) {
-    //     console.log(event);
-    // }
+    try {
+        const serialisedState = JSON.stringify(state);
+        localStorage.setItem("persistantState", serialisedState);
+    } catch (event) {
+        console.log(event);
+    }
 }
 
 function loadFromLocalStorage() {
