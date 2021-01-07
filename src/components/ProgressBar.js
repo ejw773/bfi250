@@ -7,6 +7,7 @@ import { changeShowSet } from '../redux/actions';
 
 
 const ProgressBar = (props) => {
+
     // Assigns props to variables
     const totalFilms = props.movieData.BFI2012.length;
     const seenStatusData = props.seenStatus;
@@ -81,9 +82,9 @@ const ProgressBar = (props) => {
                 <div className="progress-all progress-bar bg-primary" id="view-all" onClick={changeView} role="progressbar" style={viewAllStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
             </div>
             <div className="progress progress-sections">
-                <div className="progress-seen progress-bar bg-success" id="view-seen" onClick={changeView} role="progressbar" style={viewSeenStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{totalSeen}</div>
+                <div className="progress-skipped progress-bar progress-bar-striped bg-danger" id="view-skipped" onClick={changeView} role="progressbar" style={viewSkippedStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalSkipped}</div>
+                <div className="progress-seen progress-bar progress-bar-striped bg-success" id="view-seen" onClick={changeView} role="progressbar" style={viewSeenStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{totalSeen}</div>
                 <div className="progress-tosee progress-bar bg-warning" id="view-tosee" onClick={changeView} role="progressbar" style={viewToSeeStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalUnseen}</div>
-                <div className="progress-skipped progress-bar bg-danger" id="view-skipped" onClick={changeView} role="progressbar" style={viewSkippedStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalSkipped}</div>
             </div>
         </div>
     )
