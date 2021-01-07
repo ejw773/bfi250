@@ -3,7 +3,7 @@
 import React from 'react';
 
 const Badge = (props) => {
-    const { viewStatus } = props;
+    const viewStatus = props.viewStatus;
     return (
     viewStatus===false
     ? <span className="badge badge-pill badge-danger">Skipped</span>

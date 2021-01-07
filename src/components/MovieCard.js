@@ -11,7 +11,7 @@ const MovieCard = (props) => {
     return (
         <div className="card card-group" style={{width: "18rem"}}>
             <div className="poster">
-                <Badge viewStatus={props.viewStatus}/>
+                <Badge viewStatus={props.viewStatus[props.imdbID]}/>
                 <a href={imdbLink} target="_blank" rel="noreferrer"><img src={props.poster} style={{height: '400px'}} className="card-img-top" alt={props.title} /></a>
                 <div className="card-body align-self-end">
                         <div className="button-container view-status-buttons align-self-end">
