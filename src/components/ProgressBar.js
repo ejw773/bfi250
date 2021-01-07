@@ -1,34 +1,43 @@
-// This is done
-
 import React from 'react';
 import './ProgressBar.css'
 import { connect } from 'react-redux';
 import { changeShowSet } from '../redux/actions';
 
-
 const ProgressBar = (props) => {
-
-    // Assigns props to variables
+    // Assign props to variables
     const totalFilms = props.movieData.BFI2012.length;
     const seenStatusData = props.seenStatus;
     const showSet = props.showSet;
     
+    // Find out screen size
+    const screenSize = window.innerWidth;
+
+    // Set a minimum percentage for the progress bar sections
+    // Based on screen size: 414, 768, 992, 1200
+    let minPercent = 2;
+    if (screenSize < 414) {
+        minPercent = 10;
+    } else if (screenSize < 768) {
+        minPercent = 6;
+    } else if (screenSize < 992) {
+        minPercent = 4;
+    }
+    console.log(minPercent)
+    let leftoverPercent = 100 - (minPercent * 3);
+
     // Calculate quantities of seen, unseen, and skipped
     let totalSeen = (Object.values(seenStatusData).reduce((a, item) => a + (item === true ? 1 : 0), 0));
     let totalSkipped = (Object.values(seenStatusData).reduce((a, item) => a + (item === false ? 1 : 0), 0));
     let totalUnseen = totalFilms - totalSeen - totalSkipped;
 
-    // Set a minimum percentage for the progress bars
-    let minPercent = 2;
-
     // Calculate percentages, also accounting for minimum percentage
-    let seenPercent = Math.ceil(totalSeen / totalFilms * 100);
-    if (seenPercent < minPercent) {seenPercent = minPercent};
+    let seenPercent = (totalSeen / totalFilms * leftoverPercent) + minPercent;
+    // if (seenPercent < minPercent) {seenPercent = minPercent};
 
-    let skippedPercent = Math.ceil(totalSkipped / totalFilms * 100);
-    if (skippedPercent < minPercent) {skippedPercent = minPercent};
+    let skippedPercent = (totalSkipped / totalFilms * leftoverPercent) + minPercent;
+    // if (skippedPercent < minPercent) {skippedPercent = minPercent};
 
-    let unseenPercent = (100 - (seenPercent + skippedPercent));
+    let unseenPercent = (totalUnseen / totalFilms * leftoverPercent) + minPercent;
 
     // Add '%' onto the percentages
     let seenPercentText = seenPercent + '%';
