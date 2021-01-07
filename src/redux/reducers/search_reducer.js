@@ -1,7 +1,7 @@
 import { SEARCH_TITLE } from '../actionTypes';
 
 const initialState = {
-    title: 'Na'
+    title: ''
 };
 
 export default function searchTitle(state = initialState, action) {

@@ -18,7 +18,7 @@ class RenderCards extends React.Component {
               bfiRank={film.bfiRank}
               poster={film.poster}
               imdbID={film.imdbID}
-              viewStatus={this.props.seenStatus[film.imdbID]}
+              // viewStatus={this.props.seenStatus[film.imdbID]}
             />
           ))}
         </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleSeenStatus } from '../redux/actions'
+import { toggleSeenStatus } from '../redux/actions';
 
 const CardButtons = (props) => {
     const toNull = (event) => {
@@ -36,7 +36,7 @@ const CardButtons = (props) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    toggleSeenStatus: (bfiID, toggleAction) => dispatch(toggleSeenStatus(bfiID, toggleAction))
+    toggleSeenStatus: (bfiID, toggleAction) => dispatch(toggleSeenStatus(bfiID, toggleAction)),
 })  
 
 export default connect(null, mapDispatchToProps)(CardButtons);
