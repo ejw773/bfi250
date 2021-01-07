@@ -13,7 +13,7 @@ const ProgressBar = (props) => {
     const screenSize = window.innerWidth;
 
     // Set a minimum percentage for the progress bar sections
-    // Based on screen size: 414, 768, 992, 1200
+    // Based on screen size: 414, 768, 992
     let minPercent = 2;
     if (screenSize < 414) {
         minPercent = 10;
@@ -22,7 +22,6 @@ const ProgressBar = (props) => {
     } else if (screenSize < 992) {
         minPercent = 4;
     }
-    console.log(minPercent)
     let leftoverPercent = 100 - (minPercent * 3);
 
     // Calculate quantities of seen, unseen, and skipped

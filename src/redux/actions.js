@@ -1,8 +1,7 @@
 import {
     TOGGLE_SEEN_STATUS,
     SEARCH_TITLE,
-    CHANGE_SHOW_SET,
-    UPDATE_STATS
+    CHANGE_SHOW_SET
 } from './actionTypes';
 
 export const toggleSeenStatus = (bfiID, toggleAction) => {
