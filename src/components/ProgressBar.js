@@ -3,6 +3,8 @@ import './ProgressBar.css'
 import { connect } from 'react-redux';
 import { changeShowSet } from '../redux/actions';
 
+// This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
+
 const ProgressBar = (props) => {
     // Assign props to variables
     const totalFilms = props.movieData.BFI2012.length;
