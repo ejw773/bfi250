@@ -1,5 +1,3 @@
-// I think this is done
-
 import React from 'react';
 import { connect } from 'react-redux';
 import MovieCard from './MovieCard'

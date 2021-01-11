@@ -1,5 +1,3 @@
-// I think this one's done
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleSeenStatus } from '../redux/actions';

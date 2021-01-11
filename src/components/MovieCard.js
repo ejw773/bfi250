@@ -1,5 +1,3 @@
-// Maybe this is done?
-
 import React from 'react';
 import './MovieCard.css';
 import Badge from './Badge';
