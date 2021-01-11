@@ -35,7 +35,7 @@ As of January 2021, the front end is fairly mature, but it saves all data to loc
 
 [![BFI 250 Progress Bar Video Demo](http://img.youtube.com/vi/07n1iiyvbys/0.jpg)](http://www.youtube.com/watch?v=07n1iiyvbys "Video Demo")
 
-## Code Snippet
+## Code Snippet (Card Buttons Component)
 
 ```
 import React from 'react';
