@@ -10,7 +10,6 @@ const ProgressBar = (props) => {
     const totalFilms = props.filmSet.length;
     const seenStatusData = props.seenStatus;
     const showSet = props.showSet;
-    console.log(totalFilms);
     // Find out screen size
     const screenSize = window.innerWidth;
 

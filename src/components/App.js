@@ -20,6 +20,7 @@ const App = (props) => {
   const getMovies = async () => {
     const response = await axios.get('https://cors-anywhere.herokuapp.com/https://bfi250-data.herokuapp.com/films');
     setMovies(response.data);
+    console.log("Again")
   // Filter by any string entered in the search bar
   const all = await response.data[2012];
   let titles = await all.filter(film => film.title.toLowerCase().includes(props.searchTitle.toLowerCase()))
