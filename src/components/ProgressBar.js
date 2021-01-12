@@ -7,10 +7,10 @@ import { changeShowSet } from '../redux/actions';
 
 const ProgressBar = (props) => {
     // Assign props to variables
-    const totalFilms = props.movieData.BFI2012.length;
+    const totalFilms = props.filmSet.length;
     const seenStatusData = props.seenStatus;
     const showSet = props.showSet;
-    
+    console.log(totalFilms);
     // Find out screen size
     const screenSize = window.innerWidth;
 
