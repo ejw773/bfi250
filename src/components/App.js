@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
