@@ -6,12 +6,14 @@ import Landing from './components/Landing';
 import About from './components/About';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { fetchStatus } from './redux/actions';
 import { 
   HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
 
+store.dispatch(fetchStatus());
 
 ReactDOM.render(
 <Provider store={store}>

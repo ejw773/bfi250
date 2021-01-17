@@ -103,7 +103,7 @@ const ProgressBar = (props) => {
 
 const mapStateToProps = state => {
     return {
-        seenStatus: state.seenStatus,
+        seenStatus: state.seenStatus.status,
         movieData: state.movieData,
         showSet: state.showSet.showSet
     }

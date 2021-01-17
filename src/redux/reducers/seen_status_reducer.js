@@ -1,23 +1,35 @@
-import { FETCH_STATUS_SUCCESS, TOGGLE_STATUS_SUCCESS } from '../actionTypes';
+import { FETCH_STATUS_SUCCESS, TOGGLE_STATUS_SUCCESS, REMOVE_STATUS_SUCCESS } from '../actionTypes';
 
 const initialState = {
+    status: {}
 };
 
 export default function seenStatus(state = initialState, action) {
-    console.log('seenStatus reducer fired');
-    console.log(action.payload)
+    console.log(action.payload);
     switch(action.type) {
         case FETCH_STATUS_SUCCESS: {
             return {
                 ...state,
-                [action.payload.imdbID]: action.payload.status
+                status: action.payload || {}
             }
         }
         case TOGGLE_STATUS_SUCCESS: {
             return {
                 ...state,
-                [action.payload.imdbID]: action.payload.status
-            };            
+                status: {
+                    ...state.status,
+                    [action.payload.imdbID]: action.payload.status
+                }
+            }            
+        }
+        case REMOVE_STATUS_SUCCESS: {
+            return {
+                ...state,
+                status: {
+                    ...state.status,
+                    [action.payload.imdbID]: null
+                }
+            }
         }
         default: return state;
     }

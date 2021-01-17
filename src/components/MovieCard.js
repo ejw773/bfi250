@@ -27,7 +27,7 @@ const MovieCard = (props) => {
 
 const mapStateToProps = state => {
     return {
-        viewStatus: state.seenStatus
+        viewStatus: state.seenStatus.status
     }
 }
 

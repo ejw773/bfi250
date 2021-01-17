@@ -4,6 +4,8 @@ import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
 import { connect } from 'react-redux';
+import { fetchStatus } from '../redux/actions';
+
 
 const App = (props) => {
 
@@ -44,11 +46,15 @@ const App = (props) => {
 const mapStateToProps = state => {
   return {
     movieData: state.movieData,
-    seenStatus: state.seenStatus,
+    seenStatus: state.seenStatus.status,
     showSet: state.showSet,
     searchTitle: state.searchTitle.title
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  fetchStatus: () => dispatch(fetchStatus())
+})  
 
-export default connect(mapStateToProps, null)(App);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

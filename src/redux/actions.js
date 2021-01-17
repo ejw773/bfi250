@@ -10,29 +10,60 @@ import {
  } from './actionTypes';
 import bfiAPI from '../api/bfi'
 
-export async function fetchStatus(dispatch, getState) {
-    console.log("initial fetch fired");
-    try {
-        const response = await bfiAPI.get('/status/1');
-        console.log("initial call for status fired")
-        console.log(response.data);
-        dispatch({
-            type: FETCH_STATUS_SUCCESS,
-            payload: response.data
-        });
-    } catch(err) {
-        console.log(err);
-        dispatch({
-            type: FETCH_STATUS_FAILURE,
-            payload: err
-        });
+// export async function fetchStatus(dispatch, getState) {
+//     console.log("initial fetch fired");
+//     try {
+//         const response = await bfiAPI.get('/status/1');
+//         console.log("initial call for status fired")
+//         console.log(response.data);
+//         dispatch({
+//             type: FETCH_STATUS_SUCCESS,
+//             payload: response.data
+//         });
+//     } catch(err) {
+//         console.log(err);
+//         dispatch({
+//             type: FETCH_STATUS_FAILURE,
+//             payload: err
+//         });
+//     }
+// }
+
+export function fetchStatus() {
+    return async function fetchStatusThunk(dispatch, getState) {
+        console.log("initial fetch fired");
+        try {
+            const response = await bfiAPI.get('/status/1');
+            let theData = response.data;
+            let formattedData = {};
+            let i;
+            for (i = 0; i < theData.length; i++) {
+              let theID = theData[i].imdbID;
+              let theStatus = theData[i].status;
+              formattedData = {
+                  ...formattedData,
+                  [theID]: theStatus
+              }
+            }
+            console.log(formattedData);
+              dispatch({
+                  type: FETCH_STATUS_SUCCESS,
+                  payload: formattedData
+              })
+        } catch(err) {
+            console.log(err);
+            dispatch({
+                type: FETCH_STATUS_FAILURE,
+                payload: err
+            });
+        }
     }
 }
 
-export function toggleSeenStatus(bfiID, toggleAction) {
+export function toggleSeenStatus(imdbID, toggleAction) {
     return async function toggleStatusThunk(dispatch, getState) {
         try {
-            const response = await bfiAPI.post('/status', { userID: 2, imdbID: bfiID, status: toggleAction });
+            const response = await bfiAPI.post('/status', { userID: 1, imdbID: imdbID, status: toggleAction });
             dispatch({
                 type: TOGGLE_STATUS_SUCCESS,
                 payload: response.data
@@ -46,9 +77,23 @@ export function toggleSeenStatus(bfiID, toggleAction) {
     }
 }
 
-export const deleteSeenStatus = (imdbID) => {
-    
-} 
+export function deleteSeenStatus(imdbID) {
+    console.log(`Removing ${imdbID}`)
+    return async function toggleStatusThunk(dispatch, getState) {
+        try {
+            const response = await bfiAPI.delete(`/delete/1/${imdbID}`);
+            dispatch({
+                type: REMOVE_STATUS_SUCCESS,
+                payload: response.data
+            });
+        } catch(err) {
+            dispatch({
+                type: REMOVE_STATUS_FAILURE,
+                payload: err
+            });
+        }
+    }
+}
 
 export const searchTitle = (searchTerms) => {
     return {

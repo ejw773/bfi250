@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleSeenStatus, deleteSeenStatus } from '../redux/actions';
+import { toggleSeenStatus, deleteSeenStatus, fetchStatus } from '../redux/actions';
 
 // Call reducer for each different button press
 const CardButtons = (props) => {
@@ -36,7 +36,8 @@ const CardButtons = (props) => {
 
 const mapDispatchToProps = dispatch => ({
     toggleSeenStatus: (imdbID, toggleAction) => dispatch(toggleSeenStatus(imdbID, toggleAction)),
-    deleteSeenStatus: (imdbID, toggleAction) => dispatch(deleteSeenStatus(imdbID, toggleAction))
+    deleteSeenStatus: (imdbID, toggleAction) => dispatch(deleteSeenStatus(imdbID, toggleAction)),
+    fetchStatus: () => dispatch(fetchStatus())
 })  
 
 export default connect(null, mapDispatchToProps)(CardButtons);
