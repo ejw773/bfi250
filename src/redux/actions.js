@@ -10,25 +10,6 @@ import {
  } from './actionTypes';
 import bfiAPI from '../api/bfi'
 
-// export async function fetchStatus(dispatch, getState) {
-//     console.log("initial fetch fired");
-//     try {
-//         const response = await bfiAPI.get('/status/1');
-//         console.log("initial call for status fired")
-//         console.log(response.data);
-//         dispatch({
-//             type: FETCH_STATUS_SUCCESS,
-//             payload: response.data
-//         });
-//     } catch(err) {
-//         console.log(err);
-//         dispatch({
-//             type: FETCH_STATUS_FAILURE,
-//             payload: err
-//         });
-//     }
-// }
-
 export function fetchStatus() {
     return async function fetchStatusThunk(dispatch, getState) {
         console.log("initial fetch fired");
