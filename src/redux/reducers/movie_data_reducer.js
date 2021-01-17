@@ -1150,7 +1150,7 @@ const initialState = {
         year: "1966",
         bfiRank: "144",
         imdbID: "tt0060176",
-        poster: "https://m.media-amazon.com/images/M/MV5BNWNkOGYzOGYtZGE4OC00NDVjLWExZTYtZWE2YTA3MjI4YThlXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg"
+        poster: "https://m.media-amazon.com/images/I/71yO1l6rLtL._AC_UL320_.jpg"
       },
       {
         title: "The Great Dictator",
