@@ -5,7 +5,6 @@ const initialState = {
 };
 
 export default function seenStatus(state = initialState, action) {
-    console.log(action.payload);
     switch(action.type) {
         case FETCH_STATUS_SUCCESS: {
             return {

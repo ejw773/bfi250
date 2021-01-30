@@ -1510,7 +1510,7 @@ const initialState = {
         year: "1958",
         bfiRank: "183",
         imdbID: "tt0051792",
-        poster: "https://m.media-amazon.com/images/M/MV5BNmVhOWViMGQtMDBmNS00YmM3LTlmOGItMjRmN2VjNWExNWIzXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
+        poster: "https://upload.wikimedia.org/wikipedia/en/e/ed/The-Music-Room-poster.jpg"
       },
       {
         title: "The Story of the Last Chrysanthemums",
