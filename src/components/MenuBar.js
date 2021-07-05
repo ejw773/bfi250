@@ -1,40 +1,26 @@
 import React from 'react';
 import './MenuBar.css'
-import { Container, Row, Col, ProgressBar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-
+import './ProgressBar.css'
+import { ProgressBar } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
 
 const MenuBar = () => {
     return (
         <React.Fragment>
-            <Link>
-                <div className="menu-div menu-div-header color-primary">
-                    <p>BFI 250 Progress Bar</p>
-                </div>
-            </Link>
-            <Row noGutters>
-                <Col>
-                    <Link to="/">
-                        <div className="menu-div menu-div-item color-danger">
-                            <p>Progress</p>
-                        </div>
-                    </Link>
-                </Col>
-                <Col>
-                    <Link to="/about">
-                        <div className="menu-div menu-div-item color-warning">
-                            <p>About</p>
-                        </div>
-                    </Link>
-                </Col>
-                <Col>
-                    <Link to="/landing">
-                        <div className="menu-div menu-div-item color-success">
-                            <p>Login</p>
-                        </div>
-                    </Link>
-                </Col>
-            </Row>
+            <LinkContainer to="/">
+                <ProgressBar className="menu-bar menu-bar-header" now={100} label="BFI 250 Progress Bar" />
+            </LinkContainer>
+                <ProgressBar className="menu-bar">
+                    <LinkContainer to="/">
+                        <ProgressBar className="menu-bar-item" variant="danger" now={33} key={1} label="Progress" />
+                    </LinkContainer>
+                    <LinkContainer to="/about">
+                        <ProgressBar className="menu-bar-item" variant="warning" now={33} key={2} label="About" />
+                    </LinkContainer>
+                    <LinkContainer to="/landing">
+                        <ProgressBar className="menu-bar-item" variant="success" now={34} key={3} label="Login" />
+                    </LinkContainer>
+                </ProgressBar>
         </React.Fragment>
     )
 }

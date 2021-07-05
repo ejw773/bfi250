@@ -1,37 +1,10 @@
-.menu-div {
-    font-size: 1.6rem;
-    text-align: center;
+.menu-bar {
+    height: 1.6em;
+    font-size: 2em;
+    border-radius: 0 !important;
+    cursor: pointer;
 }
 
-.menu-div-header {
+.menu-bar-header {
     border: solid white 4px;
-}
-
-p {
-    padding: 5px 0px 0px 0px;
-}
-
-.menu-div-item {
-    font-size: 1.6em;
-    height: 2em;
-}
-
-.color-primary {
-    color: white;
-    background-color: #007bff;
-}
-
-.color-danger {
-    color: white;
-    background-color: #dc3545;
-}
-
-.color-warning {
-    color: black;
-    background-color: #ffc107;
-}
-
-.color-success {
-    color: white;
-    background-color: #28a745;
 }
