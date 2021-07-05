@@ -1,3 +1,27 @@
+/* Styling for non-progress bar menu */
+
+.progress-home {
+    height: 1.6em;
+    font-size: 2em;
+    border-radius: 0 !important;
+    cursor: pointer;
+}
+
+.progress-menu {
+    height: 1.6em;
+    border-radius: 0 !important;
+    font-size: 0.7em;
+    padding: 1.5em 0 1.5em 0;
+}
+
+.menu-sections {
+    height: 2em;
+    cursor: pointer;
+}
+
+
+/* Styling for progress bar menu */
+
 .bg-warning {
     color: black;
 }
@@ -6,6 +30,7 @@
     font-size: 2em;
     border-radius: 0 !important;
 }
+
 
 .progress-all {
     height: 1.6em;

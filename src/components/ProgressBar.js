@@ -90,7 +90,7 @@ const ProgressBar = (props) => {
     return (
         <div>
             <div className="progress progress-all">
-                <div className="progress-all progress-bar bg-primary" id="view-all" onClick={changeView} role="progressbar" style={viewAllStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">BFI 250 Progress Bar</div>
+                <div className="progress-all progress-bar bg-primary" id="view-all" onClick={changeView} role="progressbar" style={viewAllStyle} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">All Films</div>
             </div>
             <div className="progress progress-sections">
                 <div className="progress-skipped progress-bar progress-bar-striped bg-danger" id="view-skipped" onClick={changeView} role="progressbar" style={viewSkippedStyle} aria-valuenow='100' aria-valuemin="0" aria-valuemax="100">{totalSkipped}</div>

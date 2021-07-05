@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css'
+import MenuBar from './MenuBar'
+import AboutFooter from './AboutFooter'
 
 const About = () => {
     return (
-        <div id="about-page">
-            <h1>This Will Be The 'About' Page</h1>
-            <Link to="/">Back to Progress Bar</Link> <br />
-            <Link to="/landing">Logout</Link>
+        <div>
+            <MenuBar />
+            <div id="about-page">
+            </div>
+            <AboutFooter />
         </div>
     )
 }

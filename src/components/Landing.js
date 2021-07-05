@@ -37,7 +37,7 @@ class LoginManager extends React.Component {
     render() {
         return (
             <div>
-                <MenuBar></MenuBar>
+                <MenuBar />
                 <Landing />
             </div>
         )
@@ -47,8 +47,7 @@ class LoginManager extends React.Component {
 const Landing = () => {
     return (
         <div id='landing-page'>
-            <Link to="/">Take Me to the Progress Bar</Link>
-            <Modal.Dialog>
+            {/* <Modal.Dialog>
                 <Modal.Header closebutton>
                     <Modal.Title>Login</Modal.Title>
                 </Modal.Header>
@@ -61,7 +60,7 @@ const Landing = () => {
                 <Modal.Footer>
                     <Button variant="secondary">Close</Button>
                 </Modal.Footer>
-            </Modal.Dialog>
+            </Modal.Dialog> */}
         </div>
     )
 }
