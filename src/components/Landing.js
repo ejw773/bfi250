@@ -53,11 +53,13 @@ const Landing = () => {
                     <Modal.Title>Login</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Login Form Goes Here</p>
+                    <p>Login With:</p>
+                    <Button>Google</Button>
+                    <Button>Facebook</Button>
+                    <Button>Github</Button>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary">Close</Button>
-                    <Button variant="primary">Login</Button>
                 </Modal.Footer>
             </Modal.Dialog>
         </div>
