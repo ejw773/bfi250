@@ -4,6 +4,7 @@
 
 .progress {
     font-size: 2em;
+    border-radius: 0 !important;
 }
 
 .progress-all {
