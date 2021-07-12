@@ -4,11 +4,11 @@ import {
     CHANGE_SHOW_SET
 } from './actionTypes';
 
-export const toggleSeenStatus = (bfiID, toggleAction) => {
+export const toggleSeenStatus = (imdbID, toggleAction) => {
     return {
         type: TOGGLE_SEEN_STATUS,
         payload: {
-            bfiID: bfiID,
+            imdbID: imdbID,
             toggleAction: toggleAction
         }
     }

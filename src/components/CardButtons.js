@@ -8,6 +8,7 @@ const CardButtons = (props) => {
         props.toggleSeenStatus(event.target.id, null)
     }
     const toTrue = (event) => {
+        console.log(`The button: ${event.target.id}`)
         props.toggleSeenStatus(event.target.id, true);
     }
     const toFalse = (event) => {
@@ -35,7 +36,7 @@ const CardButtons = (props) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    toggleSeenStatus: (bfiID, toggleAction) => dispatch(toggleSeenStatus(bfiID, toggleAction)),
+    toggleSeenStatus: (imdbID, toggleAction) => dispatch(toggleSeenStatus(imdbID, toggleAction)),
 })  
 
 export default connect(null, mapDispatchToProps)(CardButtons);

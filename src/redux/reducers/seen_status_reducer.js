@@ -4,11 +4,12 @@ const initialState = {
 };
 
 export default function seenStatus(state = initialState, action) {
+    console.log(action.payload);
     switch(action.type) {
         case TOGGLE_SEEN_STATUS: {
             return {
                 ...state,
-                [action.payload.bfiID]: action.payload.toggleAction
+                [action.payload.imdbID]: action.payload.toggleAction
             };            
         }
         default: return state;
