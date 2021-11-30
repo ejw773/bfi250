@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm, faQuestion } from '@fortawesome/free-solid-svg-icons';
 
-const AboutFooter = () => {
+const FooterMenu = () => {
     return (
         <Nav className="navbar fixed-bottom navbar-dark bg-dark">
-            <a href="https://elijahwilcott.com">My Portfolio</a>
             <Link className="navbar-brand" to="/"><FontAwesomeIcon icon={faFilm} /></Link>
             <Link className="navbar-brand" to="/about"><FontAwesomeIcon icon={faQuestion} /></Link>
         </Nav>
     )
 }
 
-export default AboutFooter;
+export default FooterMenu;

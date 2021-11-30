@@ -4,7 +4,6 @@ const initialState = {
 };
 
 export default function seenStatus(state = initialState, action) {
-    console.log(action.payload);
     switch(action.type) {
         case TOGGLE_SEEN_STATUS: {
             return {
