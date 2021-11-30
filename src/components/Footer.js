@@ -18,7 +18,7 @@ const Footer = (props) => {
                 <input value={props.title} onChange={handleChange} className="form-control mr-sm-2" type="search" placeholder="Filter by Title" aria-label="Search" />
             </form>
             <Link className="navbar-brand" to="/"><FontAwesomeIcon icon={faFilm} /></Link>
-            <Link className="navbar-brand" to="/about"><FontAwesomeIcon icon={faQuestion} /></Link>
+            <Link className="navbar-brand" to="/login"><FontAwesomeIcon icon={faQuestion} /></Link>
         </nav>
     </div>
     )

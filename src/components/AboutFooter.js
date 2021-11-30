@@ -9,7 +9,7 @@ const AboutFooter = () => {
         <Nav className="navbar fixed-bottom navbar-dark bg-dark">
             <a href="https://elijahwilcott.com">My Portfolio</a>
             <Link className="navbar-brand" to="/"><FontAwesomeIcon icon={faFilm} /></Link>
-            <Link className="navbar-brand" to="/about"><FontAwesomeIcon icon={faQuestion} /></Link>
+            <Link className="navbar-brand" to="/login"><FontAwesomeIcon icon={faQuestion} /></Link>
         </Nav>
     )
 }
