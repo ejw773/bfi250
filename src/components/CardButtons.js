@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleSeenStatus } from '../redux/actions';
+import { toggleSeenStatus } from '../redux/actions/actions';
 
 // Call reducer for each different button press
 const CardButtons = (props) => {

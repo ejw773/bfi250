@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProgressBar.css'
 import { connect } from 'react-redux';
-import { changeShowSet } from '../redux/actions';
+import { changeShowSet } from '../redux/actions/actions';
 
 // This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
 

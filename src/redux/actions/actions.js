@@ -2,7 +2,7 @@ import {
     TOGGLE_SEEN_STATUS,
     SEARCH_TITLE,
     CHANGE_SHOW_SET
-} from './actionTypes';
+} from '../actionTypes';
 
 export const toggleSeenStatus = (imdbID, toggleAction) => {
     return {
