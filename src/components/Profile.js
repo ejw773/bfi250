@@ -7,10 +7,10 @@ import MenuBar from './MenuBar'
 import ProfileFooter from './ProfileFooter'
 import { logout, logoutAll } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
-import { changeFilmSet } from '../redux/actions/actions';
+import { changeFilmSet, changeShowSet } from '../redux/actions/actions';
 
 const Profile = () => {
-    const user = useSelector((state) => state.auth.user)
+    const user = useSelector((state) => state.auth)
     
     // Control Log Out
     const [showLogOut, setShowLogOut] = useState(false)
@@ -38,12 +38,14 @@ const Profile = () => {
         handleCloseLogOut()
     }
 
-    if (!user) {
+    if (!user.isLoggedIn) {
         return <Redirect to="/login" />;
     }
     const { name, email, filmSet } = user
     const setSelection = (selection) => {
         dispatch(changeFilmSet(selection))
+        dispatch(changeShowSet('view-all'))
+        return <Redirect to="/" />
     }
     return (
         <div id='profile-page'>
@@ -60,13 +62,13 @@ const Profile = () => {
                             <Col className="align-self-center col-md-auto p-3 mb-2 bg-secondary bg-gradient text-white">Some stuff here.</Col>
                         </Row>
                         <Row>
-                            <Col className="align-self-center col-md-auto p-3 mb-2 bg-secondary bg-gradient text-white">Choose your film set. Your current selection is {filmSet}</Col>
+                            <Col className="align-self-center col-md-auto p-3 mb-2 bg-secondary bg-gradient text-white">Choose your film set. Your current selection is {filmSet.substring(3)}</Col>
                         </Row>
                         <Row>
                             <Col>
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                        Choose Year
+                                        Chosen: {filmSet.substring(3)}
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>

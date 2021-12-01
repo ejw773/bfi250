@@ -52,7 +52,12 @@ import {
       (data) => {
         dispatch({
           type: LOGIN_SUCCESS,
-          payload: { user: data },
+          payload: { 
+            name: data.name,
+            email: data.email,
+            filmSet: data.filmSet,
+            token: data.token
+          },
         });
   
         return Promise.resolve();

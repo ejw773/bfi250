@@ -5,6 +5,9 @@ import {
     LOGIN_FAIL,
     LOGOUT_ALL,
     LOGOUT,
+    CHANGE_EMAIL,
+    CHANGE_NAME,
+    CHANGE_FILM_SET
   } from "../actionTypes";
   
   const user = JSON.parse(localStorage.getItem("user"));
@@ -32,7 +35,10 @@ import {
         return {
           ...state,
           isLoggedIn: true,
-          user: payload.user,
+          name: payload.name,
+          email: payload.email,
+          filmSet: payload.filmSet,
+          token: payload.token
         };
       case LOGIN_FAIL:
         return {
@@ -52,6 +58,18 @@ import {
           isLoggedIn: false,
           user: null
         };
+      case CHANGE_EMAIL:
+        console.log('changing email')
+        return state
+      case CHANGE_NAME:
+        console.log('changing user name')
+        return state
+      case CHANGE_FILM_SET:
+        return {
+        ...state,
+        filmSet: action.payload.newSet
+        };
+
       default:
         return state;
     }

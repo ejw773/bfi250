@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './ProgressBar.css'
 import { connect } from 'react-redux';
 import { changeShowSet } from '../redux/actions/actions';
@@ -6,10 +7,13 @@ import { changeShowSet } from '../redux/actions/actions';
 // This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
 
 const ProgressBar = (props) => {
+    const dispatch = useDispatch()
+    const filmSet = useSelector((state) => state.auth.filmSet)
+    const seenStatusData = useSelector((state) => state.seenStatus)
+    const showSet = useSelector((state) => state.showSet.showSet)
+
     // Assign props to variables
     const totalFilms = props.movieData.BFI2012.length;
-    const seenStatusData = props.seenStatus;
-    const showSet = props.showSet;
     
     // Find out screen size
     const screenSize = window.innerWidth;
@@ -84,7 +88,7 @@ const ProgressBar = (props) => {
     // Call the reducer to update which collection of films to show
     const changeView = (event) => {
         let viewSet = event.target.id;
-        props.changeShowSet(viewSet);
+        dispatch(changeShowSet(viewSet));
     }
 
     return (
@@ -103,7 +107,6 @@ const ProgressBar = (props) => {
 
 const mapStateToProps = state => {
     return {
-        seenStatus: state.seenStatus,
         movieData: state.movieData,
         showSet: state.showSet.showSet
     }

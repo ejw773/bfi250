@@ -6,17 +6,20 @@ import getFilms from '../services/film-service';
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
-import { connect } from 'react-redux';
 
-const App = (props) => {
-  const [apiFilms, setApiFilms] = useState({})
-  const user = useSelector((state) => state.auth.user)
+const App = () => {
+  const [films, setFilms] = useState({})
+
+  const user = useSelector((state) => state.auth)
+  const seenStatus = useSelector((state => state.seenStatus))
+  const showSet = useSelector((state => state.showSet))
+  const searchTitle = useSelector((state) => state.searchTitle.title)
+
   const filmSet = user.filmSet
-  console.log(user)
   useEffect(() => {
     getFilms(filmSet).then(
       (response) => {
-        setApiFilms(response.data)
+        setFilms(response.data)
       },
       (error) => {
         console.log(error)
@@ -24,11 +27,11 @@ const App = (props) => {
     )
   }, [])
 
-  if (!user) {
+  if (!user.isLoggedIn) {
     return <Redirect to="/login" />;
   }
 
-  if (!apiFilms[filmSet]) {
+  if (!films[filmSet]) {
     return (
       <div>
         <h1>Loading...</h1>
@@ -36,24 +39,20 @@ const App = (props) => {
     )
   } else {
 
-    console.log(apiFilms)
-
     // Variable containing all the films
-    const allFilms = apiFilms[filmSet];
+    const allFilms = films[filmSet];
   
     // Filter by any string entered in the search bar
-    let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(props.searchTitle.toLowerCase()))
+    let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(searchTitle.toLowerCase()))
   
     // Create sets of films based on seenStatus
-    let filmsSeen = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===true);
-    let filmsSkipped = titlesToSearch.filter(film => props.seenStatus[film.imdbID]===false);
-    let filmsToSee = titlesToSearch.filter(film => typeof (props.seenStatus[film.imdbID])!=='boolean');
-  
+    let filmsSeen = titlesToSearch.filter(film => seenStatus[film.imdbID]===true);
+    let filmsSkipped = titlesToSearch.filter(film => seenStatus[film.imdbID]===false);
+    let filmsToSee = titlesToSearch.filter(film => typeof (seenStatus[film.imdbID])!=='boolean');
   
     // Variable holding the name of the set to be shown, based on seenStatus
-    let showTheseFilms = props.showSet.showSet;
-  
-  
+    let showTheseFilms = showSet.showSet;
+    
     return (
       <div>
         <div className="fixed-top">
@@ -71,21 +70,7 @@ const App = (props) => {
         <Footer />
       </div>
     )
-
-
-  }
-
-
-}
-
-const mapStateToProps = state => {
-  return {
-    movieData: state.movieData,
-    seenStatus: state.seenStatus,
-    showSet: state.showSet,
-    searchTitle: state.searchTitle.title
   }
 }
 
-
-export default connect(mapStateToProps, null)(App);
+export default App;
