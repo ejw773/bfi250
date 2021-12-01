@@ -1,11 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom'
 import './App.css';
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
 import { connect } from 'react-redux';
 
+
+
 const App = (props) => {
+  const user = useSelector((state) => state.auth.user)
+  if (!user) {
+    return <Redirect to="/login" />;
+}
 
   // Variable containing all the films
   const allFilms = props.movieData.BFI2012;

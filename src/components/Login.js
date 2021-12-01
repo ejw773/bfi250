@@ -5,7 +5,7 @@ import { Modal, Form, Container, Row, Col, Button } from 'react-bootstrap';
 import './Login.css';
 import MenuBar from './MenuBar';
 import AboutFooter from './AboutFooter';
-import { register, login, logout, logoutAll } from '../redux/actions/auth'
+import { register, login } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
 
 const Login = () => {
@@ -35,12 +35,11 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const handleEmailChange = (val) => setEmail(val)
 
-
     const [password, setPassword] = useState('')
     const handlePasswordChange = (val) => setPassword(val)
 
-    const { isLoggedIn } = useSelector((state) => state.auth.isLoggedIn)
-    const { message } = useSelector((state) => state.message)
+    const { isLoggedIn } = useSelector((state) => state.auth)
+    const message = useSelector((state) => state.message)
 
     const dispatch = useDispatch()
 
@@ -76,25 +75,9 @@ const Login = () => {
         })
         handleCloseLogIn()
     }
-
-    const handleLogOut = async (e) => {
-        e.preventDefault()
-        dispatch(logout())
-        // .catch(() => {
-        //     setLoading(false)
-        // })
-        handleCloseLogOut()
+    if (isLoggedIn) {
+        return <Redirect to='/' />;
     }
-
-    const handleLogOutAll = (e) => {
-        e.preventDefault()
-        dispatch(logoutAll())
-        handleCloseLogOut()
-    }
-
-    // if (isLoggedIn) {
-    //     return <Redirect to='/' />
-    // }
 
     return (
         <div>
@@ -110,7 +93,7 @@ const Login = () => {
                         <Row>
                             <Col><Button onClick={handleShowSignUp}>Sign Up</Button></Col>
                             <Col><Button onClick={handleShowLogIn}>Log In</Button></Col>
-                            <Col><Button onClick={handleShowLogOut}>Log Out</Button></Col>
+                            {/* <Col><Button onClick={handleShowLogOut}>Log Out</Button></Col> */}
                         </Row>
                     </Container>
 
@@ -180,7 +163,7 @@ const Login = () => {
                     </Modal>
 
                     {/* Log Out Modal */}
-                    <Modal show={showLogOut} onHide={handleCloseLogOut} centered>
+                    {/* <Modal show={showLogOut} onHide={handleCloseLogOut} centered>
                         <Modal.Header closeButton>
                         <Modal.Title>Log Out</Modal.Title>
                         </Modal.Header>
@@ -196,7 +179,7 @@ const Login = () => {
                             All Devices
                         </Button>
                         </Modal.Footer>
-                    </Modal>
+                    </Modal> */}
 
             </div>
             <AboutFooter />
