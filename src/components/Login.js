@@ -1,13 +1,18 @@
-import React from 'react';
-import { useState } from 'react'
-import { Modal, Form, Container, Row, Col, Button } from 'react-bootstrap'
-import './Login.css'
-import MenuBar from './MenuBar'
-import AboutFooter from './AboutFooter'
-import { register, login, logout, logoutAll } from '../services/auth'
-import getMyProfile from '../services/user'
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { Modal, Form, Container, Row, Col, Button } from 'react-bootstrap';
+import './Login.css';
+import MenuBar from './MenuBar';
+import AboutFooter from './AboutFooter';
+import { register, login, logout, logoutAll } from '../redux/actions/auth'
+import { clearMessage } from '../redux/actions/message';
 
 const Login = () => {
+    // Current Status
+    const [loading, setLoading] = useState(false);
+    const [successful, setSuccessful] = useState(false);
+
     // Control Sign Up
     const [showSignUp, setShowSignUp] = useState(false)
     const handleShowSignUp = () => setShowSignUp(true)
@@ -34,6 +39,14 @@ const Login = () => {
     const [password, setPassword] = useState('')
     const handlePasswordChange = (val) => setPassword(val)
 
+    const { isLoggedIn } = useSelector((state) => state.auth.isLoggedIn)
+    const { message } = useSelector((state) => state.message)
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(clearMessage());
+    }, [dispatch])
 
     const clearForm = () => {
         setName('')
@@ -43,37 +56,45 @@ const Login = () => {
 
     const handleRegistration = (e) => {
         e.preventDefault()
-        const userInfo = {
-            name,
-            email,
-            password
-        }
-        register(userInfo)
+        setSuccessful(false)
+        dispatch(register(name, email, password))
+        .then(() => {
+            setSuccessful(true)
+        })
+        .catch(() => {
+            setSuccessful(false)
+        })
         handleCloseSignUp()
     }
 
     const handleLogIn = (e) => {
         e.preventDefault()
-        const userInfo = {
-            email,
-            password
-        }
-        login(userInfo)
+        setLoading(true)
+        dispatch(login(email, password))
+        .catch(() => {
+            setLoading(false)
+        })
         handleCloseLogIn()
     }
 
     const handleLogOut = async (e) => {
         e.preventDefault()
+        dispatch(logout())
+        // .catch(() => {
+        //     setLoading(false)
+        // })
         handleCloseLogOut()
-        console.log('Logging out.')
     }
 
     const handleLogOutAll = (e) => {
         e.preventDefault()
+        dispatch(logoutAll())
         handleCloseLogOut()
-        console.log('Logging out of all devices.')
     }
 
+    // if (isLoggedIn) {
+    //     return <Redirect to='/' />
+    // }
 
     return (
         <div>
