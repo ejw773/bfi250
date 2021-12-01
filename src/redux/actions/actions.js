@@ -1,7 +1,8 @@
 import {
     TOGGLE_SEEN_STATUS,
     SEARCH_TITLE,
-    CHANGE_SHOW_SET
+    CHANGE_SHOW_SET,
+    CHANGE_FILM_SET
 } from '../actionTypes';
 
 export const toggleSeenStatus = (imdbID, toggleAction) => {
@@ -26,6 +27,15 @@ export const searchTitle = (searchTerms) => {
 export const changeShowSet = (newSet) => {
     return {
         type: CHANGE_SHOW_SET,
+        payload: {
+            newSet: newSet
+        }
+    }
+};
+
+export const changeFilmSet = (newSet) => {
+    return {
+        type: CHANGE_FILM_SET,
         payload: {
             newSet: newSet
         }
