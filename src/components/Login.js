@@ -65,8 +65,7 @@ const Login = () => {
     const handleLogOut = async (e) => {
         e.preventDefault()
         handleCloseLogOut()
-        const theResult = await getMyProfile()
-        console.log(theResult)
+        console.log('Logging out.')
     }
 
     const handleLogOutAll = (e) => {
