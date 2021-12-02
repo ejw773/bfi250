@@ -59,21 +59,27 @@ const Login = () => {
         dispatch(register(name, email, password))
         .then(() => {
             setSuccessful(true)
+            clearForm()
+            handleCloseSignUp()
         })
-        .catch(() => {
+        .catch((e) => {
             setSuccessful(false)
+            console.log(e)
         })
-        handleCloseSignUp()
     }
 
     const handleLogIn = (e) => {
         e.preventDefault()
         setLoading(true)
         dispatch(login(email, password))
-        .catch(() => {
-            setLoading(false)
+        .then(() => {
+            clearForm()
+            handleCloseLogIn()
         })
-        handleCloseLogIn()
+        .catch((e) => {
+            setLoading(false)
+            console.log(e)
+        })
     }
     if (isLoggedIn) {
         return <Redirect to='/' />;
