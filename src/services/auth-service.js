@@ -3,6 +3,8 @@ import { API_URL } from '../api/apiUrl';
 import authHeader from './auth-header';
 
 const register = (name, email, password) => {
+  localStorage.removeItem("user");
+  localStorage.removeItem("persistantState")
   return axios.post(API_URL + "users", {
     name,
     email,
@@ -17,6 +19,8 @@ const register = (name, email, password) => {
 };
 
 const login = (email, password) => {
+  localStorage.removeItem("user");
+  localStorage.removeItem("persistantState")
   return axios
     .post(API_URL + "users/login", {
       email,
@@ -37,6 +41,7 @@ export const logout = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
+      localStorage.removeItem("persistantState")
     })
 };
 
@@ -47,6 +52,7 @@ const logoutAll = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
+      localStorage.removeItem("persistantState")
     })
 }
 

@@ -1,55 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './App.css';
-import getFilms from '../services/film-service';
+import getFilms from '../redux/actions/films'
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
 
+import { API_URL } from '../api/apiUrl'
+console.log(API_URL)
+
 const App = () => {
-  const [films, setFilms] = useState({})
+//  const [films, setFilms] = useState({})
 
   const user = useSelector((state) => state.auth)
-  const seenStatus = useSelector((state => state.seenStatus))
+  console.log(user.email)
   const showSet = useSelector((state => state.showSet))
   const searchTitle = useSelector((state) => state.searchTitle.title)
 
   const filmSet = user.filmSet
+
+  const films = useSelector((state) => state.movieData.films)
+
+  const dispatch = useDispatch()
   useEffect(() => {
-    getFilms(filmSet).then(
-      (response) => {
-        setFilms(response.data)
-      },
-      (error) => {
-        console.log(error)
-      }
-    )
+    dispatch(getFilms(filmSet))
   }, [])
 
   if (!user.isLoggedIn) {
     return <Redirect to="/login" />;
   }
 
-  if (!films[filmSet]) {
+  if (films[filmSet] === undefined) {
     return (
       <div>
         <h1>Loading...</h1>
       </div>
     )
   } else {
-
     // Variable containing all the films
     const allFilms = films[filmSet];
-  
     // Filter by any string entered in the search bar
     let titlesToSearch = allFilms.filter(film => film.title.toLowerCase().includes(searchTitle.toLowerCase()))
   
     // Create sets of films based on seenStatus
-    let filmsSeen = titlesToSearch.filter(film => seenStatus[film.imdbID]===true);
-    let filmsSkipped = titlesToSearch.filter(film => seenStatus[film.imdbID]===false);
-    let filmsToSee = titlesToSearch.filter(film => typeof (seenStatus[film.imdbID])!=='boolean');
-  
+    let filmsSeen = titlesToSearch.filter(film => film.viewStatus)
+    console.log(`Seen: ${filmsSeen.length}`)
+    let filmsSkipped = titlesToSearch.filter(film => film.viewStatus === false);
+    console.log(`Skipped: ${filmsSkipped.length}`)
+    let filmsToSee = titlesToSearch.filter(film => typeof (film.viewStatus)!=='boolean');
+    console.log(`To See: ${filmsToSee.length}`)
+
     // Variable holding the name of the set to be shown, based on seenStatus
     let showTheseFilms = showSet.showSet;
     

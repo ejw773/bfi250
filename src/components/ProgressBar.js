@@ -11,9 +11,10 @@ const ProgressBar = (props) => {
     const filmSet = useSelector((state) => state.auth.filmSet)
     const seenStatusData = useSelector((state) => state.seenStatus)
     const showSet = useSelector((state) => state.showSet.showSet)
+    const films = useSelector((state) => state.movieData.films[filmSet])
 
     // Assign props to variables
-    const totalFilms = props.movieData.BFI2012.length;
+    const totalFilms = films.length;
     
     // Find out screen size
     const screenSize = window.innerWidth;
