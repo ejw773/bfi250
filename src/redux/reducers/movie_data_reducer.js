@@ -3,7 +3,7 @@ import {
   GET_FILMS_FAIL
 } from '../actionTypes'
 
-const initialState = {};
+const initialState = [];
 
 export default function movieData(state = initialState, action) {
   const { type, payload } = action;
