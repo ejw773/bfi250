@@ -8,7 +8,7 @@ import Footer from './Footer';
 import RenderCards from './RenderCards';
 
 import { API_URL } from '../api/apiUrl'
-console.log(API_URL)
+console.log(`Data being pulled from: ${API_URL}`)
 
 const App = () => {
 //  const [films, setFilms] = useState({})
@@ -31,13 +31,17 @@ const App = () => {
     return <Redirect to="/login" />;
   }
 
-  if (films[filmSet] === undefined) {
-    return (
-      <div>
-        <h1>Loading...</h1>
-      </div>
-    )
-  } else {
+  // if (!filmSet || !films) {
+  //   return (
+  //     <div>
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   )
+  // } else {
+
+    if (films[filmSet] !== undefined) {
+
+
     // Variable containing all the films
     const allFilms = films[filmSet];
     // Filter by any string entered in the search bar
@@ -45,11 +49,8 @@ const App = () => {
   
     // Create sets of films based on seenStatus
     let filmsSeen = titlesToSearch.filter(film => film.viewStatus)
-    console.log(`Seen: ${filmsSeen.length}`)
     let filmsSkipped = titlesToSearch.filter(film => film.viewStatus === false);
-    console.log(`Skipped: ${filmsSkipped.length}`)
     let filmsToSee = titlesToSearch.filter(film => typeof (film.viewStatus)!=='boolean');
-    console.log(`To See: ${filmsToSee.length}`)
 
     // Variable holding the name of the set to be shown, based on seenStatus
     let showTheseFilms = showSet.showSet;
@@ -71,7 +72,17 @@ const App = () => {
         <Footer />
       </div>
     )
+  } else {
+    return (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+
+    )
   }
 }
+
+
+  // }
 
 export default App;
