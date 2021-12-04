@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './App.css';
 import getFilms from '../redux/actions/films'
+import getSeenStatus from '../redux/actions/seen_status_actions'
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';
@@ -11,7 +12,7 @@ const App = () => {
   // Get user information
   const user = useSelector((state) => state.auth)
   const filmSet = user?.user?.filmSet
-
+  console.log(filmSet)
   const showSet = useSelector((state => state.showSet))
 
   // Get any search criteria (usually empty)
@@ -20,19 +21,29 @@ const App = () => {
   // API call to get user's films (using 'filmSet' from above)  
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(getFilms(filmSet))
-  }, [dispatch, filmSet])
+    dispatch(getFilms())
+  }, [dispatch])  
+
+  useEffect(() => {
+    dispatch(getSeenStatus())
+  }, [dispatch])
 
   // Get films that were added to the state from the useEffect above
-  const allFilms = useSelector((state) => state.movieData.films)
+  let allFilms = []
+  const films = useSelector((state) => state?.movieData?.films)
+  if (films) {
+    allFilms = films[filmSet]
+  }
+  // console.log(films)
+  // const allFilms = films[filmSet]
+  console.log(allFilms)
 
   if (!user?.isLoggedIn) {
     return <Redirect to="/login" />;
   }
 
 
-
-  if (!allFilms) {
+  if (allFilms.length === 0) {
     return (
       <div>
         <h1>Loading...</h1>
@@ -56,7 +67,7 @@ const App = () => {
       return (
         <div>
           <div className="fixed-top">
-            <ProgressBar />
+            {/* <ProgressBar /> */}
           </div>
           {
             showTheseFilms==='view-seen' ?
