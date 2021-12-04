@@ -35,10 +35,12 @@ import {
         return {
           ...state,
           isLoggedIn: true,
-          name: payload.name,
-          email: payload.email,
-          filmSet: payload.filmSet,
-          token: payload.token
+          user: {
+            name: payload.name,
+            email: payload.email,
+            filmSet: payload.filmSet,
+            token: payload.token  
+          }
         };
       case LOGIN_FAIL:
         return {

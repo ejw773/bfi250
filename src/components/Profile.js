@@ -10,7 +10,7 @@ import { clearMessage } from '../redux/actions/message';
 import { changeFilmSet, changeShowSet } from '../redux/actions/actions';
 
 const Profile = () => {
-    const user = useSelector((state) => state.auth)
+    const user = useSelector((state) => state.auth.user)
     
     // Control Log Out
     const [showLogOut, setShowLogOut] = useState(false)
@@ -42,6 +42,7 @@ const Profile = () => {
         return <Redirect to="/login" />;
     }
     const { name, email, filmSet } = user
+    console.log(user)
     const setSelection = (selection) => {
         dispatch(changeFilmSet(selection))
         dispatch(changeShowSet('view-all'))

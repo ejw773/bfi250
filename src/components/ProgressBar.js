@@ -6,12 +6,19 @@ import { changeShowSet } from '../redux/actions/actions';
 
 // This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
 
-const ProgressBar = (props) => {
+const ProgressBar = () => {
     const dispatch = useDispatch()
-    const filmSet = useSelector((state) => state.auth.filmSet)
+    const filmSet = useSelector((state) => state.auth.user.filmSet)
+    console.log(filmSet)
+
     const seenStatusData = useSelector((state) => state.seenStatus)
+    console.log(seenStatusData)
+
     const showSet = useSelector((state) => state.showSet.showSet)
-    const films = useSelector((state) => state.movieData.films[filmSet])
+    console.log(showSet)
+
+    const films = useSelector((state) => state.movieData.films)
+    console.log(films)
 
     // Assign props to variables
     const totalFilms = films.length;

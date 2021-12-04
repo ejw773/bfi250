@@ -10,7 +10,7 @@ const getFilms = (filmSet) => (dispatch) => {
         (response) => {
             dispatch({
                 type: GET_FILMS_SUCCESS,
-                payload: response.data
+                payload: response
             });
             return Promise.resolve()
         },
