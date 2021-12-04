@@ -14,6 +14,7 @@ const App = () => {
 
   const user = useSelector((state) => state.auth)
   console.log(user.email)
+  console.log(user.filmSet)
   const showSet = useSelector((state => state.showSet))
   const searchTitle = useSelector((state) => state.searchTitle.title)
   console.log('search title')
