@@ -69,7 +69,9 @@ import {
       case CHANGE_FILM_SET:
         return {
         ...state,
-        filmSet: action.payload.newSet
+        user: {
+          filmSet: action.payload.newSet
+        }
         };
 
       default:

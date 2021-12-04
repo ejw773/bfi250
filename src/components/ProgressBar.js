@@ -1,28 +1,19 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './ProgressBar.css'
-import { connect } from 'react-redux';
 import { changeShowSet } from '../redux/actions/actions';
 
 // This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
 
 const ProgressBar = () => {
     const dispatch = useDispatch()
-    const filmSet = useSelector((state) => state.auth.user.filmSet)
-    console.log(filmSet)
-
-    const seenStatusData = useSelector((state) => state.seenStatus)
-    console.log(seenStatusData)
-
     const showSet = useSelector((state) => state.showSet.showSet)
-    console.log(showSet)
-
     const films = useSelector((state) => state.movieData.films)
-    console.log(films)
-
-    // Assign props to variables
     const totalFilms = films.length;
-    
+    const totalSeen = films.filter((film) => film.viewStatus === true).length
+    const totalSkipped = films.filter((film) => film.viewStatus === false).length
+    const totalUnseen = totalFilms - totalSeen - totalSkipped
+
     // Find out screen size
     const screenSize = window.innerWidth;
 
@@ -38,17 +29,12 @@ const ProgressBar = () => {
     }
     let leftoverPercent = 100 - (minPercent * 3);
 
-    // Calculate quantities of seen, unseen, and skipped
-    let totalSeen = (Object.values(seenStatusData).reduce((a, item) => a + (item === true ? 1 : 0), 0));
-    let totalSkipped = (Object.values(seenStatusData).reduce((a, item) => a + (item === false ? 1 : 0), 0));
-    let totalUnseen = totalFilms - totalSeen - totalSkipped;
-
     // Calculate percentages, also accounting for minimum percentage
     let seenPercent = (totalSeen / totalFilms * leftoverPercent) + minPercent;
-    // if (seenPercent < minPercent) {seenPercent = minPercent};
+    if (seenPercent < minPercent) {seenPercent = minPercent};
 
     let skippedPercent = (totalSkipped / totalFilms * leftoverPercent) + minPercent;
-    // if (skippedPercent < minPercent) {skippedPercent = minPercent};
+    if (skippedPercent < minPercent) {skippedPercent = minPercent};
 
     let unseenPercent = (totalUnseen / totalFilms * leftoverPercent) + minPercent;
 
@@ -112,16 +98,5 @@ const ProgressBar = () => {
         </div>
     )
 }
-
-const mapStateToProps = state => {
-    return {
-        movieData: state.movieData,
-        showSet: state.showSet.showSet
-    }
-}
-
-const mapDispatchToProps = dispatch => ({
-    changeShowSet: (newSet) => dispatch(changeShowSet(newSet))
-  })
   
-export default connect(mapStateToProps, mapDispatchToProps)(ProgressBar);
+export default ProgressBar;

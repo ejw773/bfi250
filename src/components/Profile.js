@@ -10,7 +10,7 @@ import { clearMessage } from '../redux/actions/message';
 import { changeFilmSet, changeShowSet } from '../redux/actions/actions';
 
 const Profile = () => {
-    const user = useSelector((state) => state.auth.user)
+    const user = useSelector((state) => state.auth)
     
     // Control Log Out
     const [showLogOut, setShowLogOut] = useState(false)
@@ -41,7 +41,7 @@ const Profile = () => {
     if (!user.isLoggedIn) {
         return <Redirect to="/login" />;
     }
-    const { name, email, filmSet } = user
+    const { name, email, filmSet } = user.user
     console.log(user)
     const setSelection = (selection) => {
         dispatch(changeFilmSet(selection))

@@ -5,6 +5,7 @@ import CardButtons from './CardButtons';
 import { connect } from 'react-redux';
 
 const MovieCard = (props) => {
+    console.log(props)
     let imdbLink = "https://www.imdb.com/title/" + props.imdbID + "/";
     return (
         <div className="card card-group" style={{width: "18rem"}}>

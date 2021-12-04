@@ -1,7 +1,7 @@
 import { CHANGE_SHOW_SET } from '../actionTypes'
 
 const initialState = {
-    showSet: 'allFilms'
+    showSet: 'view-all'
 };
 
 export default function showSet(state = initialState, action) {

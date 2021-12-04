@@ -81,9 +81,9 @@ const Login = () => {
             console.log(e)
         })
     }
-    // if (isLoggedIn) {
-    //     return <Redirect to='/' />;
-    // }
+    if (isLoggedIn) {
+        return <Redirect to='/' />;
+    }
 
     return (
         <div>
