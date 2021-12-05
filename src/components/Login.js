@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { Modal, Form, Container, Row, Col, Button } from 'react-bootstrap';
 import './Login.css';
 import MenuBar from './MenuBar';
-import AboutFooter from './Footers/AboutFooter';
+import OtherFooter from './Footers/OtherFooter';
 import { register, login } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
 
@@ -167,28 +167,8 @@ const Login = () => {
                             </Form>
                         </Modal.Body>
                     </Modal>
-
-                    {/* Log Out Modal */}
-                    {/* <Modal show={showLogOut} onHide={handleCloseLogOut} centered>
-                        <Modal.Header closeButton>
-                        <Modal.Title>Log Out</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>Where would you like to log out?</Modal.Body>
-                        <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseLogOut}>
-                            Cancel
-                        </Button>
-                        <Button variant="primary" onClick={handleLogOut}>
-                            This Device
-                        </Button>
-                        <Button variant="danger" onClick={handleLogOutAll}>
-                            All Devices
-                        </Button>
-                        </Modal.Footer>
-                    </Modal> */}
-
             </div>
-            <AboutFooter />
+            <OtherFooter />
         </div>
     )
 }

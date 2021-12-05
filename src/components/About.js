@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutFooter from './Footers/AboutFooter'
+import OtherFooter from './Footers/OtherFooter'
 import './About.css'
 
 const About = () => {
@@ -28,7 +28,7 @@ const About = () => {
                 {/* <h2>About Me</h2>
                 <p>I am a web developer in Greenville, South Carolina, with a life-long love for movies. I'm always thrilled to see how the BFI recognizes the value of silent masterpieces, such as <a href="https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans" rel="noreferrer" target="_blank">Sunrise</a>.</p> */}
             </div>
-            <AboutFooter />
+            <OtherFooter />
         </div>
     )
 }

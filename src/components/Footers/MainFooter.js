@@ -13,7 +13,6 @@ const Footer = (props) => {
     return (
         <div>
         <nav className="navbar fixed-bottom navbar-dark bg-dark">
-            {/* <a className="navbar-brand" href="https://fanwithamovieyammer.wordpress.com/the-sight-sound-top-250-list/" target="_blank">Sight & Sound "Greatest Films of All Time" | 2012 Edition</a> */}
             <form className="form-inline my-2 my-lg-0">
                 <input value={props.title} onChange={handleChange} className="form-control mr-sm-2" type="search" placeholder="Filter by Title" aria-label="Search" />
             </form>
