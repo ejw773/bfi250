@@ -1,5 +1,6 @@
 import { 
-    TOGGLE_SEEN_STATUS,
+    TOGGLE_SEEN_STATUS_SUCCESS,
+    DELETE_SEEN_STATUS_SUCCESS,
     GET_SEEN_STATUS_SUCCESS,
     GET_SEEN_STATUS_FAIL
 } from '../actionTypes';
@@ -7,19 +8,19 @@ import {
 const initialState = {};
 
 export default function seenStatus(state = initialState, action) {
-    switch(action.type) {
-        case TOGGLE_SEEN_STATUS: {
+    const { type, payload } = action;
+    switch(type) {
+        case TOGGLE_SEEN_STATUS_SUCCESS:
+            console.log('reducer fired')
+            const { imdbID, toggleAction } = payload
             return {
                 ...state,
-                seenStatus: {
-                    [action.payload.imdbID]: action.payload.toggleAction
-                }
+                    [imdbID]: toggleAction
             };            
-        }
         case GET_SEEN_STATUS_SUCCESS:
             return {
                 ...state,
-                seenStatus: action.payload
+                seenStatus: payload
             }
         case GET_SEEN_STATUS_FAIL:
             return {
