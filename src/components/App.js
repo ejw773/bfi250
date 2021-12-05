@@ -46,29 +46,24 @@ const App = () => {
       <Loading />
     )
   } else {
-    let totalFilms = 0;
-    let totalSeen = 0;
-    let totalSkipped = 0;
+
+    let totalFilms = 0
+    let totalSeen = 0
+    let totalSkipped = 0
     let totalUnseen = 0
+
+    if (films.length !== 0) {
+      totalFilms = films.length
+      totalSeen = films.filter(film => seenStatus[film.imdbID]===true).length;
+      totalSkipped = films.filter(film => seenStatus[film.imdbID]===false).length;
+      totalUnseen = films.filter(film => typeof (seenStatus[film.imdbID])!=='boolean').length;
+    }
 
     const showTheseFilms = showSet.showSet;
     const titlesToSearch = films.filter(film => film.title.toLowerCase().includes(searchTitle.toLowerCase()))
     const filmsSeen = titlesToSearch.filter(film => seenStatus[film.imdbID]===true);
     const filmsSkipped = titlesToSearch.filter(film => seenStatus[film.imdbID]===false);
     const filmsToSee = titlesToSearch.filter(film => typeof (seenStatus[film.imdbID])!=='boolean');
-
-    if (films.length !== 0) {
-      totalFilms = films.length
-    }
-    if (filmsSeen.length !== 0) {
-      totalSeen = filmsSeen.length
-    }
-    if (filmsSkipped.length !== 0) {
-      totalSkipped = filmsSkipped.length
-    }
-    if (filmsToSee !== 0) {
-      totalUnseen = filmsToSee.length
-    }
 
     return (
       <div>

@@ -25,8 +25,8 @@ const About = () => {
                 </ul>
                 <p>The frontend is hosted on <a href="https://www.siteground.com/" target="_blank" rel="noreferrer">SiteGround</a>, and the backend is hosted on <a href="https://www.heroku.com" target="_blank" rel="noreferrer">Heroku</a>. This project was completed as part of my course work at <a href="https://www.nucamp.co/" rel="noreferrer" target="_blank">Nucamp</a> coding bootcamp.</p>
                 <p>GitHub: <a href="https://github.com/ejw773/bfi250" target="_blank" rel="noreferrer">Frontend</a> | <a href="https://github.com/ejw773/bfi250-node-server" target="_blank" rel="noreferrer">Backend</a> | <a href="" target="_blank" rel="noreferrer">Mobile App</a></p>
-                <h2>About Me</h2>
-                <p>I am a web developer in Greenville, South Carolina, with a life-long love for movies. I'm always thrilled to see how the BFI recognizes the value of silent masterpieces, such as <a href="https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans" rel="noreferrer" target="_blank">Sunrise</a>.</p>
+                {/* <h2>About Me</h2>
+                <p>I am a web developer in Greenville, South Carolina, with a life-long love for movies. I'm always thrilled to see how the BFI recognizes the value of silent masterpieces, such as <a href="https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans" rel="noreferrer" target="_blank">Sunrise</a>.</p> */}
             </div>
             <AboutFooter />
         </div>
