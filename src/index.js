@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import About from './components/About';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { 
@@ -26,6 +27,9 @@ ReactDOM.render(
         </Route>
         <Route path='/profile'>
           <Profile />
+        </Route>
+        <Route path='/about'>
+          <About />
         </Route>
       </Switch>
     </Router>

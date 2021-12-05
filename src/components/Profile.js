@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import { Modal, Dropdown, Container, Row, Col, Button } from 'react-bootstrap'
 import './Profile.css';
 import MenuBar from './MenuBar'
-import ProfileFooter from './ProfileFooter'
+import ProfileFooter from './Footers/ProfileFooter'
 import { logout, logoutAll } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
 import { changeFilmSet, changeShowSet } from '../redux/actions/actions';

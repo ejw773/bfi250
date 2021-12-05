@@ -1,8 +1,12 @@
-#login-page {
+#about-page {
     background-image: url(./img/film.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+}
+
+.jumbotron {
+    background: rgba(204, 204, 204, 0.85);
 }

@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { Modal, Form, Container, Row, Col, Button } from 'react-bootstrap';
 import './Login.css';
 import MenuBar from './MenuBar';
-import AboutFooter from './AboutFooter';
+import AboutFooter from './Footers/AboutFooter';
 import { register, login } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
 
@@ -88,7 +88,7 @@ const Login = () => {
     return (
         <div>
             <MenuBar />
-            <div id="about-page">
+            <div id="login-page">
                     <Container>
                         <Row>     
                             <Col className="align-self-center col-md-auto p-3 mb-2 bg-secondary bg-gradient text-white" >Each decade since 1952, the British Film Institute's Sight & Sound Magazine has been putting out a carefully compiled list of the greatest films of all time. The published lists are usually 10 titles long, but in 2012 they put out a whopping 250 titles.</Col>
