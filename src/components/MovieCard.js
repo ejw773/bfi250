@@ -1,19 +1,24 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './MovieCard.css';
 import Badge from './Badge';
 import CardButtons from './CardButtons';
-import { connect } from 'react-redux';
 
 const MovieCard = (props) => {
+    let seenStatus = {};
+    const pulledSeenStatus = useSelector((state) => state.seenStatus.seenStatus)
+    if (pulledSeenStatus) {
+        seenStatus = pulledSeenStatus
+    }
     let imdbLink = "https://www.imdb.com/title/" + props.imdbID + "/";
     return (
         <div className="card card-group" style={{width: "18rem"}}>
             <div className="poster">
-                <Badge seenStatus={props.seenStatus[props.imdbID]}/>
+                <Badge seenStatus={seenStatus[props.imdbID]}/>
                 <a href={imdbLink} target="_blank" rel="noreferrer"><img src={props.poster} style={{height: '400px'}} className="card-img-top" alt={props.title} /></a>
                 <div className="card-body align-self-end">
                         <div className="button-container view-status-buttons align-self-end">
-                        <CardButtons seenStatus={props.seenStatus[props.imdbID]} id={props.imdbID}/>
+                        <CardButtons seenStatus={seenStatus[props.imdbID]} id={props.imdbID}/>
                         </div>
                 </div>
             </div>
@@ -25,10 +30,4 @@ const MovieCard = (props) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        seenStatus: state.seenStatus
-    }
-}
-
-export default connect(mapStateToProps, null)(MovieCard);
+export default MovieCard;

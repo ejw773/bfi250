@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import MovieCard from './MovieCard'
 
 const RenderCards = (props) => {
-    return (
+  return (
     <div className="films-container">
       {props.BFI.map((film) => (
         <MovieCard
@@ -14,18 +13,11 @@ const RenderCards = (props) => {
           bfiRank={film.bfiRank}
           poster={film.poster}
           imdbID={film.imdbID}
-          seenStatus={film.seenStatus}
         />
       ))}
     </div>
-    )
+  )
 }
 
 
-const mapStateToProps = state => {
-  return {
-    seenStatus: state.seenStatus
-  }
-}
-
-export default connect(mapStateToProps, null)(RenderCards);
+export default RenderCards;

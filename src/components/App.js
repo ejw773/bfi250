@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './App.css';
 import getFilms from '../redux/actions/films'
-import getSeenStatus from '../redux/actions/seen_status_actions'
+import { getSeenStatus } from '../redux/actions/seen_status_actions'
 import ProgressBar from './ProgressBar';
 import Footer from './Footer';
 import RenderCards from './RenderCards';

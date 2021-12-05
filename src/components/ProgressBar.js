@@ -4,16 +4,15 @@ import './ProgressBar.css'
 import { changeShowSet } from '../redux/actions/actions';
 
 const ProgressBar = (props) => {
-    console.log(props)
     const dispatch = useDispatch()
     const showSet = useSelector((state) => state.showSet.showSet)
 
     const { totalFilms, totalSeen, totalSkipped, totalUnseen } = props
 
-    console.log(`Seen: ${totalSeen}`)
-    console.log(`Skipped: ${totalSkipped}`)
-    console.log(`To See: ${totalUnseen}`)
-    console.log(`All: ${totalFilms}`)
+    // console.log(`Seen: ${totalSeen}`)
+    // console.log(`Skipped: ${totalSkipped}`)
+    // console.log(`To See: ${totalUnseen}`)
+    // console.log(`All: ${totalFilms}`)
 
     // Find out screen size
     const screenSize = window.innerWidth;

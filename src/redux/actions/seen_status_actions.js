@@ -1,12 +1,20 @@
 import {
+    TOGGLE_SEEN_STATUS,
+    TOGGLE_SEEN_STATUS_SUCCESS,
+    TOGGLE_SEEN_STATUS_FAIL,
+
+    DELETE_SEEN_STATUS,
+    DELETE_SEEN_STATUS_SUCCESS,
+    DELETE_SEEN_STATUS_FAIL,
+
     GET_SEEN_STATUS_SUCCESS,
     GET_SEEN_STATUS_FAIL
 } from '../actionTypes'
 
-import seenStatusService from '../../services/view-status-service'
+import SeenStatusService from '../../services/seen-status-service'
 
-const getSeenStatus = () => (dispatch) => {
-    return seenStatusService().then(
+export const getSeenStatus = () => (dispatch) => {
+    return SeenStatusService.getSeenStatus().then(
         (response) => {
             dispatch({
                 type: GET_SEEN_STATUS_SUCCESS,
@@ -24,4 +32,21 @@ const getSeenStatus = () => (dispatch) => {
     )
 }
 
-export default getSeenStatus
+export const deleteSeenStatus = (imdbID) => (dispatch) => {
+    return SeenStatusService.deleteSeenStatus(imdbID).then(
+        (response) => {
+            dispatch({
+                type: DELETE_SEEN_STATUS_SUCCESS,
+                payload: imdbID
+            });
+            return Promise.resolve()
+        },
+        (error) => {
+            console.log(error)
+            dispatch({
+                type: DELETE_SEEN_STATUS_FAIL,
+            });
+            return Promise.reject();
+        }
+    )
+}

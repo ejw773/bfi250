@@ -42,7 +42,6 @@ const Profile = () => {
         return <Redirect to="/login" />;
     }
     const { name, email, filmSet } = user.user
-    console.log(user)
     const setSelection = (selection) => {
         dispatch(changeFilmSet(selection))
         dispatch(changeShowSet('view-all'))
