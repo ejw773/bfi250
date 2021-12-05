@@ -41,8 +41,7 @@ const App = () => {
     return <Redirect to="/login" />;
   }
 
-  if (true) {
-  // if (films.length === 0) {
+  if (films.length === 0) {
     return (
       <Loading />
     )
