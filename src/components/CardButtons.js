@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleSeenStatus } from '../redux/actions/seen_status_actions';
-import { deleteSeenStatus } from '../redux/actions/seen_status_actions'
+import { deleteSeenStatus } from '../redux/actions/seen_status_actions';
+import { getSeenStatus } from '../redux/actions/seen_status_actions';
 
 // Call reducer for each different button press
 const CardButtons = (props) => {

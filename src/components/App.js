@@ -7,6 +7,7 @@ import { getSeenStatus } from '../redux/actions/seen_status_actions'
 import ProgressBar from './ProgressBar';
 import Footer from './Footers/MainFooter';
 import RenderCards from './RenderCards';
+import Loading from './Loading';
 
 const App = () => {
   const user = useSelector((state) => state.auth)
@@ -40,11 +41,10 @@ const App = () => {
     return <Redirect to="/login" />;
   }
 
-  if (films.length === 0) {
+  if (true) {
+  // if (films.length === 0) {
     return (
-      <div>
-        <h1>Loading...</h1>
-      </div>
+      <Loading />
     )
   } else {
     let totalFilms = 0;

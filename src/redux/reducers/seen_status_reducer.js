@@ -16,7 +16,12 @@ export default function seenStatus(state = initialState, action) {
             return {
                 ...state,
                     [imdbID]: toggleAction
-            };            
+            };
+        case DELETE_SEEN_STATUS_SUCCESS:
+            return {
+                ...state,
+                
+            }
         case GET_SEEN_STATUS_SUCCESS:
             return {
                 ...state,
