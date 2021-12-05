@@ -11,7 +11,9 @@ export default function seenStatus(state = initialState, action) {
         case TOGGLE_SEEN_STATUS: {
             return {
                 ...state,
-                [action.payload.imdbID]: action.payload.toggleAction
+                seenStatus: {
+                    [action.payload.imdbID]: action.payload.toggleAction
+                }
             };            
         }
         case GET_SEEN_STATUS_SUCCESS:

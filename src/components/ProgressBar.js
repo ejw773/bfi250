@@ -3,16 +3,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import './ProgressBar.css'
 import { changeShowSet } from '../redux/actions/actions';
 
-// This components is rather crowded. I'm considering looking for ways to re-organize and break it into two components.
-
-const ProgressBar = () => {
+const ProgressBar = (props) => {
+    console.log(props)
     const dispatch = useDispatch()
     const showSet = useSelector((state) => state.showSet.showSet)
-    const films = useSelector((state) => state.movieData.films)
-    const totalFilms = films.length;
-    const totalSeen = films.filter((film) => film.viewStatus === true).length
-    const totalSkipped = films.filter((film) => film.viewStatus === false).length
-    const totalUnseen = totalFilms - totalSeen - totalSkipped
+
+    const { totalFilms, totalSeen, totalSkipped, totalUnseen } = props
+
+    console.log(`Seen: ${totalSeen}`)
+    console.log(`Skipped: ${totalSkipped}`)
+    console.log(`To See: ${totalUnseen}`)
+    console.log(`All: ${totalFilms}`)
 
     // Find out screen size
     const screenSize = window.innerWidth;
@@ -35,7 +36,6 @@ const ProgressBar = () => {
 
     let skippedPercent = (totalSkipped / totalFilms * leftoverPercent) + minPercent;
     if (skippedPercent < minPercent) {skippedPercent = minPercent};
-
     let unseenPercent = (totalUnseen / totalFilms * leftoverPercent) + minPercent;
 
     // Add '%' onto the percentages

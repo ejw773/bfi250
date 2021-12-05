@@ -4,7 +4,7 @@ import authHeader from './auth-header'
 
 const seenStatusService = async () => {
     try {
-        const response = await axios.get(API_URL + 'viewstatus', { headers: authHeader() })
+        const response = await axios.get(API_URL + 'seenstatus', { headers: authHeader() })
         return response.data  
     } catch (e) {
         console.log(e)

@@ -14,7 +14,7 @@ const RenderCards = (props) => {
           bfiRank={film.bfiRank}
           poster={film.poster}
           imdbID={film.imdbID}
-          viewStatus={film.viewStatus}
+          seenStatus={film.seenStatus}
         />
       ))}
     </div>

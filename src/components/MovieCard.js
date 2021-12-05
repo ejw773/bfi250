@@ -5,16 +5,15 @@ import CardButtons from './CardButtons';
 import { connect } from 'react-redux';
 
 const MovieCard = (props) => {
-    console.log(props)
     let imdbLink = "https://www.imdb.com/title/" + props.imdbID + "/";
     return (
         <div className="card card-group" style={{width: "18rem"}}>
             <div className="poster">
-                <Badge viewStatus={props.viewStatus[props.imdbID]}/>
+                <Badge seenStatus={props.seenStatus[props.imdbID]}/>
                 <a href={imdbLink} target="_blank" rel="noreferrer"><img src={props.poster} style={{height: '400px'}} className="card-img-top" alt={props.title} /></a>
                 <div className="card-body align-self-end">
                         <div className="button-container view-status-buttons align-self-end">
-                        <CardButtons viewStatus={props.viewStatus[props.imdbID]} id={props.imdbID}/>
+                        <CardButtons seenStatus={props.seenStatus[props.imdbID]} id={props.imdbID}/>
                         </div>
                 </div>
             </div>
@@ -28,7 +27,7 @@ const MovieCard = (props) => {
 
 const mapStateToProps = state => {
     return {
-        viewStatus: state.seenStatus
+        seenStatus: state.seenStatus
     }
 }
 

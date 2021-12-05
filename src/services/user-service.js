@@ -6,13 +6,13 @@ const getMyProfile = () => {
     return axios.get(API_URL + 'users/me', { headers: authHeader() });
 }
 
-const getMyViewStatus = () => {
-    return axios.get(API_URL + 'viewstatus', { headers: authHeader() });
+const getMySeenStatus = () => {
+    return axios.get(API_URL + 'seenstatus', { headers: authHeader() });
 }
 
 const userServices = {
     getMyProfile,
-    getMyViewStatus
+    getMySeenStatus
 }
 
 export default userServices
