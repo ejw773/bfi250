@@ -6,3 +6,8 @@
     width: 100vw;
     height: 100vh;
 }
+
+#nologin-button {
+    color: white;
+    text-decoration: inherit;
+}
