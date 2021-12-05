@@ -70,9 +70,10 @@ import {
         return {
         ...state,
         user: {
-          filmSet: action.payload.newSet
+          ...state.user,
+            filmSet: action.payload.newSet
         }
-        };
+      };
 
       default:
         return state;
