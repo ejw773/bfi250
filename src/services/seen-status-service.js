@@ -12,18 +12,24 @@ const getSeenStatus = async () => {
 }
 
 const deleteSeenStatus = async (imdbID) => {
-    console.log(`deleting: ${imdbID}`)
     try {
         const response = await axios.delete(API_URL + 'seenstatus/film/' + imdbID, { headers: authHeader() })
-        return response.data
+        return response
     } catch (e) {
         console.log(e)
     }
 }
 
-const updateSeenStatus = async () => {
+const updateSeenStatus = async (film, seenStatus) => {
+    console.log(`Updating: ${film} to ${seenStatus}`)
     try {
-
+        const response = await axios.post(API_URL + 'seenstatus/', {
+            film,
+            seenStatus 
+        }, {
+            headers: authHeader()
+        })
+        return response
     } catch (e) {
         console.log(e)
     }

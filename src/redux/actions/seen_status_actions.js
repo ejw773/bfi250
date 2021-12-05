@@ -1,9 +1,7 @@
 import {
-    TOGGLE_SEEN_STATUS,
     TOGGLE_SEEN_STATUS_SUCCESS,
     TOGGLE_SEEN_STATUS_FAIL,
 
-    DELETE_SEEN_STATUS,
     DELETE_SEEN_STATUS_SUCCESS,
     DELETE_SEEN_STATUS_FAIL,
 
@@ -38,6 +36,27 @@ export const deleteSeenStatus = (imdbID) => (dispatch) => {
             dispatch({
                 type: DELETE_SEEN_STATUS_SUCCESS,
                 payload: imdbID
+            });
+            return Promise.resolve()
+        },
+        (error) => {
+            console.log(error)
+            dispatch({
+                type: DELETE_SEEN_STATUS_FAIL,
+            });
+            return Promise.reject();
+        }
+    )
+}
+
+export const toggleSeenStatus = (film, seenStatus) => (dispatch) => {
+    return SeenStatusService.updateSeenStatus(film, seenStatus).then(
+        (response) => {
+            dispatch({
+                type: TOGGLE_SEEN_STATUS_SUCCESS,
+                payload: {
+                    film, seenStatus
+                }
             });
             return Promise.resolve()
         },

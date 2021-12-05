@@ -1,20 +1,19 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleSeenStatus } from '../redux/actions/actions';
+import { toggleSeenStatus } from '../redux/actions/seen_status_actions';
 import { deleteSeenStatus } from '../redux/actions/seen_status_actions'
 
 // Call reducer for each different button press
 const CardButtons = (props) => {
     const dispatch = useDispatch()
     const toNull = (event) => {
-        dispatch(deleteSeenStatus(event.target.id, null))
+        dispatch(deleteSeenStatus(event.target.id, null));
     }
     const toTrue = (event) => {
-        console.log(`The button: ${event.target.id}`)
-        props.toggleSeenStatus(event.target.id, true);
+        dispatch(toggleSeenStatus(event.target.id, true));
     }
     const toFalse = (event) => {
-        props.toggleSeenStatus(event.target.id, false);
+        dispatch(toggleSeenStatus(event.target.id, false));
     }
 
     return (
