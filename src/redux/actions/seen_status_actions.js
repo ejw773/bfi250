@@ -30,12 +30,14 @@ export const getSeenStatus = () => (dispatch) => {
     )
 }
 
-export const deleteSeenStatus = (imdbID) => (dispatch) => {
-    return SeenStatusService.deleteSeenStatus(imdbID).then(
+export const deleteSeenStatus = (film, seenStatus) => (dispatch) => {
+    return SeenStatusService.deleteSeenStatus(film).then(
         (response) => {
             dispatch({
                 type: DELETE_SEEN_STATUS_SUCCESS,
-                payload: imdbID
+                payload: {
+                    film, seenStatus
+                }
             });
             return Promise.resolve()
         },
