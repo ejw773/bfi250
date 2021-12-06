@@ -4,7 +4,6 @@ import authHeader from './auth-header';
 
 const register = (name, email, password) => {
   localStorage.removeItem("user");
-  // localStorage.removeItem("persistantState")
   return axios.post(API_URL + "users", {
     name,
     email,
@@ -20,7 +19,6 @@ const register = (name, email, password) => {
 
 const login = (email, password) => {
   localStorage.removeItem("user");
-  // localStorage.removeItem("persistantState")
   return axios
     .post(API_URL + "users/login", {
       email,
@@ -30,7 +28,6 @@ const login = (email, password) => {
       if (response.data.token) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
-
       return response.data;
     });
 };
@@ -41,26 +38,78 @@ export const logout = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
-      // localStorage.removeItem("persistantState")
     })
 };
 
 const logoutAll = () => {
-  console.log('logging out all devices')
   return axios
     .post(API_URL + "users/logoutAll", null, { headers: authHeader() })
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
-      // localStorage.removeItem("persistantState")
     })
 }
+
+const changeFilmSet = (bfiSet) => {
+  return axios
+    .patch(API_URL + "users/me", {filmSet: bfiSet}, { headers: authHeader() })
+    .then((response) => {
+      console.log(response.data)
+      return response.data
+    })
+}
+
+const changeName = (newName) => {
+  return axios
+    .patch(API_URL + "users/me", {name: newName}, { headers: authHeader() })
+    .then((response) => {
+      console.log(response)
+      return response
+      // update local storage
+    })
+}
+
+const changeEmail = (newEmail) => {
+  return axios
+    .patch(API_URL + "users/me", {email: newEmail}, { headers: authHeader() })
+    .then((response) => {
+      console.log(response)
+      return response
+      // update local storage
+    })
+}
+
+const changePassword = (newPassword) => {
+  return axios
+    .patch(API_URL + "users/me", {password: newPassword}, { headers: authHeader() })
+    .then((response) => {
+      console.log(response)
+      return response
+      // update local storage
+    })
+}
+
+const deleteAccount = () => {
+  return axios
+    .delete(API_URL + "users/me", { headers: authHeader() })
+    .then((response) => {
+      console.log(response)
+      localStorage.removeItem("user");
+      return response
+    })
+}
+
 
 const authService = {
   register,
   login,
   logout,
-  logoutAll
+  logoutAll,
+  changeFilmSet,
+  changeName,
+  changeEmail,
+  changePassword,
+  deleteAccount
 }
 
 export default authService

@@ -5,15 +5,17 @@ import { Modal, Dropdown, Button, Form } from 'react-bootstrap'
 import './Profile.css';
 import MenuBar from './MenuBar'
 import OtherFooter from './Footers/OtherFooter'
-import { logout, logoutAll } from '../redux/actions/auth'
+import { logout, logoutAll, deleteAccount } from '../redux/actions/auth'
+import { changeName } from '../redux/actions/user_prefs_actions'
 import { clearMessage } from '../redux/actions/message';
 import { changeFilmSet, changeShowSet } from '../redux/actions/actions';
+import DeleteButtons from './Profile/DeleteButtons'
 
 const Profile = () => {
     const user = useSelector((state) => state.auth)
-
     const [nameText, setNameText] = useState('')
-    
+    const [deleteMessage, setDeleteMessage] = useState('')
+
     // Control Name Change
     const [showNameChange, setShowNameChange] = useState(false)
     const handleShowNameChange = () => setShowNameChange(true)
@@ -37,7 +39,7 @@ const Profile = () => {
 
     const handleNameChange = async (e) => {
         e.preventDefault()
-        //dispatch()
+        dispatch(changeName(nameText))
         handleCloseNameChange()
     }
     
@@ -58,8 +60,11 @@ const Profile = () => {
 
     const handleDeleteAccount = (e) => {
         e.preventDefault()
-        console.log('deleting the account')
-        handleCloseDeleteAccount()
+        setDeleteMessage('Deleting account. You will be redirected...')
+        setTimeout(() => {
+            dispatch(deleteAccount())
+            handleCloseDeleteAccount()    
+        }, 2000)
     }
 
     if (!user.isLoggedIn) {
@@ -121,7 +126,6 @@ const Profile = () => {
                             <Form.Group className="mb-3" controlId="changeUserName">
                                 <Form.Control type="text" placeholder="New User Name" value={nameText} onChange={e => setNameText(e.target.value)} />
                             </Form.Group>
-                            <Button variant="secondary" type="cancel">Cancel</Button>
                             <Button variant="primary" type="submit">Change Name</Button>
                             {/* For error handling: */}
                             {/* <p style={{color: 'red'}}>{messageToDisplay}</p> */}
@@ -155,16 +159,13 @@ const Profile = () => {
                     </Modal.Header>
                     <Modal.Body>Are you sure you want to proceed? There is no 'undo'.</Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseDeleteAccount}>
-                            Cancel
-                        </Button>
-                        <Button variant="danger" onClick={handleDeleteAccount}>
-                            Delete Account
-                        </Button>
+                        <DeleteButtons 
+                            deleteMessage={deleteMessage}
+                            handleCloseDeleteAccount={handleCloseDeleteAccount}
+                            handleDeleteAccount={handleDeleteAccount}
+                        />
                     </Modal.Footer>
                 </Modal>
-
-
             <OtherFooter />
         </div>
     )

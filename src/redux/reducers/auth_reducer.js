@@ -7,7 +7,8 @@ import {
     LOGOUT,
     CHANGE_EMAIL,
     CHANGE_NAME,
-    CHANGE_FILM_SET
+    CHANGE_FILM_SET,
+    DELETE_ACCOUNT
   } from "../actionTypes";
   
   const user = JSON.parse(localStorage.getItem("user"));
@@ -60,12 +61,23 @@ import {
           isLoggedIn: false,
           user: null
         };
-      case CHANGE_EMAIL:
+        case DELETE_ACCOUNT:
+          return {
+            ...state,
+            isLoggedIn: false,
+            user: null
+          };
+        case CHANGE_EMAIL:
         console.log('changing email')
         return state
       case CHANGE_NAME:
-        console.log('changing user name')
-        return state
+        return {
+          ...state, 
+            user: {
+              ...state.user,
+              name: action.payload.newName
+            }
+        }
       case CHANGE_FILM_SET:
         return {
         ...state,

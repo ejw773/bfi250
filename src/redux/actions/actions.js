@@ -1,19 +1,20 @@
 import {
-    TOGGLE_SEEN_STATUS,
     SEARCH_TITLE,
     CHANGE_SHOW_SET,
     CHANGE_FILM_SET
 } from '../actionTypes';
 
-export const toggleSeenStatus = (imdbID, toggleAction) => {
-    return {
-        type: TOGGLE_SEEN_STATUS,
-        payload: {
-            imdbID: imdbID,
-            toggleAction: toggleAction
-        }
-    }
-};
+import AuthService from '../../services/auth-service'
+
+// export const toggleSeenStatus = (imdbID, toggleAction) => {
+//     return {
+//         type: TOGGLE_SEEN_STATUS,
+//         payload: {
+//             imdbID: imdbID,
+//             toggleAction: toggleAction
+//         }
+//     }
+// };
 
 export const searchTitle = (searchTerms) => {
     return {
@@ -33,11 +34,15 @@ export const changeShowSet = (newSet) => {
     }
 };
 
-export const changeFilmSet = (newSet) => {
-    return {
-        type: CHANGE_FILM_SET,
-        payload: {
-            newSet: newSet
+export const changeFilmSet = (newSet) => (dispatch) => {
+    return AuthService.changeFilmSet(newSet).then(
+        (response) => {
+            dispatch({
+                type: CHANGE_FILM_SET,
+                payload: {
+                    newSet: newSet
+                }            
+            })
         }
-    }
-};
+    )
+}
