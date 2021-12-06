@@ -4,6 +4,7 @@ import authHeader from './auth-header';
 
 const register = (name, email, password) => {
   localStorage.removeItem("user");
+  localStorage.removeItem("prefs")
   return axios.post(API_URL + "users", {
     name,
     email,
@@ -12,6 +13,7 @@ const register = (name, email, password) => {
   .then((response) => {
     if (response.data.token) {
       localStorage.setItem("user", JSON.stringify(response.data));
+      localStorage.setItem("prefs", JSON.stringify(response.data))
     }
     return response.data
   })
@@ -27,17 +29,20 @@ const login = (email, password) => {
     .then((response) => {
       if (response.data.token) {
         localStorage.setItem("user", JSON.stringify(response.data));
+        localStorage.setItem("prefs", JSON.stringify(response.data))
       }
       return response.data;
     });
 };
 
 export const logout = () => {
+  console.log('removing user')
   return axios
     .post(API_URL + "users/logout", null, { headers: authHeader() })
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
+      localStorage.removeItem("prefs")
     })
 };
 
@@ -47,6 +52,7 @@ const logoutAll = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
+      localStorage.removeItem("prefs")
     })
 }
 
@@ -95,6 +101,7 @@ const deleteAccount = () => {
     .then((response) => {
       console.log(response)
       localStorage.removeItem("user");
+      localStorage.removeItem("prefs")
       return response
     })
 }
