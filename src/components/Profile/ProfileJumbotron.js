@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Dropdown } from 'react-bootstrap'
 
 const ProfileJumbotron = (props) => {
-    const { name, filmSet, setSelection, handleShowNameChange, email, handleShowLogOut, handleShowDeleteAccount } = props
+    const { name, filmSet, setSelection, handleShowNameChange, handleShowEmailChange, email, handleShowPasswordChange, handleShowLogOut, handleShowDeleteAccount } = props
     return(
         <div className="jumbotron">
         <h2>{name}'s Profile</h2>
@@ -30,11 +30,11 @@ const ProfileJumbotron = (props) => {
             <br />
 
             <h3>{email}</h3>
-            <Button className="btn btn-info btn-block" >Change Email</Button>
+            <Button className="btn btn-info btn-block" onClick={handleShowEmailChange}>Change Email</Button>
             <br />
 
             <h3>Password: ******</h3>
-            <Button className="btn-primary btn-block" >ChangePassword</Button>
+            <Button className="btn-primary btn-block" onClick={handleShowPasswordChange}>ChangePassword</Button>
             <br />
             <Button className="btn-secondary btn-block" onClick={handleShowLogOut}>Log Out</Button>
             <br />

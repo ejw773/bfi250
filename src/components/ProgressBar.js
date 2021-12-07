@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './ProgressBar.css'
-import { changeShowSet } from '../redux/actions/actions';
+import { changeShowSet } from '../redux/actions/local_actions';
 
 const ProgressBar = (props) => {
     const dispatch = useDispatch()

@@ -6,25 +6,37 @@ import MenuBar from './MenuBar'
 import ProfileJumbotron from './Profile/ProfileJumbotron'
 import NameChangeModal from './Profile/NameChangeModal'
 import EmailChangeModal from './Profile/EmailChangeModal'
-import PasswordChangeModal from './Profile/ProfileJumbotron'
+import PasswordChangeModal from './Profile/PasswordChangeModal'
 import LogOutModal from './Profile/LogOutModal'
 import DeleteAccountModal from './Profile/DeleteAccountModal';
 import OtherFooter from './Footers/OtherFooter'
 import { logout, logoutAll, deleteAccount } from '../redux/actions/auth'
-import { changeName } from '../redux/actions/user_prefs_actions'
+import { changeFilmSet, changeName, changeEmail, changePassword } from '../redux/actions/user_prefs_actions'
 import { clearMessage } from '../redux/actions/message';
-import { changeFilmSet, changeShowSet } from '../redux/actions/actions';
+import { changeShowSet } from '../redux/actions/local_actions';
 
 const Profile = () => {
     const user = useSelector((state) => state.auth)
     const [nameText, setNameText] = useState('')
+    const [emailText, setEmailText] = useState('')
+    const [passwordText, setPasswordText] = useState('')
     const [deleteMessage, setDeleteMessage] = useState('')
 
     // Control Name Change
     const [showNameChange, setShowNameChange] = useState(false)
     const handleShowNameChange = () => setShowNameChange(true)
     const handleCloseNameChange = () => setShowNameChange(false)
+
+    // Control Email Change
+    const [showEmailChange, setShowEmailChange] = useState(false)
+    const handleShowEmailChange = () => setShowEmailChange(true)
+    const handleCloseEmailChange = () => setShowEmailChange(false)
     
+    // Control Password Change
+    const [showPasswordChange, setShowPasswordChange] = useState(false)
+    const handleShowPasswordChange = () => setShowPasswordChange(true)
+    const handleClosePasswordChange = () => setShowPasswordChange(false)
+
     // Control Log Out
     const [showLogOut, setShowLogOut] = useState(false)
     const handleShowLogOut = () => setShowLogOut(true)
@@ -45,6 +57,18 @@ const Profile = () => {
         e.preventDefault()
         dispatch(changeName(nameText))
         handleCloseNameChange()
+    }
+
+    const handleEmailChange = async (e) => {
+        e.preventDefault()
+        dispatch(changeEmail(emailText))
+        handleCloseEmailChange()
+    }
+
+    const handlePasswordChange = async (e) => {
+        e.preventDefault()
+        dispatch(changePassword(passwordText))
+        handleClosePasswordChange()
     }
     
     const handleLogOut = async (e) => {
@@ -86,9 +110,11 @@ const Profile = () => {
                 filmSet={filmSet}
                 setSelection={setSelection}
                 handleShowNameChange={handleShowNameChange}
+                handleShowEmailChange={handleShowEmailChange}
                 email={email}
                 handleShowLogOut={handleShowLogOut}
                 handleShowDeleteAccount={handleShowDeleteAccount}
+                handleShowPasswordChange={handleShowPasswordChange}
             />
 
             <NameChangeModal 
@@ -97,6 +123,22 @@ const Profile = () => {
                 handleNameChange={handleNameChange}
                 nameText={nameText}
                 setNameText={setNameText}
+            />
+
+            <EmailChangeModal 
+                showEmailChange={showEmailChange}
+                handleCloseEmailChange={handleCloseEmailChange}
+                handleEmailChange={handleEmailChange}
+                emailText={emailText}
+                setEmailText={setEmailText}
+            />
+
+            <PasswordChangeModal 
+                showPasswordChange={showPasswordChange}
+                handleClosePasswordChange={handleClosePasswordChange}
+                handlePasswordChange={handlePasswordChange}
+                passwordText={passwordText}
+                setPasswordText={setPasswordText}
             />
 
             <LogOutModal 

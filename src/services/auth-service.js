@@ -1,10 +1,10 @@
 import axios from "axios";
 import { API_URL } from '../api/apiUrl';
 import authHeader from './auth-header';
+import localStorageHelper from './localStorage-helper'
 
 const register = (name, email, password) => {
   localStorage.removeItem("user");
-  localStorage.removeItem("prefs")
   return axios.post(API_URL + "users", {
     name,
     email,
@@ -13,7 +13,6 @@ const register = (name, email, password) => {
   .then((response) => {
     if (response.data.token) {
       localStorage.setItem("user", JSON.stringify(response.data));
-      localStorage.setItem("prefs", JSON.stringify(response.data))
     }
     return response.data
   })
@@ -29,7 +28,6 @@ const login = (email, password) => {
     .then((response) => {
       if (response.data.token) {
         localStorage.setItem("user", JSON.stringify(response.data));
-        localStorage.setItem("prefs", JSON.stringify(response.data))
       }
       return response.data;
     });
@@ -42,7 +40,6 @@ export const logout = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
-      localStorage.removeItem("prefs")
     })
 };
 
@@ -52,7 +49,6 @@ const logoutAll = () => {
     .then((response) => {
       console.log(response.data)
       localStorage.removeItem("user");
-      localStorage.removeItem("prefs")
     })
 }
 
@@ -60,7 +56,7 @@ const changeFilmSet = (bfiSet) => {
   return axios
     .patch(API_URL + "users/me", {filmSet: bfiSet}, { headers: authHeader() })
     .then((response) => {
-      console.log(response.data)
+      localStorageHelper('filmSet', bfiSet)
       return response.data
     })
 }
@@ -69,9 +65,8 @@ const changeName = (newName) => {
   return axios
     .patch(API_URL + "users/me", {name: newName}, { headers: authHeader() })
     .then((response) => {
-      console.log(response)
+      localStorageHelper('name', newName)
       return response
-      // update local storage
     })
 }
 
@@ -79,9 +74,8 @@ const changeEmail = (newEmail) => {
   return axios
     .patch(API_URL + "users/me", {email: newEmail}, { headers: authHeader() })
     .then((response) => {
-      console.log(response)
+      localStorageHelper('email', newEmail)
       return response
-      // update local storage
     })
 }
 
@@ -91,7 +85,6 @@ const changePassword = (newPassword) => {
     .then((response) => {
       console.log(response)
       return response
-      // update local storage
     })
 }
 
@@ -101,7 +94,6 @@ const deleteAccount = () => {
     .then((response) => {
       console.log(response)
       localStorage.removeItem("user");
-      localStorage.removeItem("prefs")
       return response
     })
 }

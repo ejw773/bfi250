@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchTitle } from '../../redux/actions/actions';
+import { searchTitle } from '../../redux/actions/local_actions';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdBadge, faQuestion } from '@fortawesome/free-solid-svg-icons';
