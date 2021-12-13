@@ -1,26 +1,50 @@
+/* Styling for non-progress bar menu */
+
+.progress-home {
+  height: 1.6em;
+  font-size: 2em;
+  border-radius: 0 !important;
+  cursor: pointer;
+}
+
+.progress-menu {
+  height: 1.6em;
+  border-radius: 0 !important;
+  font-size: 0.7em;
+  padding: 1.5em 0 1.5em 0;
+}
+
+.menu-sections {
+  height: 2em;
+  cursor: pointer;
+}
+
+/* Styling for progress bar menu */
+
 .bg-warning {
-    color: black;
+  color: black;
 }
 
 .progress {
-    font-size: 2em;
+  font-size: 2em;
+  border-radius: 0 !important;
 }
 
 .progress-all {
-    height: 1.6em;
-    cursor: pointer;
-    /* border-left: 3px solid black;
+  height: 1.6em;
+  cursor: pointer;
+  /* border-left: 3px solid black;
     border-top: 3px solid black;
     border-right: 3px solid black; */
 }
 
 .progress-all:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .progress-sections {
-    height: 1.6em;
-    cursor: pointer;
+  height: 1.6em;
+  cursor: pointer;
 }
 
 /* .progress-seen {
@@ -28,7 +52,7 @@
 } */
 
 .progress-seen:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* .progress-tosee {
@@ -37,7 +61,7 @@
 } */
 
 .progress-tosee:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* .progress-skipped {
@@ -45,6 +69,5 @@
 } */
 
 .progress-skipped:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-

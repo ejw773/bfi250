@@ -1,12 +1,9 @@
-// I think this is done
-
 import React from 'react';
-import { connect } from 'react-redux';
-import MovieCard from './MovieCard'
+import MovieCard from './MovieCard';
 
 const RenderCards = (props) => {
-    return (
-    <div className="films-container">
+  return (
+    <div className='films-container'>
       {props.BFI.map((film) => (
         <MovieCard
           key={film.imdbID}
@@ -19,14 +16,7 @@ const RenderCards = (props) => {
         />
       ))}
     </div>
-    )
-}
+  );
+};
 
-
-const mapStateToProps = state => {
-  return {
-    seenStatus: state.seenStatus
-  }
-}
-
-export default connect(mapStateToProps, null)(RenderCards);
+export default RenderCards;

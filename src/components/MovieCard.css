@@ -1,25 +1,25 @@
 .badge-pill {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 .badge-danger {
-    border: solid white 3px;
+  border: solid white 3px;
 }
 
 .badge-success {
-    border: solid white 3px;
+  border: solid white 3px;
 }
 
 .badge-warning {
-    border: solid black 3px;
+  border: solid black 3px;
 }
 
 .button-container {
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
 
 .view-status-button {
-    margin-bottom: -15px;
+  margin-bottom: -15px;
 }

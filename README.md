@@ -55,13 +55,13 @@ const CardButtons = (props) => {
     }
 
     return (
-        props.viewStatus===true
+        props.seenStatus===true
         ?
         <div className="status-buttons">
             <button onClick={toNull} className="btn btn-warning view-status-button unseen-button align-self-end float-left" id={props.id} name='toNull'>Unseen</button>
         </div>
         :
-        props.viewStatus===false
+        props.seenStatus===false
         ?
         <div className="status-buttons">
             <button onClick={toNull} className="btn btn-secondary view-status-button unskip-button align-self-end float-right" id={props.id} name='toNull'>Unskip</button> 
