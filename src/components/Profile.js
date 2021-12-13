@@ -110,7 +110,9 @@ const Profile = () => {
 
   return (
     <div id='profile-page'>
-      <MenuBar />
+      <div className='fixed-top'>
+        <MenuBar />
+      </div>
       <Container>
         <Row>
           <Col>
