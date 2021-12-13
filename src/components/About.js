@@ -94,7 +94,7 @@ const About = () => {
             </a>{' '}
             |{' '}
             <a
-              href='https://github.com/ejw773/bfi250-mobile'
+              href='https://snack.expo.dev/@ejw773/bfi-250-mobile'
               target='_blank'
               rel='noreferrer'
             >
