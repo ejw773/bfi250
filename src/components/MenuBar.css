@@ -1,10 +1,10 @@
 .menu-bar {
-    height: 1.6em;
-    font-size: 2em;
-    border-radius: 0 !important;
-    cursor: pointer;
+  height: 1.6em;
+  font-size: 2em;
+  border-radius: 0 !important;
+  cursor: pointer;
 }
 
 .menu-bar-header {
-    border: solid white 4px;
+  border: solid white 4px;
 }
