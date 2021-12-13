@@ -1,4 +1,4 @@
-import { SET_MESSAGE, CLEAR_MESSAGE } from "../actionTypes";
+import { SET_MESSAGE, CLEAR_MESSAGE } from '../actionTypes';
 
 const initialState = {};
 
@@ -10,7 +10,7 @@ export default function message(state = initialState, action) {
       return { message: payload };
 
     case CLEAR_MESSAGE:
-      return { message: "" };
+      return { message: '' };
 
     default:
       return state;

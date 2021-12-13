@@ -1,9 +1,9 @@
 import React from 'react';
-import MovieCard from './MovieCard'
+import MovieCard from './MovieCard';
 
 const RenderCards = (props) => {
   return (
-    <div className="films-container">
+    <div className='films-container'>
       {props.BFI.map((film) => (
         <MovieCard
           key={film.imdbID}
@@ -16,8 +16,7 @@ const RenderCards = (props) => {
         />
       ))}
     </div>
-  )
-}
-
+  );
+};
 
 export default RenderCards;

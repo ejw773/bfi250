@@ -7,33 +7,28 @@ import Profile from './components/Profile';
 import About from './components/About';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import { 
-  HashRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
-
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
-<Provider store={store}>
-  <div className="App">
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='/profile'>
-          <Profile />
-        </Route>
-        <Route path='/about'>
-          <About />
-        </Route>
-      </Switch>
-    </Router>
-  </div>
-</Provider>,
-document.getElementById('root')
+  <Provider store={store}>
+    <div className='App'>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <App />
+          </Route>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/profile'>
+            <Profile />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  </Provider>,
+  document.getElementById('root')
 );

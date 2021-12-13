@@ -1,13 +1,13 @@
 #login-page {
-    background-image: url(./img/film.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(./img/film.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 #nologin-button {
-    color: white;
-    text-decoration: inherit;
+  color: white;
+  text-decoration: inherit;
 }

@@ -4,6 +4,13 @@ import showSet from './show_set_reducer';
 import searchTitle from './search_reducer';
 import seenStatus from './seen_status_reducer';
 import auth from './auth_reducer';
-import message from './message_reducer'
+import message from './message_reducer';
 
-export default combineReducers( { movieData, showSet, searchTitle, seenStatus, auth, message } );
+export default combineReducers({
+  movieData,
+  showSet,
+  searchTitle,
+  seenStatus,
+  auth,
+  message,
+});
