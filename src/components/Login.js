@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { Modal, Form, Button, Spinner } from 'react-bootstrap';
+import { Modal, Form, Button, Spinner, Card, Container } from 'react-bootstrap';
 import './Login.css';
 import MenuBar from './MenuBar';
 import OtherFooter from './Footers/OtherFooter';
-import Wait from './WaitAlert'
 import { register, login } from '../redux/actions/auth'
 import { clearMessage } from '../redux/actions/message';
 
@@ -109,15 +108,16 @@ const Login = () => {
         <div>
             <MenuBar />
             <div id="login-page">
-                <div className='jumbotron'>
+                <Container>
+                <Card>
                     <h1>Login</h1>
                     <p>For best experience, create an account to save your data.</p>
                     <Button className="btn btn-primary btn-lg btn-block" onClick={handleShowSignUp}>Sign Up</Button>
                     <Button className="btn btn-primary btn-lg btn-block" onClick={handleShowLogIn}>Log In</Button>
                     <Button className="btn btn-primary btn-lg btn-block" onClick={handleShowNoLogIn}>Use Without Account</Button>
                     {/* <Button className="btn btn-primary btn-lg btn-block btn-link" id="nologin-button" href="https://nologin.bfi250.com/" target="_blank" rel="noreferrer">Use Without Account</Button> */}
-                </div>
-
+                </Card>
+                </Container>
                     {/* Sign Up Modal */}
                     <Modal show={showSignUp} onHide={handleCloseSignUp} centered>
                         <Modal.Header closeButton>
@@ -125,7 +125,6 @@ const Login = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <Form onSubmit={(e) => handleRegistration(e)}>
-
                                 <Form.Group className="mb-3" controlId="formBasicName">
                                     <Form.Label>User Name</Form.Label>
                                     <Form.Control type="name" placeholder="Enter User Name" value={name} onChange={e => handleNameChange(e.target.value)}/>
