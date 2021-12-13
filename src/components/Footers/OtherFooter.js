@@ -11,20 +11,20 @@ const OtherFooter = () => {
     const location = useLocation()
 
     let movieButton = 'white'
-    let loginButton = 'white'
+    // let loginButton = 'white'
     let profileButton = 'white'
     let aboutButton = 'white'
 
     if (location.pathname === '/login') {
         movieButton = 'blue'
-        loginButton = 'red'
-        profileButton = 'blue'
+        // loginButton = 'red'
+        profileButton = 'red'
         aboutButton = 'white'
     }
 
     if (location.pathname === '/profile') {
         movieButton = 'white'
-        loginButton = 'blue'
+        // loginButton = 'blue'
         profileButton = 'red'
         aboutButton = 'white'
     }
@@ -32,12 +32,12 @@ const OtherFooter = () => {
     if (location.pathname === '/about') {
         if (!loginStatus) {
             movieButton = 'blue'
-            loginButton = 'white'
-            profileButton = 'blue'
+            // loginButton = 'white'
+            profileButton = 'white'
             aboutButton = 'red'
         } else {
             movieButton = 'white'
-            loginButton = 'blue'
+            // loginButton = 'blue'
             profileButton = 'white'
             aboutButton = 'red'    
         }
@@ -48,7 +48,7 @@ const OtherFooter = () => {
             {/* films */}
             <Link className="navbar-brand unreachable" to="/"><FontAwesomeIcon icon={faFilm} color={movieButton} /></Link>
             {/* login */}
-            <Link className="navbar-brand" to="/login"><FontAwesomeIcon icon={faSignInAlt} color={loginButton} /></Link>
+            {/* <Link className="navbar-brand" to="/login"><FontAwesomeIcon icon={faSignInAlt} color={loginButton} /></Link> */}
             {/* profile */}
             <Link className="navbar-brand unreachable" to="/profile"><FontAwesomeIcon icon={faIdBadge} color={profileButton} /></Link>
             {/* about */}

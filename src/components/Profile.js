@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom'
+import { Container, Row, Col } from 'react-bootstrap';
 import './Profile.css';
 import MenuBar from './MenuBar'
 import ProfileJumbotron from './Profile/ProfileJumbotron'
@@ -104,7 +105,9 @@ const Profile = () => {
     return (
         <div id='profile-page'>
             <MenuBar />
-
+            <Container>
+                <Row>
+                    <Col>
             <ProfileJumbotron 
                 name={name}
                 filmSet={filmSet}
@@ -154,7 +157,9 @@ const Profile = () => {
                 deleteMessage={deleteMessage}
                 handleDeleteAccount={handleDeleteAccount}
             />
-
+            </Col>
+            </Row>
+            </Container>
             <OtherFooter />
         </div>
     )
