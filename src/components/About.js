@@ -8,7 +8,7 @@ const About = () => {
     <div id='about-page'>
       <Container>
         <Card>
-          <h1>About BFI 250</h1>
+          <Card.Title>About BFI 250</Card.Title>
           <p>
             Each decade since 1952, the British Film Institute's{' '}
             <a
@@ -39,7 +39,7 @@ const About = () => {
             <li>Mobile-friendly.</li>
             <li>A button to "Skip" films I don't intend to see.</li>
           </ul>
-          <p>Technologies Used:</p>
+          <Card.Title>Technologies Used</Card.Title>
           <ul>
             <li>React</li>
             <li>Redux</li>
@@ -101,8 +101,20 @@ const About = () => {
               Mobile App on Expo Snack
             </a>
           </p>
-          {/* <h2>About Me</h2>
-                <p>I am a web developer in Greenville, South Carolina, with a life-long love for movies. I'm always thrilled to see how the BFI recognizes the value of silent masterpieces, such as <a href="https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans" rel="noreferrer" target="_blank">Sunrise</a>.</p> */}
+          <Card.Title>About Me</Card.Title>
+          <p>
+            I am a{' '}
+            <a
+              href='https://elijahwilcott.com/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              web developer
+            </a>{' '}
+            in Greenville, South Carolina, with a life-long love for movies.
+          </p>
+          <br />
+          <br />
         </Card>
       </Container>
       <OtherFooter />
