@@ -2,12 +2,18 @@
   background-image: url(./img/film.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
-#nologin-button {
-  color: white;
-  text-decoration: inherit;
+img {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
 }

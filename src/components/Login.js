@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { Modal, Form, Button, Spinner, Card, Container } from 'react-bootstrap';
 import './Login.css';
+import qrCode from './img/snack-qr.png';
 import MenuBar from './MenuBar';
 import OtherFooter from './Footers/OtherFooter';
 import { register, login } from '../redux/actions/auth';
@@ -132,7 +133,15 @@ const Login = () => {
             </Button>
             {/* <Button className="btn btn-primary btn-lg btn-block btn-link" id="nologin-button" href="https://nologin.bfi250.com/" target="_blank" rel="noreferrer">Use Without Account</Button> */}
           </Card>
+          <Card>
+            <Card.Body>
+              <h2>Mobile App</h2>
+              <p>The mobile app is available through Expo Go:</p>
+              <img src={qrCode} className='rounded center' alt='' />
+            </Card.Body>
+          </Card>
         </Container>
+
         {/* Sign Up Modal */}
         <Modal show={showSignUp} onHide={handleCloseSignUp} centered>
           <Modal.Header closeButton>
