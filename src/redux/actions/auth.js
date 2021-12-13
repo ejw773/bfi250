@@ -85,15 +85,10 @@ export const login = (email, password) => (dispatch) => {
 };
 
 export const logout = () => (dispatch) => {
-  return AuthService.logout().then(
-    (data) => {
-      dispatch({
-        type: LOGOUT,
-        payload: data
-      });
-      return Promise.resolve();
-    }
-  )
+  AuthService.logout();
+  dispatch({
+    type: LOGOUT
+  })
 };
 
 export const logoutAll = () => (dispatch) => {

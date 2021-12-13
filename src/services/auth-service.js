@@ -33,24 +33,25 @@ const login = (email, password) => {
     });
 };
 
-export const logout = () => {
-  console.log('removing user')
-  return axios
-    .post(API_URL + "users/logout", null, { headers: authHeader() })
-    .then((response) => {
-      console.log(response.data)
-      localStorage.removeItem("user");
-    })
+export const logout = async () => {
+  try {
+    const response = await axios.post(API_URL + "users/logout", null, { headers: authHeader() })
+    localStorage.removeItem("user");
+    console.log(response.data)  
+  } catch (e) {
+    console.log(e)
+  }
 };
 
-const logoutAll = () => {
-  return axios
-    .post(API_URL + "users/logoutAll", null, { headers: authHeader() })
-    .then((response) => {
-      console.log(response.data)
-      localStorage.removeItem("user");
-    })
-}
+export const logoutAll = async () => {
+  try {
+    const response = await axios.post(API_URL + "users/logoutAll", null, { headers: authHeader() })
+    localStorage.removeItem("user");
+    console.log(response.data)  
+  } catch (e) {
+    console.log(e)
+  }
+};
 
 const changeFilmSet = (bfiSet) => {
   return axios
