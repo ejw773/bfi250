@@ -4,9 +4,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-top: 50px;
 }
 
-img {
+.qr-code {
   max-width: 200px;
   display: block;
   margin-left: auto;

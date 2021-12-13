@@ -82,6 +82,7 @@ const Login = () => {
       .catch((e) => {
         setLoading(false);
         setSuccessful(false);
+        console.log(successful);
         console.log(e);
       });
   };
@@ -107,7 +108,9 @@ const Login = () => {
 
   return (
     <div>
-      <MenuBar />
+      <div className='fixed-top'>
+        <MenuBar />
+      </div>
       <div id='login-page'>
         <Container>
           <Card>
@@ -137,7 +140,12 @@ const Login = () => {
             <Card.Body>
               <h2>Mobile App</h2>
               <p>The mobile app is available through Expo Go:</p>
-              <img src={qrCode} className='rounded center' alt='' />
+              <img
+                src={qrCode}
+                className='rounded center'
+                id='qr-code'
+                alt=''
+              />
             </Card.Body>
           </Card>
         </Container>
