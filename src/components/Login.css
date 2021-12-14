@@ -1,14 +1,15 @@
 #login-page {
   background-image: url(./img/film.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
   margin-top: 50px;
 }
 
 .qr-code {
-  max-width: 200px;
+  width: 100%;
+  max-width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -17,4 +18,5 @@
 
 h2 {
   text-align: center;
+  color: 'crimson';
 }
