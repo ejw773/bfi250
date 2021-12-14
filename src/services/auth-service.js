@@ -39,11 +39,12 @@ export const logout = async () => {
     const response = await axios.post(API_URL + 'users/logout', null, {
       headers: authHeader(),
     });
+    localStorage.removeItem('user');
     console.log(response.data);
   } catch (e) {
+    localStorage.removeItem('user');
     console.log(e);
   }
-  localStorage.removeItem('user');
 };
 
 export const logoutAll = async () => {
@@ -51,11 +52,12 @@ export const logoutAll = async () => {
     const response = await axios.post(API_URL + 'users/logoutAll', null, {
       headers: authHeader(),
     });
+    localStorage.removeItem('user');
     console.log(response.data);
   } catch (e) {
+    localStorage.removeItem('user');
     console.log(e);
   }
-  localStorage.removeItem('user');
 };
 
 const changeFilmSet = (bfiSet) => {

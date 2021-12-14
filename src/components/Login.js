@@ -134,7 +134,6 @@ const Login = () => {
             >
               Use Without Account
             </Button>
-            {/* <Button className="btn btn-primary btn-lg btn-block btn-link" id="nologin-button" href="https://nologin.bfi250.com/" target="_blank" rel="noreferrer">Use Without Account</Button> */}
           </Card>
           <Card>
             <Card.Body>
@@ -142,9 +141,9 @@ const Login = () => {
               <p>The mobile app is available through Expo Go:</p>
               <img
                 src={qrCode}
-                className='rounded center'
+                className='rounded center qr-code'
                 id='qr-code'
-                alt=''
+                alt='QR Code'
               />
             </Card.Body>
           </Card>
