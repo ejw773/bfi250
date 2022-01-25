@@ -14,17 +14,6 @@ const MenuBar = () => {
           label='BFI 250 Progress Bar'
         />
       </LinkContainer>
-      {/* <ProgressBar className="menu-bar">
-                <LinkContainer to="/">
-                    <ProgressBar className="menu-bar-item" variant="danger" now={33} key={1} label="Progress" />
-                </LinkContainer>
-                <LinkContainer to="/about">
-                    <ProgressBar className="menu-bar-item" variant="warning" now={33} key={2} label="About" />
-                </LinkContainer>
-                <LinkContainer to="/landing">
-                    <ProgressBar className="menu-bar-item" variant="success" now={34} key={3} label="Login" />
-                </LinkContainer>
-            </ProgressBar> */}
     </React.Fragment>
   );
 };

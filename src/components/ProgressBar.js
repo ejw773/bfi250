@@ -9,11 +9,6 @@ const ProgressBar = (props) => {
 
   const { totalFilms, totalSeen, totalSkipped, totalUnseen } = props;
 
-  // console.log(`Seen: ${totalSeen}`)
-  // console.log(`Skipped: ${totalSkipped}`)
-  // console.log(`To See: ${totalUnseen}`)
-  // console.log(`All: ${totalFilms}`)
-
   // Find out screen size
   const screenSize = window.innerWidth;
 
