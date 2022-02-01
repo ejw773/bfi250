@@ -32,6 +32,8 @@ As of January 2021, the front end is fairly mature, but it saves all data to loc
 
 ## 🖥 Screenshots
 
+![image](https://github.com/ejw773/bfi250/blob/main/screenshots/bfi250.png)
+
 ## Demo Video
 
 [![BFI 250 Progress Bar Video Demo](http://img.youtube.com/vi/07n1iiyvbys/0.jpg)](http://www.youtube.com/watch?v=07n1iiyvbys "Video Demo")
